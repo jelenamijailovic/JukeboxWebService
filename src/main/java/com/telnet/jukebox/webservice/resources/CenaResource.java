@@ -14,47 +14,52 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.telnet.jukebox.webservice.model.Cena;
+import com.telnet.jukebox.webservice.model.Promet;
 import com.telnet.jukebox.webservice.service.CenaService;
+import com.telnet.jukebox.webservice.service.PrometService;
 
 @Path("/cene")
-@Produces({MediaType.APPLICATION_JSON})
-@Consumes({MediaType.APPLICATION_JSON})
+@Produces({ MediaType.APPLICATION_JSON })
+@Consumes({ MediaType.APPLICATION_JSON })
 public class CenaResource {
 
-	CenaService cenaService= new CenaService();
-	
+	CenaService cenaService = new CenaService();
+	PrometService prometService= new PrometService();
+
 	@GET
 	public List<Cena> getCene() throws ClassNotFoundException, SQLException {
 		return cenaService.getCene();
 	}
-	
+
 	@POST
 	public Cena addCena(Cena cena) throws ClassNotFoundException, SQLException {
 		return cenaService.addCena(cena);
 	}
-	
+
 	@PUT
 	@Path("/{cenaId}")
-	public Cena updateIzvodjac(@PathParam("cenaId") Long cenaId, Cena cena) throws ClassNotFoundException, SQLException {
+	public Cena updateIzvodjac(@PathParam("cenaId") Long cenaId, Cena cena)
+			throws ClassNotFoundException, SQLException {
 		cena.setId(cenaId);
 		return cenaService.updateCena(cena);
 	}
-	
+
 	@DELETE
 	@Path("/{cenaId}")
 	public void deleteCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
 		cenaService.removeCena(cenaId);
 	}
-	
+
 	@GET
 	@Path("/{cenaId}")
 	public Cena getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
 		return cenaService.getCena(cenaId);
 	}
-	
-	@Path("/{cenaId}/pesme")
-	public PrometResource getPrometiResource() {
-		return new PrometResource();
+
+	@GET
+	@Path("/{cenaId}/prometi")
+	public List<Promet> getSviPrometiPoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
+		return prometService.getSviPrometiPoCeni(cenaId);
 	}
-	
+
 }

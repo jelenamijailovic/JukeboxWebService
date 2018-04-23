@@ -1,83 +1,59 @@
 package com.telnet.jukebox.webservice.resources;
 
-import java.util.Date;
+import java.sql.SQLException;
 import java.util.List;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import com.telnet.jukebox.webservice.model.Promet;
 import com.telnet.jukebox.webservice.service.PrometService;
 
+@Path("/prometi")
+@Produces({ MediaType.APPLICATION_JSON })
+@Consumes({ MediaType.APPLICATION_JSON })
+
 public class PrometResource {
 
+	public PrometService prometService = new PrometService();
 
-	public PrometService prometService= new PrometService();
-	
 	@GET
-	@Path("/{pesmaId}")
-	public List<Promet> getSviPrometiPoPesmi(@PathParam("pesmaId") Long pesmaId) {
-		return prometService.getSviPrometiPoPesmi(pesmaId);
+	public List<Promet> getSviPrometiPoCeni() throws ClassNotFoundException, SQLException {
+		return prometService.getSviPrometi();
 	}
-	
+
 	@GET
-	@Path("/{cenaId}")
-	public List<Promet> getSviPrometiPoCeni(@PathParam("cenaId") Long cenaId) {
-		return prometService.getSviPrometiPoCeni(cenaId);
+	@Path("/{prometId}")
+	public Promet addPromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException, SQLException {
+		return prometService.getPromet(prometId);
 	}
-	
+
 	@POST
-	@Path("/{pesmaId}")
-	public Promet addPrometZaPesmu(@PathParam("pesmaId") Long pesmaId, Promet promet) {
-		return prometService.addPrometZaPesmu(pesmaId, promet);
+	@Path("/{pesmaId}/{cenaId}")
+	public Promet addPromet(@PathParam("pesmaId") Long pesmaId, @PathParam("cenaId") Long cenaId, Promet promet)
+			throws ClassNotFoundException, SQLException {
+		return prometService.addPromet(pesmaId, cenaId, promet);
 	}
-	
-	@POST
-	@Path("/{cenaId}")
-	public Promet addPrometZaCenu(@PathParam("cenaId") Long cenaId, Promet promet) {
-		return prometService.addPrometZaCenu(cenaId, promet);
-	}
-	
+
 	@PUT
-	@Path("/{pesmaId}/{prometId}")
-	public Promet updatePrometPoPesmi(@PathParam("pesmaId") Long pesmaId ,@PathParam("prometId") Long prometId, Promet promet) {
+	@Path("/{prometId}")
+	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
+			throws ClassNotFoundException, SQLException {
 		promet.setId(prometId);
-		return prometService.updatePrometPoPesmi(pesmaId, promet);
+		return prometService.updatePromet(promet);
 	}
-	
-	@PUT
-	@Path("/{cenaId}/{prometId}")
-	public Promet updatePrometPoCeni(@PathParam("prometId") Long prometId ,@PathParam("cenaId") Long cenaId, Promet promet) {
-		promet.setId(prometId);
-		return prometService.updatePrometPoCeni(cenaId, promet);
-	}
-	
+
 	@DELETE
-	@Path("/{pesmaId}/{prometId}")
-	public void deletePrometPoPesmi(@PathParam("pesmaId") Long pesmaId, @PathParam("prometId") Long prometId) {
-		prometService.deletePrometPoPesmi(pesmaId, prometId);
+	@Path("/{prometId}")
+	public void deletePromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException, SQLException {
+		prometService.deletePromet(prometId);
 	}
-	
-	@DELETE
-	@Path("/{cenaId}/{prometId}")
-	public void deletePrometPoCeni(@PathParam("cenaId") Long cenaId, @PathParam("prometId") Long prometId) {
-		prometService.deletePrometPoCeni(cenaId, prometId);
-	}
-	
-	@GET
-	@Path("/{pesmaId}/{prometId}")
-	public Promet getPrometPoPesmi(@PathParam("pesmaId") Long pesmaId ,@PathParam("prometId") Long prometId) {
-		return prometService.getPrometPoPesmi(pesmaId, prometId);
-	}
-	
-	@GET
-	@Path("/{cenaId}/{prometId}")
-	public Promet getPrometPoCeni(@PathParam("cenaId") Long cenaId ,@PathParam("prometId") Long prometId) {
-		return prometService.getPrometPoCeni(cenaId, prometId);
-	}
-	
+
 }

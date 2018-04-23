@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DatabaseConnector {
 
-	public static Connection conStat() throws ClassNotFoundException{
+	public static Connection conStat() throws ClassNotFoundException {
 		Connection conn = null;
-		
+
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jukebox?useSSL=false", "root", "qqq");
@@ -16,7 +16,7 @@ public class DatabaseConnector {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-			return conn;
-		}
-	
+		return conn;
+	}
+
 }

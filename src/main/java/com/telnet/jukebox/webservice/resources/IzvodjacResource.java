@@ -14,50 +14,56 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.telnet.jukebox.webservice.model.Izvodjac;
+import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.service.IzvodjacService;
+import com.telnet.jukebox.webservice.service.PesmaService;
 
 @Path("/izvodjaci")
-@Produces({MediaType.APPLICATION_JSON})
-@Consumes({MediaType.APPLICATION_JSON})
+@Produces({ MediaType.APPLICATION_JSON })
+@Consumes({ MediaType.APPLICATION_JSON })
 
 public class IzvodjacResource {
-	
-	IzvodjacService izvodjacService= new IzvodjacService();
-	
+
+	IzvodjacService izvodjacService = new IzvodjacService();
+	PesmaService pesmaService = new PesmaService();
+
 	@GET
 	public List<Izvodjac> getIzvodjaci() throws SQLException, ClassNotFoundException {
 		System.out.println(izvodjacService.getIzvodjaci().get(1).getIme());
 		return izvodjacService.getIzvodjaci();
 	}
-	
+
 	@GET
 	@Path("/{izvodjacId}")
 	public Izvodjac getIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws SQLException, ClassNotFoundException {
-		
+
 		return izvodjacService.getIzvodjac(izvodjacId);
 	}
-	
+
 	@POST
 	public Izvodjac addIzvodjaca(Izvodjac izvodjac) throws SQLException, ClassNotFoundException {
 		return izvodjacService.addIzvodjac(izvodjac);
 	}
-	
+
 	@PUT
 	@Path("/{izvodjacId}")
-	public Izvodjac updateIzvodjac(@PathParam("izvodjacId") Long izvodjacId, Izvodjac izvodjac) throws SQLException, ClassNotFoundException {
+	public Izvodjac updateIzvodjac(@PathParam("izvodjacId") Long izvodjacId, Izvodjac izvodjac)
+			throws SQLException, ClassNotFoundException {
 		izvodjac.setId(izvodjacId);
 		return izvodjacService.updateIzvodjac(izvodjac);
 	}
-	
+
 	@DELETE
 	@Path("/{izvodjacId}")
 	public void deleteIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws SQLException, ClassNotFoundException {
 		izvodjacService.removeIzvodjac(izvodjacId);
 	}
-	
+
+	@GET
 	@Path("/{izvodjacId}/pesme")
-	public PesmaResource getPesmeResource() {
-		return new PesmaResource();
+	public List<Pesma> getSvePesmePoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId)
+			throws ClassNotFoundException, SQLException {
+		return pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
 	}
 
 }

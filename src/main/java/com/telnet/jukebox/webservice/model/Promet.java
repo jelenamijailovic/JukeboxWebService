@@ -1,27 +1,24 @@
 package com.telnet.jukebox.webservice.model;
 
-import java.text.DateFormat;
+import java.sql.Date;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
-
-import javax.xml.bind.annotation.XmlTransient;
 
 public class Promet {
 
 	private long id;
 	private Date datum;
-	
-	public Promet() {}
+	private String pesmaNaziv;
+	private Long cenaKolicina;
 
-	public Promet(long id) throws ParseException {
+	public Promet() {
+	}
+
+	public Promet(long id, Date datum) throws ParseException {
 		super();
-		DateFormat df = new SimpleDateFormat("MMM dd hh:mm:ss yyyy", Locale.ENGLISH);
+		// DateFormat df = new SimpleDateFormat("MMM dd hh:mm:ss yyyy", Locale.ENGLISH);
 		this.id = id;
-		this.datum = df.parse(df.format(datum));
+		// this.datum = df.parse(df.format(datum));
+		this.datum = datum;
 	}
 
 	public long getId() {
@@ -40,8 +37,20 @@ public class Promet {
 		this.datum = datum;
 	}
 
-	
-	
-	
-	
+	public String getPesmaNaziv() {
+		return pesmaNaziv;
+	}
+
+	public void setPesmaNaziv(String pesmaNaziv) {
+		this.pesmaNaziv = pesmaNaziv;
+	}
+
+	public Long getCenaKolicina() {
+		return cenaKolicina;
+	}
+
+	public void setCenaKolicina(Long cenaKolicina) {
+		this.cenaKolicina = cenaKolicina;
+	}
+
 }

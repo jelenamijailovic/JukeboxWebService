@@ -1,5 +1,6 @@
 package com.telnet.jukebox.webservice.resources;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -13,92 +14,55 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.telnet.jukebox.webservice.model.Pesma;
+import com.telnet.jukebox.webservice.model.Promet;
 import com.telnet.jukebox.webservice.service.PesmaService;
+import com.telnet.jukebox.webservice.service.PrometService;
 
-
-
-@Produces({MediaType.APPLICATION_JSON})
-@Consumes({MediaType.APPLICATION_JSON})
+@Path("/pesme")
+@Produces({ MediaType.APPLICATION_JSON })
+@Consumes({ MediaType.APPLICATION_JSON })
 
 public class PesmaResource {
 
-	public PesmaService pesmaService= new PesmaService();
-	
+	PesmaService pesmaService = new PesmaService();
+	PrometService prometService= new PrometService();
+
 	@GET
-//	@Path("/{izvodjacId}")
-//	@PathParam("izvodjacId") 
-	public List<Pesma> getSvePesmePoIzvodjacu(Long izvodjacId) {
-		return pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
+	public List<Pesma> getSvePesme() throws ClassNotFoundException, SQLException {
+		return pesmaService.getSvePesme();
 	}
-	
-//	@GET
-//	@Path("/{zanrId}")
-//	@PathParam("zanrId") 
-//	public List<Pesma> getSvePesmePoZanru(Long zanrId) {
-//		return pesmaService.getSvePesmePoZanru(zanrId);
-//	}
-	
+
 	@POST
-	@Path("/{izvodjacId}/{zanrId}")
-	public Pesma addPesmaPoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId, Pesma pesma) {
-		return pesmaService.addPesmaPoIzvodjacu(izvodjacId, pesma);
+	@Path("/{zanrId}/{izvodjacId}")
+	public Pesma addPesma(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId, Pesma pesma)
+			throws ClassNotFoundException, SQLException {
+		return pesmaService.addPesma(izvodjacId, zanrId, pesma);
 	}
-	
-	@POST
-//	@Path("/{zanrId}")
-//	@PathParam("zanrId") 
-	public Pesma addPesmaPoZanru(Long zanrId, Pesma pesma) {
-		return pesmaService.addPesmaPoZanru(zanrId, pesma);
-	}
-	
+
 	@PUT
-//	{izvodjacId}/
-//	@PathParam("izvodjacId") 
 	@Path("/{pesmaId}")
-	public Pesma updatePesmaPoIzvodjacu(@PathParam("pesmaId") Long pesmaId ,Long izvodjacId, Pesma pesma) {
+	public Pesma updatePesma(@PathParam("pesmaId") Long pesmaId, Pesma pesma)
+			throws ClassNotFoundException, SQLException {
 		pesma.setId(pesmaId);
-		return pesmaService.updatePesmaPoIzvodjacu(izvodjacId, pesma);
+		return pesmaService.updatePesma(pesma);
 	}
-	
-	@PUT
-//	/{zanrId}
-//	@PathParam("zanrId") 
-	@Path("/{pesmaId}")
-	public Pesma updatePesmaPoZanru(@PathParam("pesmaId") Long pesmaId ,Long zanrId, Pesma pesma) {
-		pesma.setId(pesmaId);
-		return pesmaService.updatePesmaPoIzvodjacu(zanrId, pesma);
-	}
-	
+
 	@DELETE
-//	{izvodjacId}/
-//	@PathParam("izvodjacId") 
 	@Path("/{pesmaId}")
-	public void deletePesmaPoIzvodjacu(Long izvodjacId, @PathParam("pesmaId") Long pesmaId) {
-		pesmaService.deletePesmaPoIzvodjacu(izvodjacId, pesmaId);
+	public void deletePesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
+		pesmaService.deletePesma(pesmaId);
 	}
-	
-	@DELETE
-//	{zanrId}/
-//	@PathParam("zanrId") 
+
+	@GET
 	@Path("/{pesmaId}")
-	public void deletePesmaPoZanru(Long zanrId, @PathParam("pesmaId") Long pesmaId) {
-		pesmaService.deletePesmaPoZanru(zanrId, pesmaId);
+	public Pesma getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
+		return pesmaService.getPesma(pesmaId);
 	}
 	
 	@GET
-//	{izvodjacId}/
-//	@PathParam("izvodjacId") 
-	@Path("/{pesmaId}")
-	public Pesma getPesmaPoIzvodjacu(Long izvodjacId ,@PathParam("pesmaId") Long pesmaId) {
-		return pesmaService.getPesmaPoIzvodjacu(izvodjacId, pesmaId);
+	@Path("/{pesmaId}/prometi")
+	public List<Promet> getSviPrometiPoCeni(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
+		return prometService.getSviPrometiPoPesmi(pesmaId);
 	}
-	
-	@GET
-//	{zanrId}/
-//	@PathParam("zanrId") 
-	@Path("/{pesmaId}")
-	public Pesma getPesmaPoZanru(Long zanrId ,@PathParam("pesmaId") Long pesmaId) {
-		return pesmaService.getPesmaPoZanru(zanrId, pesmaId);
-	}
-	
+
 }
