@@ -11,10 +11,10 @@ import com.telnet.jukebox.webservice.model.Izvodjac;
 
 public class DAOIzvodjac {
 
-	Statement stmt= null;
-	PreparedStatement prepStmt= null;
-	ResultSet resultSet= null;
-	
+	Statement stmt = null;
+	PreparedStatement prepStmt = null;
+	ResultSet resultSet = null;
+
 	public List<Izvodjac> getIzvodjaci() throws SQLException, ClassNotFoundException {
 		List<Izvodjac> izvodjaci = new ArrayList<>();
 		stmt = DatabaseConnector.conStat().createStatement();
@@ -26,18 +26,18 @@ public class DAOIzvodjac {
 			izvodjac.setIme(resultSet.getString(2));
 			izvodjaci.add(izvodjac);
 		}
-		
+
 		return izvodjaci;
 
 	}
 
 	public Izvodjac getIzvodjac(Long izvodjacId) throws SQLException, ClassNotFoundException {
 		Izvodjac izvodjac = new Izvodjac();
-		
+
 		prepStmt = DatabaseConnector.conStat().prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
 		prepStmt.setLong(1, izvodjacId);
 		resultSet = prepStmt.executeQuery();
-		
+
 		while (resultSet.next()) {
 			izvodjac.setId(resultSet.getLong(1));
 			izvodjac.setIme(resultSet.getString(2));

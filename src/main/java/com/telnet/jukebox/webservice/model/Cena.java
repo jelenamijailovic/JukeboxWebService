@@ -9,10 +9,10 @@ public class Cena {
 
 	private long id;
 	private long kolicina;
-	private Map<Long, Promet> prometi= new HashMap<>();
+	private Map<Long, Promet> prometi = new HashMap<>();
 
-	
-	public Cena() {}
+	public Cena() {
+	}
 
 	public Cena(long id, long kolicina) {
 		super();
@@ -35,7 +35,7 @@ public class Cena {
 	public void setKolicina(long kolicina) {
 		this.kolicina = kolicina;
 	}
-	
+
 	@XmlTransient
 	public Map<Long, Promet> getPrometi() {
 		return prometi;
@@ -45,5 +45,4 @@ public class Cena {
 		this.prometi = prometi;
 	}
 
-	
 }

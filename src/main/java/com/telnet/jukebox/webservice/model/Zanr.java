@@ -11,16 +11,17 @@ public class Zanr {
 
 	private long id;
 	private String naziv;
-	private Map<Long, Pesma> pesme= new HashMap<>();
-	
-	public Zanr() {}
+	private Map<Long, Pesma> pesme = new HashMap<>();
+
+	public Zanr() {
+	}
 
 	public Zanr(long id, String naziv) {
 		super();
 		this.id = id;
 		this.naziv = naziv;
 	}
-	
+
 	@XmlTransient
 	public Map<Long, Pesma> getPesme() {
 		return pesme;
@@ -45,7 +46,5 @@ public class Zanr {
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
-	
-	
-	
+
 }

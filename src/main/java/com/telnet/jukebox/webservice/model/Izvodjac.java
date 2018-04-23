@@ -11,16 +11,17 @@ public class Izvodjac {
 
 	private long id;
 	private String ime;
-	private Map<Long, Pesma> pesme= new HashMap<>();
-	
-	public Izvodjac() {}
+	private Map<Long, Pesma> pesme = new HashMap<>();
+
+	public Izvodjac() {
+	}
 
 	public Izvodjac(long id, String ime) {
 		super();
 		this.id = id;
 		this.ime = ime;
 	}
-	
+
 	@XmlTransient
 	public Map<Long, Pesma> getPesme() {
 		return pesme;
@@ -45,7 +46,5 @@ public class Izvodjac {
 	public void setIme(String ime) {
 		this.ime = ime;
 	}
-	
-	
-	
+
 }
