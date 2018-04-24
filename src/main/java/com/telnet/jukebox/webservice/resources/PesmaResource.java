@@ -33,10 +33,10 @@ public class PesmaResource {
 	}
 
 	@POST
-	@Path("/{zanrId}/{izvodjacId}")
-	public Pesma addPesma(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId, Pesma pesma)
+	@Path("/{zanrId}/{izvodjacId}/{cenaId}")
+	public Pesma addPesma(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId, @PathParam("cenaId") Long cenaId, Pesma pesma)
 			throws ClassNotFoundException, SQLException {
-		return pesmaService.addPesma(izvodjacId, zanrId, pesma);
+		return pesmaService.addPesma(izvodjacId, zanrId, cenaId, pesma);
 	}
 
 	@PUT

@@ -14,10 +14,6 @@ public class PrometService {
 		return dao.getSvePromete();
 	}
 
-	public List<Promet> getSviPrometiPoCeni(Long cenaId) throws ClassNotFoundException, SQLException {
-		return dao.getPrometePoCeni(cenaId);
-	}
-
 	public List<Promet> getSviPrometiPoPesmi(Long pesmaId) throws ClassNotFoundException, SQLException {
 		return dao.getPrometePoPesmi(pesmaId);
 	}
@@ -26,8 +22,8 @@ public class PrometService {
 		return dao.getPromet(prometId);
 	}
 
-	public Promet addPromet(Long pesmaId, Long cenaId, Promet promet) throws ClassNotFoundException, SQLException {
-		return dao.insertPromet(pesmaId, cenaId, promet);
+	public Promet addPromet(Long pesmaId, Promet promet) throws ClassNotFoundException, SQLException {
+		return dao.insertPromet(pesmaId, promet);
 	}
 
 	public Promet updatePromet(Promet promet) throws ClassNotFoundException, SQLException {
