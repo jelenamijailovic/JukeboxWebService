@@ -36,10 +36,10 @@ public class PrometResource {
 	}
 
 	@POST
-	@Path("/{pesmaId}/{cenaId}")
-	public Promet addPromet(@PathParam("pesmaId") Long pesmaId, @PathParam("cenaId") Long cenaId, Promet promet)
+	@Path("/{pesmaId}")
+	public Promet addPromet(@PathParam("pesmaId") Long pesmaId, Promet promet)
 			throws ClassNotFoundException, SQLException {
-		return prometService.addPromet(pesmaId, cenaId, promet);
+		return prometService.addPromet(pesmaId, promet);
 	}
 
 	@PUT

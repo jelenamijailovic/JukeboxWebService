@@ -22,7 +22,7 @@ public class DAOPromet {
 		Connection conn = DatabaseConnector.conStat();
 		stmt = conn.createStatement();
 		resultSet = stmt.executeQuery(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pr.cena_id=c.cene_id");
+				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id");
 
 		while (resultSet.next()) {
 			Promet promet = new Promet();
@@ -45,7 +45,7 @@ public class DAOPromet {
 		Connection conn = DatabaseConnector.conStat();
 
 		prepStmt = conn.prepareStatement(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pr.cena_id=c.cene_id where c.cene_id= ?");
+				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where c.cene_id= ?");
 		prepStmt.setLong(1, cenaId);
 		resultSet = prepStmt.executeQuery();
 
@@ -70,7 +70,7 @@ public class DAOPromet {
 		Connection conn = DatabaseConnector.conStat();
 
 		prepStmt = conn.prepareStatement(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pr.cena_id=c.cene_id where pe.pesme_id= ?");
+				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where pe.pesme_id= ?");
 		prepStmt.setLong(1, pesmaId);
 		resultSet = prepStmt.executeQuery();
 
@@ -95,7 +95,7 @@ public class DAOPromet {
 		Promet promet = new Promet();
 
 		prepStmt = conn.prepareStatement(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pr.cena_id=c.cene_id where pr.prometi_id= ?");
+				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where pr.prometi_id= ?");
 		prepStmt.setLong(1, prometId);
 		resultSet = prepStmt.executeQuery();
 
@@ -109,13 +109,12 @@ public class DAOPromet {
 		return promet;
 	}
 
-	public Promet insertPromet(Long pesmaId, Long cenaId, Promet promet) throws ClassNotFoundException, SQLException {
+	public Promet insertPromet(Long pesmaId, Promet promet) throws ClassNotFoundException, SQLException {
 
 		Connection conn = DatabaseConnector.conStat();
-		prepStmt = conn.prepareStatement("insert into prometi (prometi_datum, pesma_id, cena_id) values(?,?,?)");
+		prepStmt = conn.prepareStatement("insert into prometi (prometi_datum, pesma_id) values(?,?)");
 		prepStmt.setDate(1, promet.getDatum());
 		prepStmt.setLong(2, pesmaId);
-		prepStmt.setLong(3, cenaId);
 		prepStmt.executeUpdate();
 
 		return promet;

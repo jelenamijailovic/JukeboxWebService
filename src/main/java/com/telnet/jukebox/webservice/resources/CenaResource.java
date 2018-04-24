@@ -14,9 +14,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.telnet.jukebox.webservice.model.Cena;
-import com.telnet.jukebox.webservice.model.Promet;
+import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.service.CenaService;
-import com.telnet.jukebox.webservice.service.PrometService;
+import com.telnet.jukebox.webservice.service.PesmaService;
 
 @Path("/cene")
 @Produces({ MediaType.APPLICATION_JSON })
@@ -24,7 +24,7 @@ import com.telnet.jukebox.webservice.service.PrometService;
 public class CenaResource {
 
 	CenaService cenaService = new CenaService();
-	PrometService prometService= new PrometService();
+	PesmaService pesmaService= new PesmaService();
 
 	@GET
 	public List<Cena> getCene() throws ClassNotFoundException, SQLException {
@@ -55,11 +55,11 @@ public class CenaResource {
 	public Cena getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
 		return cenaService.getCena(cenaId);
 	}
-
+	
 	@GET
-	@Path("/{cenaId}/prometi")
-	public List<Promet> getSviPrometiPoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
-		return prometService.getSviPrometiPoCeni(cenaId);
+	@Path("/{cenaId}/pesme")
+	public List<Pesma> getSvePesmePoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
+		return pesmaService.getSvePesmePoCeni(cenaId);
 	}
 
 }
