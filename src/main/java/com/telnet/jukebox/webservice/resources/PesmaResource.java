@@ -12,11 +12,14 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Promet;
 import com.telnet.jukebox.webservice.service.PesmaService;
 import com.telnet.jukebox.webservice.service.PrometService;
+
+import javax.ws.rs.core.GenericEntity;
 
 @Path("/pesme")
 @Produces({ MediaType.APPLICATION_JSON })
@@ -26,10 +29,17 @@ public class PesmaResource {
 
 	PesmaService pesmaService = new PesmaService();
 	PrometService prometService= new PrometService();
-
+	
 	@GET
-	public List<Pesma> getSvePesme() throws ClassNotFoundException, SQLException {
-		return pesmaService.getSvePesme();
+	public Response getSvePesme() throws ClassNotFoundException, SQLException {
+//		return pesmaService.getSvePesme();
+		  List<Pesma> pesme = pesmaService.getSvePesme();
+			        GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+			        };
+		return Response.ok(list) 
+				.header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+				
 	}
 
 	@POST
@@ -55,14 +65,24 @@ public class PesmaResource {
 
 	@GET
 	@Path("/{pesmaId}")
-	public Pesma getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
-		return pesmaService.getPesma(pesmaId);
+	public Response getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
+//		return pesmaService.getPesma(pesmaId);
+		return Response.ok() 
+				.entity(pesmaService.getPesma(pesmaId)).header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET")
+				.allow("OPTIONS").build();
 	}
 	
 	@GET
 	@Path("/{pesmaId}/prometi")
-	public List<Promet> getSviPrometiPoCeni(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
-		return prometService.getSviPrometiPoPesmi(pesmaId);
+	public Response getSviPrometiPoCeni(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
+//		return prometService.getSviPrometiPoPesmi(pesmaId);
+		List<Promet> prometi = prometService.getSviPrometiPoPesmi(pesmaId);
+        GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 }

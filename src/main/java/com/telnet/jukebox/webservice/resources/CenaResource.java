@@ -11,7 +11,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.telnet.jukebox.webservice.model.Cena;
 import com.telnet.jukebox.webservice.model.Pesma;
@@ -27,8 +29,14 @@ public class CenaResource {
 	PesmaService pesmaService= new PesmaService();
 
 	@GET
-	public List<Cena> getCene() throws ClassNotFoundException, SQLException {
-		return cenaService.getCene();
+	public Response getCene() throws ClassNotFoundException, SQLException {
+//		return cenaService.getCene();
+		List<Cena> cene = cenaService.getCene();
+        GenericEntity<List<Cena>> list = new GenericEntity<List<Cena>>(cene) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 	@POST
@@ -52,14 +60,24 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}")
-	public Cena getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
-		return cenaService.getCena(cenaId);
+	public Response getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
+//		return cenaService.getCena(cenaId);
+		return Response.ok() 
+				.entity(cenaService.getCena(cenaId)).header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET")
+				.allow("OPTIONS").build();
 	}
 	
 	@GET
 	@Path("/{cenaId}/pesme")
-	public List<Pesma> getSvePesmePoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
-		return pesmaService.getSvePesmePoCeni(cenaId);
+	public Response getSvePesmePoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException, SQLException {
+//		return pesmaService.getSvePesmePoCeni(cenaId);
+		List<Pesma> pesme = pesmaService.getSvePesmePoCeni(cenaId);
+        GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 }

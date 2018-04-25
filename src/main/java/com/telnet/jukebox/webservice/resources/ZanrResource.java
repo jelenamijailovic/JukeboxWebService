@@ -11,7 +11,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Zanr;
@@ -27,8 +29,14 @@ public class ZanrResource {
 	PesmaService pesmaService = new PesmaService();
 
 	@GET
-	public List<Zanr> getZanrovi() throws ClassNotFoundException, SQLException {
-		return zanrService.getZanrovi();
+	public Response getZanrovi() throws ClassNotFoundException, SQLException {
+//		return zanrService.getZanrovi();
+		List<Zanr> zanrovi = zanrService.getZanrovi();
+        GenericEntity<List<Zanr>> list = new GenericEntity<List<Zanr>>(zanrovi) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 
 	}
 
@@ -52,8 +60,12 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}")
-	public Zanr getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
-		return zanrService.getZanr(zanrId);
+	public Response getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
+//		return zanrService.getZanr(zanrId);
+		return Response.ok() 
+				.entity(zanrService.getZanr(zanrId)).header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET")
+				.allow("OPTIONS").build();
 	}
 
 	// @Path("/{zanrId}/pesme")
@@ -63,9 +75,15 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}/pesme")
-	public List<Pesma> getSvePesmePoZanru(@PathParam("zanrId") Long zanrId)
+	public Response getSvePesmePoZanru(@PathParam("zanrId") Long zanrId)
 			throws ClassNotFoundException, SQLException {
-		return pesmaService.getSvePesmePoZanru(zanrId);
+//		return pesmaService.getSvePesmePoZanru(zanrId);
+		List<Pesma> pesme = pesmaService.getSvePesmePoZanru(zanrId);
+        GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 }

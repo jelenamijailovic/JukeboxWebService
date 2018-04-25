@@ -11,7 +11,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import com.telnet.jukebox.webservice.model.Izvodjac;
 import com.telnet.jukebox.webservice.model.Pesma;
@@ -28,16 +30,25 @@ public class IzvodjacResource {
 	PesmaService pesmaService = new PesmaService();
 
 	@GET
-	public List<Izvodjac> getIzvodjaci() throws SQLException, ClassNotFoundException {
-		System.out.println(izvodjacService.getIzvodjaci().get(1).getIme());
-		return izvodjacService.getIzvodjaci();
+	public Response getIzvodjaci() throws SQLException, ClassNotFoundException {
+//		System.out.println(izvodjacService.getIzvodjaci().get(1).getIme());
+//		return izvodjacService.getIzvodjaci();
+		List<Izvodjac> izvodjaci = izvodjacService.getIzvodjaci();
+        GenericEntity<List<Izvodjac>> list = new GenericEntity<List<Izvodjac>>(izvodjaci) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 	@GET
 	@Path("/{izvodjacId}")
-	public Izvodjac getIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws SQLException, ClassNotFoundException {
-
-		return izvodjacService.getIzvodjac(izvodjacId);
+	public Response getIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws SQLException, ClassNotFoundException {
+//		return izvodjacService.getIzvodjac(izvodjacId);
+		return Response.ok() 
+				.entity(izvodjacService.getIzvodjac(izvodjacId)).header("Access-Control-Allow-Origin", "*")
+				.header("Access-Control-Allow-Methods", "GET")
+				.allow("OPTIONS").build();
 	}
 
 	@POST
@@ -61,9 +72,15 @@ public class IzvodjacResource {
 
 	@GET
 	@Path("/{izvodjacId}/pesme")
-	public List<Pesma> getSvePesmePoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId)
+	public Response getSvePesmePoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId)
 			throws ClassNotFoundException, SQLException {
-		return pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
+//		return pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
+		List<Pesma> pesme = pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
+        GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+        };
+        return Response.ok(list) 
+        		.header("Access-Control-Allow-Origin", "*")
+        		.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 	}
 
 }

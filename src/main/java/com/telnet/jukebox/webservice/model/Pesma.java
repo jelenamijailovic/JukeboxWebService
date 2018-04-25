@@ -1,10 +1,5 @@
 package com.telnet.jukebox.webservice.model;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.xml.bind.annotation.XmlTransient;
-
 public class Pesma {
 
 	private long id;
@@ -13,7 +8,7 @@ public class Pesma {
 	private String zanrIme;
 	private long cenaKolicina;
 
-	private Map<Long, Promet> prometi = new HashMap<>();
+//	private Map<Long, Promet> prometi = new HashMap<>();
 
 	public Pesma() {
 
@@ -41,14 +36,14 @@ public class Pesma {
 		this.naziv = naziv;
 	}
 
-	@XmlTransient
-	public Map<Long, Promet> getPrometi() {
-		return prometi;
-	}
-
-	public void setPrometi(Map<Long, Promet> prometi) {
-		this.prometi = prometi;
-	}
+//	@XmlTransient
+//	public Map<Long, Promet> getPrometi() {
+//		return prometi;
+//	}
+//
+//	public void setPrometi(Map<Long, Promet> prometi) {
+//		this.prometi = prometi;
+//	}
 
 	public String getIzvodjacIme() {
 		return izvodjacIme;
