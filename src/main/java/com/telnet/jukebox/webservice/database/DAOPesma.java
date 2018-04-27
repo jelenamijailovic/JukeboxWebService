@@ -16,27 +16,32 @@ public class DAOPesma {
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
 
-	public List<Pesma> getSvePesme() throws ClassNotFoundException, SQLException {
+	public List<Pesma> getSvePesme() throws ClassNotFoundException {
 		List<Pesma> pesme = new ArrayList<>();
 
 		Connection conn = DatabaseConnector.conStat();
-		stmt = conn.createStatement();
-		resultSet = stmt.executeQuery(
-				"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id");
+		try {
+			stmt = conn.createStatement();
+			resultSet = stmt.executeQuery(
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id");
 
-		while (resultSet.next()) {
-			Pesma pesma = new Pesma();
+			while (resultSet.next()) {
+				Pesma pesma = new Pesma();
 
-			pesma.setId(resultSet.getLong(1));
-			pesma.setNaziv(resultSet.getString(2));
-			pesma.setIzvodjacIme(resultSet.getString(3));
-			pesma.setZanrIme(resultSet.getString(4));
-			pesma.setCenaKolicina(resultSet.getLong(5));
+				pesma.setId(resultSet.getLong(1));
+				pesma.setNaziv(resultSet.getString(2));
+				pesma.setIzvodjacIme(resultSet.getString(3));
+				pesma.setZanrIme(resultSet.getString(4));
+				pesma.setCenaKolicina(resultSet.getLong(5));
 
-			pesme.add(pesma);
+				pesme.add(pesma);
+			}
+
+			return pesme;
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-
-		return pesme;
+		return null;
 
 	}
 
@@ -45,6 +50,7 @@ public class DAOPesma {
 
 		Connection conn = DatabaseConnector.conStat();
 
+		// try {
 		prepStmt = conn.prepareStatement(
 				"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where i.izvodjaci_id= ?");
 		prepStmt.setLong(1, izvodjacId);
@@ -63,6 +69,10 @@ public class DAOPesma {
 		}
 
 		return pesme;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 
 	}
 
@@ -71,6 +81,7 @@ public class DAOPesma {
 
 		Connection conn = DatabaseConnector.conStat();
 
+		// try {
 		prepStmt = conn.prepareStatement(
 				"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where z.zanrovi_id= ?");
 		prepStmt.setLong(1, zanrId);
@@ -89,14 +100,19 @@ public class DAOPesma {
 		}
 
 		return pesme;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 
 	}
-	
+
 	public List<Pesma> getPesmePoCeni(Long cenaId) throws ClassNotFoundException, SQLException {
 		List<Pesma> pesme = new ArrayList<>();
 
 		Connection conn = DatabaseConnector.conStat();
 
+		// try {
 		prepStmt = conn.prepareStatement(
 				"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where c.cene_id= ?");
 		prepStmt.setLong(1, cenaId);
@@ -115,34 +131,47 @@ public class DAOPesma {
 		}
 
 		return pesme;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 
 	}
 
-	public Pesma getPesma(Long pesmaId) throws ClassNotFoundException, SQLException {
+	public Pesma getPesma(Long pesmaId) throws ClassNotFoundException {
 
 		Connection conn = DatabaseConnector.conStat();
 		Pesma pesma = new Pesma();
 
-		prepStmt = conn.prepareStatement(
-				"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where p.pesme_id= ?");
-		prepStmt.setLong(1, pesmaId);
-		resultSet = prepStmt.executeQuery();
+		try {
+			prepStmt = conn.prepareStatement(
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where p.pesme_id= ?");
+			prepStmt.setLong(1, pesmaId);
+			resultSet = prepStmt.executeQuery();
 
-		while (resultSet.next()) {
-			pesma.setId(resultSet.getLong(1));
-			pesma.setNaziv(resultSet.getString(2));
-			pesma.setIzvodjacIme(resultSet.getString(3));
-			pesma.setZanrIme(resultSet.getString(4));
-			pesma.setCenaKolicina(resultSet.getLong(5));
+			while (resultSet.next()) {
+				pesma.setId(resultSet.getLong(1));
+				pesma.setNaziv(resultSet.getString(2));
+				pesma.setIzvodjacIme(resultSet.getString(3));
+				pesma.setZanrIme(resultSet.getString(4));
+				pesma.setCenaKolicina(resultSet.getLong(5));
+				return pesma;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
+		return null;
 
-		return pesma;
 	}
 
-	public Pesma insertPesma(Long izvodjacId, Long zanrId, Long cenaId, Pesma pesma) throws ClassNotFoundException, SQLException {
+	public Pesma insertPesma(Long izvodjacId, Long zanrId, Long cenaId, Pesma pesma)
+			throws ClassNotFoundException, SQLException {
 
 		Connection conn = DatabaseConnector.conStat();
-		prepStmt = conn.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, zanr_id, cena_id) values(?,?,?,?)");
+		// try {
+		prepStmt = conn
+				.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, zanr_id, cena_id) values(?,?,?,?)");
 		prepStmt.setString(1, pesma.getNaziv());
 		prepStmt.setLong(2, izvodjacId);
 		prepStmt.setLong(3, zanrId);
@@ -150,27 +179,43 @@ public class DAOPesma {
 		prepStmt.executeUpdate();
 
 		return pesma;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
+
 	}
 
 	public Pesma updatePesma(Pesma pesma) throws ClassNotFoundException, SQLException {
 
 		Connection conn = DatabaseConnector.conStat();
 
+		// try {
 		prepStmt = conn.prepareStatement("update pesme set pesme_naziv= ? where pesme_id= ?");
 		prepStmt.setString(1, pesma.getNaziv());
 		prepStmt.setLong(2, pesma.getId());
 		prepStmt.executeUpdate();
 
 		return pesma;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
+
 	}
 
-	public void removePesma(Long pesmaId) throws SQLException, ClassNotFoundException {
+	public void removePesma(Long pesmaId) throws ClassNotFoundException, SQLException {
 
 		Connection conn = DatabaseConnector.conStat();
 
+		// try {
 		prepStmt = conn.prepareStatement("delete from pesme where pesme_id= ?");
 		prepStmt.setLong(1, pesmaId);
 		prepStmt.executeUpdate();
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+
 	}
 
 }
