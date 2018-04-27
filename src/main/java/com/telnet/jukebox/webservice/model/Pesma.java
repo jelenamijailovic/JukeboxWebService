@@ -8,7 +8,7 @@ public class Pesma {
 	private String zanrIme;
 	private long cenaKolicina;
 
-//	private Map<Long, Promet> prometi = new HashMap<>();
+	// private Map<Long, Promet> prometi = new HashMap<>();
 
 	public Pesma() {
 
@@ -36,14 +36,14 @@ public class Pesma {
 		this.naziv = naziv;
 	}
 
-//	@XmlTransient
-//	public Map<Long, Promet> getPrometi() {
-//		return prometi;
-//	}
-//
-//	public void setPrometi(Map<Long, Promet> prometi) {
-//		this.prometi = prometi;
-//	}
+	// @XmlTransient
+	// public Map<Long, Promet> getPrometi() {
+	// return prometi;
+	// }
+	//
+	// public void setPrometi(Map<Long, Promet> prometi) {
+	// this.prometi = prometi;
+	// }
 
 	public String getIzvodjacIme() {
 		return izvodjacIme;
@@ -60,7 +60,7 @@ public class Pesma {
 	public void setZanrIme(String zanrIme) {
 		this.zanrIme = zanrIme;
 	}
-	
+
 	public long getCenaKolicina() {
 		return cenaKolicina;
 	}

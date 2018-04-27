@@ -1,0 +1,4 @@
+2018-04-27 11:38:48 WARN  ZanrResource:53 - Ne postoje uneti izvodjaci
+2018-04-27 11:39:58 WARN  ZanrResource:172 - Ne postoje pesme za izvodjaca sa id-om 50
+2018-04-27 12:15:41 ERROR ZanrResource:107 - Greska pri unosu izvodjaca:
+Column 'izvodjaci_ime' cannot be null

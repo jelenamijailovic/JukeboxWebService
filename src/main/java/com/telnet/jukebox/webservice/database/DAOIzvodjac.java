@@ -15,8 +15,9 @@ public class DAOIzvodjac {
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
 
-	public List<Izvodjac> getIzvodjaci() throws SQLException, ClassNotFoundException {
+	public List<Izvodjac> getIzvodjaci() throws ClassNotFoundException, SQLException {
 		List<Izvodjac> izvodjaci = new ArrayList<>();
+		// try {
 		stmt = DatabaseConnector.conStat().createStatement();
 		resultSet = stmt.executeQuery("select * from izvodjaci");
 
@@ -28,45 +29,68 @@ public class DAOIzvodjac {
 		}
 
 		return izvodjaci;
-
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 	}
 
-	public Izvodjac getIzvodjac(Long izvodjacId) throws SQLException, ClassNotFoundException {
+	public Izvodjac getIzvodjac(Long izvodjacId) throws ClassNotFoundException {
 		Izvodjac izvodjac = new Izvodjac();
 
-		prepStmt = DatabaseConnector.conStat().prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
-		prepStmt.setLong(1, izvodjacId);
-		resultSet = prepStmt.executeQuery();
+		try {
+			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
+			prepStmt.setLong(1, izvodjacId);
+			resultSet = prepStmt.executeQuery();
 
-		while (resultSet.next()) {
-			izvodjac.setId(resultSet.getLong(1));
-			izvodjac.setIme(resultSet.getString(2));
+			while (resultSet.next()) {
+				izvodjac.setId(resultSet.getLong(1));
+				izvodjac.setIme(resultSet.getString(2));
+				return izvodjac;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-
-		return izvodjac;
+		return null;
 
 	}
 
-	public Izvodjac insertIzvodjac(Izvodjac izvodjac) throws SQLException, ClassNotFoundException {
+	public Izvodjac insertIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException, SQLException {
+		// try {
 		prepStmt = DatabaseConnector.conStat().prepareStatement("insert into izvodjaci (izvodjaci_ime) values (?)");
 		prepStmt.setString(1, izvodjac.getIme());
 		prepStmt.executeUpdate();
 		return izvodjac;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 	}
 
-	public Izvodjac updateIzvodjac(Izvodjac izvodjac) throws SQLException, ClassNotFoundException {
+	public Izvodjac updateIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException, SQLException {
+		// try {
 		prepStmt = DatabaseConnector.conStat()
 				.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
 		prepStmt.setString(1, izvodjac.getIme());
 		prepStmt.setLong(2, izvodjac.getId());
 		prepStmt.executeUpdate();
 		return izvodjac;
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return null;
 	}
 
-	public void removeIzvodjac(long izvodjacId) throws SQLException, ClassNotFoundException {
+	public void removeIzvodjac(long izvodjacId) throws ClassNotFoundException, SQLException {
+		// try {
 		prepStmt = DatabaseConnector.conStat().prepareStatement("delete from izvodjaci where izvodjaci_id= ?");
 		prepStmt.setLong(1, izvodjacId);
 		prepStmt.executeUpdate();
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+
 	}
 
 }

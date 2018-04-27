@@ -1,17 +1,9 @@
 package com.telnet.jukebox.webservice.model;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
-
-@XmlRootElement
 public class Zanr {
 
 	private long id;
 	private String naziv;
-	private Map<Long, Pesma> pesme = new HashMap<>();
 
 	public Zanr() {
 	}
@@ -22,14 +14,14 @@ public class Zanr {
 		this.naziv = naziv;
 	}
 
-	@XmlTransient
-	public Map<Long, Pesma> getPesme() {
-		return pesme;
-	}
-
-	public void setPesme(Map<Long, Pesma> pesme) {
-		this.pesme = pesme;
-	}
+	// @XmlTransient
+	// public Map<Long, Pesma> getPesme() {
+	// return pesme;
+	// }
+	//
+	// public void setPesme(Map<Long, Pesma> pesme) {
+	// this.pesme = pesme;
+	// }
 
 	public long getId() {
 		return id;
