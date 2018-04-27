@@ -114,7 +114,7 @@ public class ZanrResource {
 		Zanr z = null;
 
 		try {
-			if (zanrService.getZanr(zanrId) == null) {
+			if (zanrService.getZanr(zanrId) == null || zanrService.getZanr(zanrId).getNaziv()==null) {
 				logger.warn("Zanr sa id-om " + zanrId + " ne moze biti modifikovan jer ne postoji");
 			} else {
 				z = zanrService.updateZanr(zanr);
@@ -130,7 +130,7 @@ public class ZanrResource {
 	@Path("/{zanrId}")
 	public void deleteZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
 		logger.info("Brisanje zanra.");
-
+		
 		try {
 			if (zanrService.getZanr(zanrId) == null) {
 				logger.warn("Zanr sa id-om " + zanrId + " ne moze biti obrisan jer ne postoji.");

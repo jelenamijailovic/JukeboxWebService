@@ -169,3 +169,143 @@ Column 'izvodjaci_ime' cannot be null
 2018-04-27 12:47:55 INFO  ZanrResource:58 - Pesme su uspesno prikazane
 2018-04-27 12:48:05 INFO  ZanrResource:41 - Prikaz svih pesama
 2018-04-27 12:48:05 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:48:41 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:48:41 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:49:21 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:49:21 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:49:51 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:49:51 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:50:01 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:50:01 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:52:23 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:52:23 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:52:38 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:52:38 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:52:52 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:52:52 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:52:59 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:52:59 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:53:15 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:53:15 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:53:21 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:53:21 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:59:33 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:59:34 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 12:59:36 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 12:59:36 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:01:41 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:01:41 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:02:33 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:02:33 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:03:12 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:03:12 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:03:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:03:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:06:14 INFO  ZanrResource:39 - Prikaz svih zanrova
+2018-04-27 13:06:14 INFO  ZanrResource:56 - Zanrovi su uspesno prikazani.
+2018-04-27 13:06:41 INFO  ZanrResource:112 - Modifikovanje zanra.
+2018-04-27 13:06:41 WARN  ZanrResource:118 - Zanr sa id-om 19 ne moze biti modifikovan jer ne postoji
+2018-04-27 13:06:48 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:06:48 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:06:56 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:06:56 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:07:15 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:07:15 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:07:21 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:07:21 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:07:30 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:07:30 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:08:53 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:08:53 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:27 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:27 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:27 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:27 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:51 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:51 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:09:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:09:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:10:01 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:10:01 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:10:19 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:10:19 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:10:22 INFO  ZanrResource:95 - Unosenje zanra.
+2018-04-27 13:10:22 INFO  ZanrResource:103 - Zanr je uspesno unet.
+2018-04-27 13:10:26 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:10:26 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:10:31 INFO  ZanrResource:39 - Prikaz svih zanrova
+2018-04-27 13:10:31 INFO  ZanrResource:56 - Zanrovi su uspesno prikazani.
+2018-04-27 13:13:28 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:13:28 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:13:46 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:13:46 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:14:24 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:14:24 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:17:45 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:17:45 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:18:01 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:18:01 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:18:17 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:18:17 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:33 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:33 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:35 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:35 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:44 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:44 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:47 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:47 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:54 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:54 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:19:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:19:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:21:24 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:21:24 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:21:25 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:21:25 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:21:29 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:21:29 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:21:31 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:21:31 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:32:09 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:32:09 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:33:31 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:33:31 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:34:00 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:34:00 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:34:29 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:34:29 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:34:46 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:34:46 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:34:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:34:58 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:35:19 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:35:19 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:35:54 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:35:54 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:35:55 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:35:55 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:35:59 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:35:59 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:36:00 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:36:00 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:37:12 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:37:12 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:50:44 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:50:44 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 13:54:34 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 13:54:34 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 14:04:29 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 14:04:29 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 14:20:42 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 14:20:42 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 14:25:10 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 14:25:10 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-04-27 14:25:53 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-04-27 14:25:53 INFO  ZanrResource:58 - Pesme su uspesno prikazane
