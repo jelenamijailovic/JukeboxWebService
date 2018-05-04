@@ -1,4 +1,70 @@
-2018-04-27 11:38:48 WARN  ZanrResource:53 - Ne postoje uneti izvodjaci
-2018-04-27 11:39:58 WARN  ZanrResource:172 - Ne postoje pesme za izvodjaca sa id-om 50
-2018-04-27 12:15:41 ERROR ZanrResource:107 - Greska pri unosu izvodjaca:
-Column 'izvodjaci_ime' cannot be null
+2018-05-03 10:30:43 WARN  ZanrResource:77 - Ne postoji pesma sa id-om 1
+2018-05-03 10:31:24 WARN  ZanrResource:77 - Ne postoji pesma sa id-om 1
+2018-05-03 10:33:30 WARN  ZanrResource:77 - Ne postoji pesma sa id-om 1
+2018-05-03 10:38:09 WARN  ZanrResource:121 - Pesma sa id-om 90 ne moze biti modifikovana jer ne postoji
+2018-05-03 10:38:42 WARN  ZanrResource:140 - Pesma sa id-om 180 ne moze biti obrisana jer ne postoji
+2018-05-03 10:52:27 WARN  ZanrResource:73 - Ne postoji promet sa id-om 100
+2018-05-03 10:53:47 WARN  ZanrResource:73 - Ne postoji promet sa id-om 10
+2018-05-03 10:54:41 WARN  ZanrResource:116 - Promet sa id-om 60 ne moze biti modifikovan jer ne postoji
+2018-05-03 10:55:27 WARN  ZanrResource:136 - Promet sa id-om 60 ne moze biti obrisan jer ne postoji
+2018-05-03 11:39:28 WARN  ZanrResource:77 - Ne postoji zanr sa id-om 150
+2018-05-03 11:39:32 WARN  ZanrResource:77 - Ne postoji zanr sa id-om 150
+2018-05-03 11:40:30 WARN  ZanrResource:77 - Ne postoji zanr sa id-om 150
+2018-05-03 11:42:38 ERROR ZanrResource:86 - Greska pri prikazu zanra sa id-om 150:
+null
+2018-05-03 11:43:33 ERROR ZanrResource:86 - Greska pri prikazu zanra sa id-om 150:
+null
+2018-05-03 11:44:15 WARN  ZanrResource:77 - Ne postoji zanr sa id-om 150
+2018-05-03 11:53:20 ERROR ZanrResource:86 - Greska pri prikazu zanra sa id-om 150:
+null
+2018-05-03 12:07:25 WARN  ZanrResource:78 - Ne postoji zanr sa id-om 150
+2018-05-03 12:08:56 WARN  ZanrResource:76 - Ne postoji zanr sa id-om 150
+2018-05-03 12:24:05 ERROR ZanrResource:76 - Ne postoji zanr sa id-om 150
+2018-05-03 13:41:50 ERROR ZanrResource:79 - Ne postoji zanr sa id-om 150
+2018-05-03 13:46:32 ERROR ZanrResource:79 - Ne postoji zanr sa id-om 150
+2018-05-03 13:47:08 ERROR ZanrResource:79 - Ne postoji zanr sa id-om 150
+2018-05-03 14:00:46 ERROR ZanrResource:73 - Ne postoji zanr sa id-om 150
+2018-05-03 14:01:04 WARN  ZanrResource:110 - Zanr sa id-om 150 ne moze biti modifikovan jer ne postoji
+2018-05-03 14:05:53 WARN  ZanrResource:130 - Zanr sa id-om 150 ne moze biti obrisan jer ne postoji
+2018-05-03 14:19:56 WARN  ZanrResource:110 - Zanr sa id-om 500 ne moze biti modifikovan jer ne postoji
+2018-05-03 14:20:24 WARN  ZanrResource:130 - Zanr sa id-om 500 ne moze biti obrisan jer ne postoji
+2018-05-03 14:22:31 ERROR ZanrResource:109 - Zanr sa id-om 500 ne moze biti modifikovan jer ne postoji
+2018-05-03 14:22:50 ERROR ZanrResource:126 - Zanr sa id-om 500 ne moze biti obrisan jer ne postoji
+2018-05-03 14:36:47 ERROR ZanrResource:71 - Ne postoji zanr sa id-om 500
+2018-05-03 14:37:32 ERROR ZanrResource:71 - Ne postoji zanr sa id-om 500
+2018-05-03 14:40:44 ERROR ZanrResource:71 - Ne postoji zanr sa id-om 500
+2018-05-03 14:50:55 ERROR ZanrResource:71 - Ne postoji zanr sa id-om 500
+2018-05-03 14:54:21 ERROR ZanrResource:73 - Ne postoji izvodjac sa id-om 500
+2018-05-03 14:57:45 ERROR ZanrResource:73 - Ne postoji izvodjac sa id-om 500
+2018-05-03 14:58:53 ERROR ZanrResource:73 - Ne postoji izvodjac sa id-om 500
+2018-05-03 15:00:13 ERROR ZanrResource:127 - Izvodjac sa id-om 900 ne moze biti obrisan jer ne postoji
+2018-05-03 15:00:36 ERROR ZanrResource:110 - Izvodjac sa id-om 900 ne moze biti modifikovan jer ne postoji
+2018-05-03 15:19:01 ERROR CenaResource:72 - Ne postoji cena sa id-om 900
+2018-05-03 15:20:45 ERROR CenaResource:108 - Cena sa id-om 80 ne moze biti modifikovana jer ne postoji
+2018-05-03 15:24:36 ERROR CenaResource:125 - Cena sa id-om 80 ne moze biti obrisana jer ne postoji
+2018-05-04 09:10:11 ERROR ZanrResource:73 - Ne postoji pesma sa id-om 100
+2018-05-04 09:11:55 ERROR ZanrResource:111 - Pesma sa id-om 180 ne moze biti modifikovana jer ne postoji
+2018-05-04 09:12:22 ERROR ZanrResource:128 - Pesma sa id-om 180 ne moze biti obrisana jer ne postoji
+2018-05-04 09:44:21 ERROR ZanrResource:70 - Ne postoji promet sa id-om 100
+2018-05-04 09:54:35 ERROR ZanrResource:109 - Zanr sa id-om 400 ne moze biti modifikovan jer ne postoji
+2018-05-04 10:05:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:05:05 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:05:39 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:08:04 ERROR ZanrResource:69 - Ne postoji promet sa id-om 1
+2018-05-04 10:10:28 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:10:32 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:11:45 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:11:46 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:12:58 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:12:59 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:12:59 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:00 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:01 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:01 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:02 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:13:17 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
+2018-05-04 10:14:17 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9

@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.resources;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -36,72 +35,58 @@ public class PesmaResource {
 
 	@SuppressWarnings("unused")
 	@GET
-	public Response getSvePesme() throws ClassNotFoundException, SQLException {
-
+	public Response getSvePesme() throws ClassNotFoundException {
 		logger.info("Prikaz svih pesama");
 
 		List<Pesma> pesme = pesmaService.getSvePesme();
 		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
 		};
-		Response r = null;
 
-		try {
-			if (list == null) {
+		Response r;
 
-				r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoje unete pesme");
-
-			} else {
-				r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Pesme su uspesno prikazane");
-
-			}
-		} catch (Exception e) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu pesama:\n" + e.getMessage());
-
+			logger.error("Ne postoje unete pesme");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Pesme su uspesno prikazane");
 		}
-		return r;
 
+		return r;
 	}
 
 	@GET
 	@Path("/{pesmaId}")
-	public Response getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
-
+	public Response getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz pesme sa id-om " + pesmaId);
 
-		Response r = null;
+		Pesma p = pesmaService.getPesma(pesmaId);
 
-		try {
-			if (pesmaService.getPesma(pesmaId) == null) {
-				r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoji pesma sa id-om " + pesmaId);
-			} else {
-				r = Response.ok(pesmaService.getPesma(pesmaId)).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Uspesno prikazana pesma sa id-om " + pesmaId);
-			}
-		} catch (Exception e) {
+		Response r;
+
+		if (p.getId() == 0) {
 			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
-					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu pesme:\n" + pesmaId);
+					.entity("Ne postoji pesma sa id-om " + pesmaId).header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.error("Ne postoji pesma sa id-om " + pesmaId);
+		} else {
+			r = Response.ok(p).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.info("Uspesno prikazana pesma sa id-om " + pesmaId);
 		}
+
 		return r;
 	}
 
 	@POST
 	@Path("/{zanrId}/{izvodjacId}/{cenaId}")
 	public Pesma addPesma(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId,
-			@PathParam("cenaId") Long cenaId, Pesma pesma) throws ClassNotFoundException, SQLException {
-
+			@PathParam("cenaId") Long cenaId, Pesma pesma) throws ClassNotFoundException {
 		logger.info("Unosenje pesme");
 
-		Pesma p = null;
+		Pesma p = new Pesma();
 
 		try {
 			p = pesmaService.addPesma(izvodjacId, zanrId, cenaId, pesma);
@@ -109,79 +94,69 @@ public class PesmaResource {
 		} catch (Exception e) {
 			logger.error("Greska pri unosu pesme:\n" + e.getMessage());
 		}
+
 		return p;
 	}
 
 	@PUT
 	@Path("/{pesmaId}")
-	public Pesma updatePesma(@PathParam("pesmaId") Long pesmaId, Pesma pesma)
-			throws ClassNotFoundException, SQLException {
-
+	public Pesma updatePesma(@PathParam("pesmaId") Long pesmaId, Pesma pesma) throws ClassNotFoundException {
 		pesma.setId(pesmaId);
 
 		logger.info("Modifikovanje pesme sa id-om " + pesmaId);
 
-		Pesma p = null;
+		Pesma p = pesmaService.getPesma(pesmaId);
 
-		try {
-			if (pesmaService.getPesma(pesmaId) == null) {
-				logger.warn("Pesma sa id-om " + pesmaId + " ne moze biti modifikovana jer ne postoji");
-			} else {
-				p = pesmaService.updatePesma(pesma);
-				logger.info("Pesma je uspesno modifikovana");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri modifikaciji pesme:\n" + e.getMessage());
+		if (p.getId() == 0) {
+			logger.error("Pesma sa id-om " + pesmaId + " ne moze biti modifikovana jer ne postoji");
+		} else {
+			p = pesmaService.updatePesma(pesma);
+			logger.info("Pesma sa id-om " + pesmaId + " je uspesno modifikovana");
 		}
+
 		return p;
 	}
 
 	@DELETE
 	@Path("/{pesmaId}")
-	public void deletePesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException, SQLException {
-
+	public void deletePesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Brisanje pesme sa id-om " + pesmaId);
 
-		try {
-			if (pesmaService.getPesma(pesmaId) == null) {
-				logger.warn("Pesma sa id-om " + pesmaId + " ne moze biti obrisana jer ne postoji");
-			} else {
-				pesmaService.deletePesma(pesmaId);
-				logger.info("Pesma je uspesno obrisan");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri brisanju pesme:\n" + e.getMessage());
+		Pesma p = pesmaService.getPesma(pesmaId);
+
+		if (p.getId() == 0) {
+			logger.error("Pesma sa id-om " + pesmaId + " ne moze biti obrisana jer ne postoji");
+		} else {
+			pesmaService.deletePesma(pesmaId);
+			logger.info("Pesma sa id-om " + pesmaId + " je uspesno obrisana");
 		}
+
 	}
 
 	@GET
 	@Path("/{pesmaId}/prometi")
-	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") Long pesmaId)
-			throws ClassNotFoundException, SQLException {
-
+	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa za pesmu sa id-om " + pesmaId);
 
 		List<Promet> prometi = prometService.getSviPrometiPoPesmi(pesmaId);
 		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
 		};
 
-		Response r = null;
+		Pesma p = pesmaService.getPesma(pesmaId);
 
-		try {
-			if (pesmaService.getPesma(pesmaId) == null) {
-				r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoje prometi za pesmu sa id-om " + pesmaId);
-			} else {
-				r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Uspesan prikaz prometa za pesmu sa id-om " + pesmaId);
-			}
-		} catch (Exception e) {
+		Response r;
+
+		if (p.getId() == 0) {
 			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Ne postoje prometi za pesmu sa id-om " + pesmaId)
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu prometa za pesmu sa id-om " + pesmaId + ":\n" + e.getMessage());
+			logger.error("Ne postoje prometi za pesmu sa id-om " + pesmaId);
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Uspesan prikaz prometa za pesmu sa id-om " + pesmaId);
 		}
+
 		return r;
 	}
 

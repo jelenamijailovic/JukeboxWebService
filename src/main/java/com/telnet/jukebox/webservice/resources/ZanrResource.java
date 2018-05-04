@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.resources;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -34,113 +33,102 @@ public class ZanrResource {
 
 	@SuppressWarnings("unused")
 	@GET
-	public Response getZanrovi() throws ClassNotFoundException, SQLException {
-		// return zanrService.getZanrovi();
+	public Response getZanrovi() throws ClassNotFoundException {
 		logger.info("Prikaz svih zanrova");
 
 		List<Zanr> zanrovi = zanrService.getZanrovi();
 		GenericEntity<List<Zanr>> list = new GenericEntity<List<Zanr>>(zanrovi) {
 		};
-		// GenericEntity<List<Zanr>> list = null;z
 
-		try {
-			if (list == null) {
+		Response r;
 
-				Response r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoje uneti zanrovi.");
-				return r;
-			} else {
-				Response r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Zanrovi su uspesno prikazani.");
-				return r;
-			}
-		} catch (Exception e) {
-			Response r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Ne postoje uneti zanrovi")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu zanra:\n" + e.getMessage());
-			return r;
+			logger.error("Ne postoje uneti zanrovi");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Zanrovi su uspesno prikazani");
 		}
 
+		return r;
 	}
 
 	@GET
 	@Path("/{zanrId}")
-	public Response getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
-		// return zanrService.getZanr(zanrId);
+	public Response getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz zanra sa id-om " + zanrId);
-		try {
-			if (zanrService.getZanr(zanrId) == null) {
-				Response r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoji zanr sa id-om " + zanrId);
-				return r;
-			} else {
-				Response r = Response.ok(zanrService.getZanr(zanrId)).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Uspesno prikazan zanr sa id-om " + zanrId);
-				return r;
-			}
-		} catch (Exception e) {
-			Response r = Response.status(404).header("Access-Control-Allow-Origin", "*")
-					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu zanra:\n" + e.getMessage());
-			return r;
+
+		Zanr z = zanrService.getZanr(zanrId);
+
+		Response r;
+
+		if (z.getId() == 0) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Ne postoji zanr sa id-om " + zanrId).header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.error("Ne postoji zanr sa id-om " + zanrId);
+		} else {
+			r = Response.ok(z).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.info("Uspesno prikazan zanr sa id-om " + zanrId);
 		}
+
+		return r;
 	}
 
 	@POST
-	public Zanr addZanr(Zanr zanr) throws ClassNotFoundException, SQLException {
-		logger.info("Unosenje zanra.");
+	public Zanr addZanr(Zanr zanr) throws ClassNotFoundException {
+		logger.info("Unosenje zanra");
 
-		Zanr z = null;
+		Zanr z = new Zanr();
 
 		try {
 			z = zanrService.addZanr(zanr);
-			logger.info("Zanr je uspesno unet.");
+			logger.info("Zanr je uspesno unet");
 		} catch (Exception e) {
 			logger.error("Greska pri unosu zanra:\n" + e.getMessage());
 		}
+
 		return z;
 	}
 
 	@PUT
 	@Path("/{zanrId}")
-	public Zanr updateZanr(@PathParam("zanrId") Long zanrId, Zanr zanr) throws ClassNotFoundException, SQLException {
+	public Zanr updateZanr(@PathParam("zanrId") Long zanrId, Zanr zanr) throws ClassNotFoundException {
 		zanr.setId(zanrId);
-		logger.info("Modifikovanje zanra.");
 
-		Zanr z = null;
+		logger.info("Modifikovanje zanra sa id-om " + zanrId);
 
-		try {
-			if (zanrService.getZanr(zanrId) == null) {
-				logger.warn("Zanr sa id-om " + zanrId + " ne moze biti modifikovan jer ne postoji");
-			} else {
-				z = zanrService.updateZanr(zanr);
-				logger.info("Zanr je uspesno modifikovan.");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri modifikaciji zanra:\n" + e.getMessage());
+		Zanr z = zanrService.getZanr(zanrId);
+
+		if (z.getId() == 0) {
+//			 || z.getNaziv() == null
+			logger.error("Zanr sa id-om " + zanrId + " ne moze biti modifikovan jer ne postoji");
+		} else {
+			z = zanrService.updateZanr(zanr);
+			logger.info("Zanr sa id-om " + zanrId + " je uspesno modifikovan");
 		}
+
 		return z;
 	}
 
 	@DELETE
 	@Path("/{zanrId}")
-	public void deleteZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
-		logger.info("Brisanje zanra.");
+	public void deleteZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
+		logger.info("Brisanje zanra sa id-om " + zanrId);
 
-		try {
-			if (zanrService.getZanr(zanrId) == null) {
-				logger.warn("Zanr sa id-om " + zanrId + " ne moze biti obrisan jer ne postoji.");
-			} else {
-				zanrService.removeZanr(zanrId);
-				logger.info("Zanr je uspesno obrisan.");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri brisanju zanra:\n" + e.getMessage());
+		Zanr z = zanrService.getZanr(zanrId);
+
+		if (z.getId() == 0) {
+			logger.error("Zanr sa id-om " + zanrId + " ne moze biti obrisan jer ne postoji");
+		} else {
+			zanrService.removeZanr(zanrId);
+			logger.info("Zanr sa id-om " + zanrId + " je uspesno obrisan");
 		}
+
 	}
 
 	// @Path("/{zanrId}/pesme")
@@ -150,33 +138,30 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}/pesme")
-	public Response getSvePesmePoZanru(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException, SQLException {
-		// return pesmaService.getSvePesmePoZanru(zanrId);
-
+	public Response getSvePesmePoZanru(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za zanr sa id-om " + zanrId);
 
 		List<Pesma> pesme = pesmaService.getSvePesmePoZanru(zanrId);
 		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
 		};
 
-		try {
-			if (zanrService.getZanr(zanrId) == null) {
-				Response r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoje pesme za zanr sa id-om: " + zanrId);
-				return r;
-			} else {
-				Response r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Uspesan prikaz pesama za zanr sa id-om: " + zanrId);
-				return r;
-			}
-		} catch (Exception e) {
-			Response r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+		Zanr z = zanrService.getZanr(zanrId);
+
+		Response r;
+
+		if (z.getId() == 0) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Ne postoje pesme za zanr sa id-om").header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.error("Ne postoje pesme za zanr sa id-om " + zanrId);
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu pesama za zanr sa id-om" + zanrId + ":\n" + e.getMessage());
-			return r;
+			logger.info("Uspesan prikaz pesama za zanr sa id-om " + zanrId);
+
 		}
+
+		return r;
 	}
 
 }
