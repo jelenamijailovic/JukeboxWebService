@@ -1,6 +1,6 @@
 package com.telnet.jukebox.webservice.database;
 
-import java.sql.Connection;
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,105 +16,88 @@ public class DAOPromet {
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
 
-	public List<Promet> getSvePromete() throws ClassNotFoundException, SQLException {
+	public List<Promet> getSvePromete() throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<>();
 
-		Connection conn = DatabaseConnector.conStat();
-		// try {
-		stmt = conn.createStatement();
-		resultSet = stmt.executeQuery(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id");
-
-		while (resultSet.next()) {
-			Promet promet = new Promet();
-
-			promet.setId(resultSet.getLong(1));
-			promet.setDatum(resultSet.getDate(2));
-			promet.setPesmaNaziv(resultSet.getString(3));
-			promet.setCenaKolicina(resultSet.getLong(4));
-
-			prometi.add(promet);
+		try {
+			stmt = DatabaseConnector.conStat().createStatement();
+			resultSet = stmt.executeQuery(
+					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id");
+			while (resultSet.next()) {
+				Promet promet = new Promet();
+				promet.setId(resultSet.getLong(1));
+				promet.setDatum(resultSet.getDate(2));
+				promet.setPesmaNaziv(resultSet.getString(3));
+				promet.setCenaKolicina(resultSet.getLong(4));
+				prometi.add(promet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 
 		return prometi;
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-		// return null;
-
 	}
 
-	public List<Promet> getPrometePoCeni(Long cenaId) throws ClassNotFoundException, SQLException {
+	public List<Promet> getPrometePoCeni(Long cenaId) throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<>();
 
-		Connection conn = DatabaseConnector.conStat();
-
-		// try {
-		prepStmt = conn.prepareStatement(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where c.cene_id= ?");
-		prepStmt.setLong(1, cenaId);
-		resultSet = prepStmt.executeQuery();
-
-		while (resultSet.next()) {
-			Promet promet = new Promet();
-
-			promet.setId(resultSet.getLong(1));
-			promet.setDatum(resultSet.getDate(2));
-			promet.setPesmaNaziv(resultSet.getString(3));
-			promet.setCenaKolicina(resultSet.getLong(4));
-
-			prometi.add(promet);
+		try {
+			prepStmt = DatabaseConnector.conStat().prepareStatement(
+					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where c.cene_id= ?");
+			prepStmt.setLong(1, cenaId);
+			resultSet = prepStmt.executeQuery();
+			while (resultSet.next()) {
+				Promet promet = new Promet();
+				promet.setId(resultSet.getLong(1));
+				promet.setDatum(resultSet.getDate(2));
+				promet.setPesmaNaziv(resultSet.getString(3));
+				promet.setCenaKolicina(resultSet.getLong(4));
+				prometi.add(promet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 
 		return prometi;
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-		// return null;
-
 	}
 
-	public List<Promet> getPrometePoPesmi(Long pesmaId) throws ClassNotFoundException, SQLException {
+	public List<Promet> getPrometePoPesmi(Long pesmaId) throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<>();
 
-		Connection conn = DatabaseConnector.conStat();
-
-		// try {
-		prepStmt = conn.prepareStatement(
-				"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where pe.pesme_id= ?");
-		prepStmt.setLong(1, pesmaId);
-		resultSet = prepStmt.executeQuery();
-
-		while (resultSet.next()) {
-			Promet promet = new Promet();
-
-			promet.setId(resultSet.getLong(1));
-			promet.setDatum(resultSet.getDate(2));
-			promet.setPesmaNaziv(resultSet.getString(3));
-			promet.setCenaKolicina(resultSet.getLong(4));
-
-			prometi.add(promet);
+		try {
+			prepStmt = DatabaseConnector.conStat().prepareStatement(
+					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where pe.pesme_id= ?");
+			prepStmt.setLong(1, pesmaId);
+			resultSet = prepStmt.executeQuery();
+			while (resultSet.next()) {
+				Promet promet = new Promet();
+				promet.setId(resultSet.getLong(1));
+				promet.setDatum(resultSet.getDate(2));
+				promet.setPesmaNaziv(resultSet.getString(3));
+				promet.setCenaKolicina(resultSet.getLong(4));
+				prometi.add(promet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 
 		return prometi;
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-		// return null;
-
 	}
 
 	public Promet getPromet(Long prometId) throws ClassNotFoundException {
-
-		Connection conn = DatabaseConnector.conStat();
 		Promet promet = new Promet();
 
 		try {
-			prepStmt = conn.prepareStatement(
+			prepStmt = DatabaseConnector.conStat().prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where pr.prometi_id= ?");
 			prepStmt.setLong(1, prometId);
 			resultSet = prepStmt.executeQuery();
-
 			while (resultSet.next()) {
 				promet.setId(resultSet.getLong(1));
 				promet.setDatum(resultSet.getDate(2));
@@ -124,57 +107,56 @@ public class DAOPromet {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
-		return null;
-
-	}
-
-	public Promet insertPromet(Long pesmaId, Promet promet) throws ClassNotFoundException, SQLException {
-
-		Connection conn = DatabaseConnector.conStat();
-		// try {
-		prepStmt = conn.prepareStatement("insert into prometi (prometi_datum, pesma_id) values(?,?)");
-		prepStmt.setDate(1, promet.getDatum());
-		prepStmt.setLong(2, pesmaId);
-		prepStmt.executeUpdate();
 
 		return promet;
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-		// return null;
-
 	}
 
-	public Promet updatePromet(Promet promet) throws ClassNotFoundException, SQLException {
-
-		Connection conn = DatabaseConnector.conStat();
-
-		// try {
-		prepStmt = conn.prepareStatement("update prometi set prometi_datum= ? where prometi_id= ?");
-		prepStmt.setDate(1, promet.getDatum());
-		prepStmt.setLong(2, promet.getId());
-		prepStmt.executeUpdate();
+	public Promet insertPromet(Promet promet) throws ClassNotFoundException {
+		try {
+			prepStmt = DatabaseConnector.conStat()
+					.prepareStatement("insert into prometi (prometi_datum, pesma_id) values(?,?)");
+			prepStmt.setDate(1, promet.getDatum());
+			prepStmt.setLong(2, promet.getPesmaId());
+			prepStmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		return promet;
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-		// return null;
-
 	}
 
-	public void removePromet(Long prometId) throws ClassNotFoundException, SQLException {
+	public Promet updatePromet(Promet promet) throws ClassNotFoundException {
+		try {
+			prepStmt = DatabaseConnector.conStat()
+					.prepareStatement("update prometi set prometi_datum= ? where prometi_id= ?");
+			prepStmt.setDate(1, promet.getDatum());
+			prepStmt.setLong(2, promet.getId());
+			prepStmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-		Connection conn = DatabaseConnector.conStat();
-
-		// try {
-		prepStmt = conn.prepareStatement("delete from prometi where prometi_id= ?");
-		prepStmt.setLong(1, prometId);
-		prepStmt.executeUpdate();
-		// } catch (SQLException e) {
-		// e.printStackTrace();
-		// }
-
+		return promet;
 	}
+
+	public void removePromet(Long prometId) throws ClassNotFoundException {
+		try {
+			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from prometi where prometi_id= ?");
+			prepStmt.setLong(1, prometId);
+			prepStmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 }

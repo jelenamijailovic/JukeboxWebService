@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.telnet.jukebox.webservice.database.DAOPromet;
@@ -10,27 +9,37 @@ public class PrometService {
 
 	DAOPromet dao = new DAOPromet();
 
-	public List<Promet> getSviPrometi() throws ClassNotFoundException, SQLException {
+	public List<Promet> getSviPrometi() throws ClassNotFoundException {
 		return dao.getSvePromete();
 	}
 
-	public List<Promet> getSviPrometiPoPesmi(Long pesmaId) throws ClassNotFoundException, SQLException {
+	public List<Promet> getSviPrometiPoPesmi(Long pesmaId) throws ClassNotFoundException {
 		return dao.getPrometePoPesmi(pesmaId);
 	}
 
-	public Promet getPromet(Long prometId) throws ClassNotFoundException, SQLException {
+	public Promet getPromet(Long prometId) throws ClassNotFoundException {
 		return dao.getPromet(prometId);
 	}
 
-	public Promet addPromet(Long pesmaId, Promet promet) throws ClassNotFoundException, SQLException {
-		return dao.insertPromet(pesmaId, promet);
+	public Promet addPromet(Long pesmaId) throws ClassNotFoundException {
+		Promet promet= new Promet();
+		
+		promet.setPesmaId(pesmaId);
+		
+		java.util.Date datum = new java.util.Date();
+
+		java.sql.Date date = new java.sql.Date(datum.getTime());
+		
+		promet.setDatum(date);
+		
+		return dao.insertPromet(promet);
 	}
 
-	public Promet updatePromet(Promet promet) throws ClassNotFoundException, SQLException {
+	public Promet updatePromet(Promet promet) throws ClassNotFoundException {
 		return dao.updatePromet(promet);
 	}
 
-	public void deletePromet(Long prometId) throws ClassNotFoundException, SQLException {
+	public void deletePromet(Long prometId) throws ClassNotFoundException {
 		dao.removePromet(prometId);
 	}
 

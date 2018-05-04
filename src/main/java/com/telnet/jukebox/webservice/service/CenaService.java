@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import com.telnet.jukebox.webservice.database.DAOCena;
@@ -10,23 +9,23 @@ public class CenaService {
 
 	DAOCena dao = new DAOCena();
 
-	public List<Cena> getCene() throws ClassNotFoundException, SQLException {
+	public List<Cena> getCene() throws ClassNotFoundException {
 		return dao.getCene();
 	}
 
-	public Cena getCena(Long id) throws ClassNotFoundException, SQLException {
+	public Cena getCena(Long id) throws ClassNotFoundException {
 		return dao.getCena(id);
 	}
 
-	public Cena addCena(Cena cena) throws ClassNotFoundException, SQLException {
+	public Cena addCena(Cena cena) throws ClassNotFoundException {
 		return dao.insertCena(cena);
 	}
 
-	public Cena updateCena(Cena cena) throws ClassNotFoundException, SQLException {
+	public Cena updateCena(Cena cena) throws ClassNotFoundException {
 		return dao.updateCena(cena);
 	}
 
-	public void removeCena(Long id) throws ClassNotFoundException, SQLException {
+	public void removeCena(Long id) throws ClassNotFoundException {
 		dao.removeCena(id);
 	}
 

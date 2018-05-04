@@ -7,6 +7,15 @@ public class Promet {
 
 	private long id;
 	private Date datum;
+	private Long pesmaId;
+	public Long getPesmaId() {
+		return pesmaId;
+	}
+
+	public void setPesmaId(Long pesmaId) {
+		this.pesmaId = pesmaId;
+	}
+
 	private String pesmaNaziv;
 	private Long cenaKolicina;
 

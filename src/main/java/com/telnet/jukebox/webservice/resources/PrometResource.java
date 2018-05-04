@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.resources;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -32,122 +31,107 @@ public class PrometResource {
 
 	@SuppressWarnings("unused")
 	@GET
-	public Response getSviPrometiPo() throws ClassNotFoundException, SQLException {
-
+	public Response getSviPrometi() throws ClassNotFoundException {
 		logger.info("Prikaz svih prometa");
 
 		List<Promet> prometi = prometService.getSviPrometi();
 		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
 		};
 
-		Response r = null;
+		Response r;
 
-		try {
-			if (list == null) {
-
-				r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoje uneti prometi");
-
-			} else {
-				r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Prometi su uspesno prikazani");
-
-			}
-		} catch (Exception e) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti prometi")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu prometa:\n" + e.getMessage());
-
+			logger.error("Ne postoje uneti prometi");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Prometi su uspesno prikazani");
 		}
+
 		return r;
 	}
 
 	@GET
 	@Path("/{prometId}")
-	public Response getPromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException, SQLException {
-
+	public Response getPromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa sa id-om " + prometId);
 
-		Response r = null;
+		Promet p = prometService.getPromet(prometId);
 
-		try {
-			if (prometService.getPromet(prometId) == null) {
-				r = Response.noContent().header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.warn("Ne postoji promet sa id-om " + prometId);
-			} else {
-				r = Response.ok(prometService.getPromet(prometId)).header("Access-Control-Allow-Origin", "*")
-						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-				logger.info("Uspesno prikazan promet sa id-om " + prometId);
-			}
-		} catch (Exception e) {
+		Response r;
+
+		if (p.getId() == 0) {
 			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Ne postoji promet sa id-om " + prometId).header("Access-Control-Allow-Methods", "GET")
+					.allow("OPTIONS").build();
+			logger.error("Ne postoji promet sa id-om " + prometId);
+		} else {
+			r = Response.ok(prometService.getPromet(prometId)).header("Access-Control-Allow-Origin", "*")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-			logger.error("Greska pri prikazu prometa:\n" + prometId);
+			logger.info("Uspesno prikazan promet sa id-om " + prometId);
 		}
+
 		return r;
 	}
 
 	@POST
 	@Path("/{pesmaId}")
-	public Promet addPromet(@PathParam("pesmaId") Long pesmaId, Promet promet)
-			throws ClassNotFoundException, SQLException {
-
+	public Response addPromet(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Unosenje prometa");
 
-		Promet p = null;
+		Promet promet= prometService.addPromet(pesmaId);
+		
+		Response r;
 
 		try {
-			p = prometService.addPromet(pesmaId, promet);
+			r = Response.ok(promet).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 			logger.info("Promet je uspesno unet");
 		} catch (Exception e) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+					.entity("Greska pri unosu prometa:\n" + e.getMessage())
+					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 			logger.error("Greska pri unosu prometa:\n" + e.getMessage());
 		}
-		return p;
+
+		return r;
 	}
 
 	@PUT
 	@Path("/{prometId}")
 	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
-			throws ClassNotFoundException, SQLException {
-
+			throws ClassNotFoundException {
 		promet.setId(prometId);
 
 		logger.info("Modifikovanje prometa sa id-om " + prometId);
 
-		Promet p = null;
+		Promet p = prometService.getPromet(prometId);
 
-		try {
-			if (prometService.getPromet(prometId) == null) {
-				logger.warn("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
-			} else {
-				p = prometService.updatePromet(promet);
-				logger.info("Promet je uspesno modifikovan");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri modifikaciji prometa:\n" + e.getMessage());
+		if (p.getId() == 0) {
+			logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
+		} else {
+			p = prometService.updatePromet(promet);
+			logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
 		}
-		return p;
+
+		return promet;
 	}
 
 	@DELETE
 	@Path("/{prometId}")
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public void deletePromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException, SQLException {
-
+	public void deletePromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
 		logger.info("Brisanje prometa sa id-om " + prometId);
 
-		try {
-			if (prometService.getPromet(prometId) == null) {
-				logger.warn("Promet sa id-om " + prometId + " ne moze biti obrisan jer ne postoji");
-			} else {
-				prometService.deletePromet(prometId);
-				logger.info("Promet je uspesno obrisan");
-			}
-		} catch (Exception e) {
-			logger.error("Greska pri brisanju prometa:\n" + e.getMessage());
+		Promet p = prometService.getPromet(prometId);
+
+		if (p.getId() == 0) {
+			logger.error("Promet sa id-om " + prometId + " ne moze biti obrisan jer ne postoji");
+		} else {
+			prometService.deletePromet(prometId);
+			logger.info("Promet sa id-om " + prometId + " je uspesno obrisan");
 		}
 
 		// Podcast podcastById = podcastService.getPodcastById(id);
