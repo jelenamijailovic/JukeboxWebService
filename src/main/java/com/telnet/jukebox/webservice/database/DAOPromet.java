@@ -114,6 +114,54 @@ public class DAOPromet {
 		return promet;
 	}
 
+	public List<Promet> getTop5Songs() throws ClassNotFoundException {
+		List<Promet> prometi = new ArrayList<>();
+
+		try {
+			stmt = DatabaseConnector.conStat().createStatement();
+			resultSet = stmt.executeQuery(
+					"select pe.pesme_naziv, count(pr.pesma_id) as repetition from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id group by pe.pesme_naziv order by repetition desc limit 5;");
+			Long i = (long) 1;
+			while (resultSet.next()) {
+				Promet promet = new Promet();
+				promet.setId(i++);
+				promet.setPesmaNaziv(resultSet.getString(1));
+				promet.setRepetition(resultSet.getLong(2));
+				prometi.add(promet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prometi;
+	}
+	
+	public List<Promet> getTop5Artists() throws ClassNotFoundException {
+		List<Promet> prometi = new ArrayList<>();
+
+		try {
+			stmt = DatabaseConnector.conStat().createStatement();
+			resultSet = stmt.executeQuery(
+					"select i.izvodjaci_ime, count(pr.pesma_id) as repetition from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join izvodjaci i on pe.izvodjac_id= i.izvodjaci_id group by pe.izvodjac_id order by repetition desc limit 5;");
+			Long i = (long) 1;
+			while (resultSet.next()) {
+				Promet promet = new Promet();
+				promet.setId(i++);
+				promet.setIzvodjacIme(resultSet.getString(1));
+				promet.setRepetition(resultSet.getLong(2));
+				prometi.add(promet);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return prometi;
+	}
+
 	public Promet insertPromet(Promet promet) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat()
@@ -121,7 +169,10 @@ public class DAOPromet {
 			prepStmt.setDate(1, promet.getDatum());
 			prepStmt.setLong(2, promet.getPesmaId());
 			prepStmt.executeUpdate();
-			
+			resultSet = prepStmt.getGeneratedKeys();
+			if (resultSet.next()) {
+				promet.setId(resultSet.getLong(1));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

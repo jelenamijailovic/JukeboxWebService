@@ -63,6 +63,10 @@ public class DAOCena {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into cene (cene_kolicina) values(?)");
 			prepStmt.setLong(1, cena.getKolicina());
 			prepStmt.executeUpdate();
+			resultSet = prepStmt.getGeneratedKeys();
+			if (resultSet.next()) {
+				cena.setId(resultSet.getLong(1));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

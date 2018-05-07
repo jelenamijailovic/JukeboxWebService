@@ -153,6 +153,17 @@ public class DAOPesma {
 			prepStmt.setLong(3, zanrId);
 			prepStmt.setLong(4, cenaId);
 			prepStmt.executeUpdate();
+			resultSet = prepStmt.getGeneratedKeys();
+			if (resultSet.next()) {
+				pesma.setId(resultSet.getLong(1));
+			}
+			prepStmt = DatabaseConnector.conStat()
+					.prepareStatement("select cene_kolicina from cene where cene_id=?");
+			prepStmt.setLong(1, cenaId);
+			resultSet= prepStmt.executeQuery();
+			if (resultSet.next()) {
+				pesma.setCenaKolicina(resultSet.getLong(1));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -8,16 +8,10 @@ public class Promet {
 	private long id;
 	private Date datum;
 	private Long pesmaId;
-	public Long getPesmaId() {
-		return pesmaId;
-	}
-
-	public void setPesmaId(Long pesmaId) {
-		this.pesmaId = pesmaId;
-	}
-
 	private String pesmaNaziv;
 	private Long cenaKolicina;
+	private Long repetition;
+	private String izvodjacIme;
 
 	public Promet() {
 	}
@@ -60,6 +54,30 @@ public class Promet {
 
 	public void setCenaKolicina(Long cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
+	}
+
+	public Long getPesmaId() {
+		return pesmaId;
+	}
+
+	public void setPesmaId(Long pesmaId) {
+		this.pesmaId = pesmaId;
+	}
+
+	public Long getRepetition() {
+		return repetition;
+	}
+
+	public void setRepetition(Long repetition) {
+		this.repetition = repetition;
+	}
+
+	public String getIzvodjacIme() {
+		return izvodjacIme;
+	}
+
+	public void setIzvodjacIme(String izvodjacIme) {
+		this.izvodjacIme = izvodjacIme;
 	}
 
 }

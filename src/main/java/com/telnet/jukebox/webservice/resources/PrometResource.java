@@ -76,13 +76,63 @@ public class PrometResource {
 		return r;
 	}
 
+	@SuppressWarnings("unused")
+	@GET
+	@Path("/top5songs")
+	public Response getTop5Songs() throws ClassNotFoundException {
+		logger.info("Prikaz top 5 pesama");
+
+		List<Promet> prometi = prometService.getTop5Songs();
+		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		};
+
+		Response r;
+
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje pesme")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.error("Ne postoje pesme");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Top 5 pesama je uspesno prikazano");
+		}
+
+		return r;
+	}
+	
+	@SuppressWarnings("unused")
+	@GET
+	@Path("/top5artists")
+	public Response getTop5Artists() throws ClassNotFoundException {
+		logger.info("Prikaz top 5 izvodjaca");
+
+		List<Promet> prometi = prometService.getTop5Artists();
+		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		};
+
+		Response r;
+
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje izvodjaci")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.error("Ne postoje izvodjaci");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Top 5 izvodjaca je uspesno prikazano");
+		}
+
+		return r;
+	}
+
 	@POST
 	@Path("/{pesmaId}")
 	public Response addPromet(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Unosenje prometa");
 
-		Promet promet= prometService.addPromet(pesmaId);
-		
+		Promet promet = prometService.addPromet(pesmaId);
+
 		Response r;
 
 		try {

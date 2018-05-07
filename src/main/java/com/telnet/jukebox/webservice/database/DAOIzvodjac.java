@@ -63,6 +63,10 @@ public class DAOIzvodjac {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into izvodjaci (izvodjaci_ime) values (?)");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.executeUpdate();
+			resultSet = prepStmt.getGeneratedKeys();
+			if (resultSet.next()) {
+				izvodjac.setId(resultSet.getLong(1));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
