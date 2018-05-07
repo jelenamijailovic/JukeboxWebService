@@ -21,17 +21,25 @@ public class PrometService {
 		return dao.getPromet(prometId);
 	}
 
+	public List<Promet> getTop5Songs() throws ClassNotFoundException {
+		return dao.getTop5Songs();
+	}
+	
+	public List<Promet> getTop5Artists() throws ClassNotFoundException {
+		return dao.getTop5Artists();
+	}
+
 	public Promet addPromet(Long pesmaId) throws ClassNotFoundException {
-		Promet promet= new Promet();
-		
+		Promet promet = new Promet();
+
 		promet.setPesmaId(pesmaId);
-		
+
 		java.util.Date datum = new java.util.Date();
 
 		java.sql.Date date = new java.sql.Date(datum.getTime());
-		
+
 		promet.setDatum(date);
-		
+
 		return dao.insertPromet(promet);
 	}
 

@@ -7,6 +7,7 @@ public class Pesma {
 	private String izvodjacIme;
 	private String zanrIme;
 	private long cenaKolicina;
+//	private long cenaId;
 
 	// private Map<Long, Promet> prometi = new HashMap<>();
 
@@ -68,5 +69,13 @@ public class Pesma {
 	public void setCenaKolicina(long cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
 	}
+
+//	public long getCenaId() {
+//		return cenaId;
+//	}
+//
+//	public void setCenaId(long cenaId) {
+//		this.cenaId = cenaId;
+//	}
 
 }

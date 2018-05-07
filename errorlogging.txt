@@ -55,3 +55,4 @@ null
 2018-05-04 10:21:13 ERROR ZanrResource:69 - Ne postoji promet sa id-om 9
 2018-05-04 11:03:19 ERROR ZanrResource:94 - Greska pri unosu prometa:
 java.util.Date cannot be cast to java.sql.Date
+2018-05-07 13:19:16 ERROR ZanrResource:72 - Ne postoji zanr sa id-om 10

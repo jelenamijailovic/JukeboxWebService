@@ -63,6 +63,10 @@ public class DAOZanr {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into zanrovi (zanrovi_ime) values(?)");
 			prepStmt.setString(1, zanr.getNaziv());
 			prepStmt.executeUpdate();
+			resultSet = prepStmt.getGeneratedKeys();
+			if (resultSet.next()) {
+			    zanr.setId(resultSet.getLong(1));
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
