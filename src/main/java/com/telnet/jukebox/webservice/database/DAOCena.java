@@ -17,7 +17,7 @@ public class DAOCena {
 	ResultSet resultSet = null;
 
 	public List<Cena> getCene() throws ClassNotFoundException {
-		List<Cena> cene = new ArrayList<>();
+		List<Cena> cene = new ArrayList<Cena>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();

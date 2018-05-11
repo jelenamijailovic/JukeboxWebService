@@ -1,0 +1,8 @@
+FROM tomcat:8-jre8 
+ENV CATALINA_HOME /home/dev-10/Downloads/apache-tomcat-8.0.51
+ENV PATH $CATALINA_HOME/:$PATH
+ENV TOMCAT_VERSION 8.0.51
+RUN mkdir -p "$CATALINA_HOME"
+WORKDIR $CATALINA_HOME
+EXPOSE 8083:8080
+CMD ["catalina.sh", "run"]

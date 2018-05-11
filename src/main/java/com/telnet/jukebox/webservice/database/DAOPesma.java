@@ -17,7 +17,7 @@ public class DAOPesma {
 	ResultSet resultSet = null;
 
 	public List<Pesma> getSvePesme() throws ClassNotFoundException {
-		List<Pesma> pesme = new ArrayList<>();
+		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();
@@ -42,7 +42,7 @@ public class DAOPesma {
 	}
 
 	public List<Pesma> getPesmePoIzvodjacu(Long izvodjacId) throws ClassNotFoundException {
-		List<Pesma> pesme = new ArrayList<>();
+		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
@@ -68,7 +68,7 @@ public class DAOPesma {
 	}
 
 	public List<Pesma> getPesmePoZanru(Long zanrId) throws ClassNotFoundException {
-		List<Pesma> pesme = new ArrayList<>();
+		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
@@ -94,7 +94,7 @@ public class DAOPesma {
 	}
 
 	public List<Pesma> getPesmePoCeni(Long cenaId) throws ClassNotFoundException {
-		List<Pesma> pesme = new ArrayList<>();
+		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(

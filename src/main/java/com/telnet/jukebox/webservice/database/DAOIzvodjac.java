@@ -17,7 +17,7 @@ public class DAOIzvodjac {
 	ResultSet resultSet = null;
 
 	public List<Izvodjac> getIzvodjaci() throws ClassNotFoundException {
-		List<Izvodjac> izvodjaci = new ArrayList<>();
+		List<Izvodjac> izvodjaci = new ArrayList<Izvodjac>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();

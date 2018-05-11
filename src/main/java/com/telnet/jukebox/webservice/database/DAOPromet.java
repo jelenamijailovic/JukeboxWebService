@@ -17,7 +17,7 @@ public class DAOPromet {
 	ResultSet resultSet = null;
 
 	public List<Promet> getSvePromete() throws ClassNotFoundException {
-		List<Promet> prometi = new ArrayList<>();
+		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();
@@ -41,7 +41,7 @@ public class DAOPromet {
 	}
 
 	public List<Promet> getPrometePoCeni(Long cenaId) throws ClassNotFoundException {
-		List<Promet> prometi = new ArrayList<>();
+		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
@@ -66,7 +66,7 @@ public class DAOPromet {
 	}
 
 	public List<Promet> getPrometePoPesmi(Long pesmaId) throws ClassNotFoundException {
-		List<Promet> prometi = new ArrayList<>();
+		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
@@ -115,18 +115,19 @@ public class DAOPromet {
 	}
 
 	public List<Promet> getTop5Songs() throws ClassNotFoundException {
-		List<Promet> prometi = new ArrayList<>();
+		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();
 			resultSet = stmt.executeQuery(
-					"select pe.pesme_naziv, count(pr.pesma_id) as repetition from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id group by pe.pesme_naziv order by repetition desc limit 5;");
+					"select pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id group by pe.pesme_naziv, pe.cena_id order by repetition desc limit 5;");
 			Long i = (long) 1;
 			while (resultSet.next()) {
 				Promet promet = new Promet();
 				promet.setId(i++);
 				promet.setPesmaNaziv(resultSet.getString(1));
 				promet.setRepetition(resultSet.getLong(2));
+				promet.setCenaKolicina(resultSet.getLong(3));
 				prometi.add(promet);
 			}
 		} catch (SQLException e) {
@@ -139,7 +140,7 @@ public class DAOPromet {
 	}
 	
 	public List<Promet> getTop5Artists() throws ClassNotFoundException {
-		List<Promet> prometi = new ArrayList<>();
+		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();

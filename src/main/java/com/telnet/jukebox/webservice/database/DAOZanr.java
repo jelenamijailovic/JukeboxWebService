@@ -17,7 +17,7 @@ public class DAOZanr {
 	ResultSet resultSet = null;
 
 	public List<Zanr> getZanrovi() throws ClassNotFoundException {
-		List<Zanr> zanrovi = new ArrayList<>();
+		List<Zanr> zanrovi = new ArrayList<Zanr>();
 
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();
