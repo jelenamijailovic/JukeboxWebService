@@ -6,7 +6,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
+//import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -76,7 +76,6 @@ public class PrometResource {
 		return r;
 	}
 
-	@SuppressWarnings("unused")
 	@GET
 	@Path("/top5songs")
 	public Response getTop5Songs() throws ClassNotFoundException {
@@ -88,7 +87,7 @@ public class PrometResource {
 
 		Response r;
 
-		if (list == null) {
+		if (prometi == null) {
 			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje pesme");
@@ -149,25 +148,25 @@ public class PrometResource {
 		return r;
 	}
 
-	@PUT
-	@Path("/{prometId}")
-	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
-			throws ClassNotFoundException {
-		promet.setId(prometId);
-
-		logger.info("Modifikovanje prometa sa id-om " + prometId);
-
-		Promet p = prometService.getPromet(prometId);
-
-		if (p.getId() == 0) {
-			logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
-		} else {
-			p = prometService.updatePromet(promet);
-			logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
-		}
-
-		return promet;
-	}
+//	@PUT
+//	@Path("/{prometId}")
+//	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
+//			throws ClassNotFoundException {
+//		promet.setId(prometId);
+//
+//		logger.info("Modifikovanje prometa sa id-om " + prometId);
+//
+//		Promet p = prometService.getPromet(prometId);
+//
+//		if (p.getId() == 0) {
+//			logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
+//		} else {
+//			p = prometService.updatePromet(promet);
+//			logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
+//		}
+//
+//		return promet;
+//	}
 
 	@DELETE
 	@Path("/{prometId}")

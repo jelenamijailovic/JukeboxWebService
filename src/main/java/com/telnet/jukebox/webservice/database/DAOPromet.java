@@ -40,13 +40,13 @@ public class DAOPromet {
 		return prometi;
 	}
 
-	public List<Promet> getPrometePoCeni(Long cenaId) throws ClassNotFoundException {
+	public List<Promet> getPrometePoKorisniku(Long korisnikId) throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
-					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id where c.cene_id= ?");
-			prepStmt.setLong(1, cenaId);
+					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnicko_ime from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where k.korisnici_id= ?");
+			prepStmt.setLong(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
 				Promet promet = new Promet();
@@ -183,21 +183,21 @@ public class DAOPromet {
 		return promet;
 	}
 
-	public Promet updatePromet(Promet promet) throws ClassNotFoundException {
-		try {
-			prepStmt = DatabaseConnector.conStat()
-					.prepareStatement("update prometi set prometi_datum= ? where prometi_id= ?");
-			prepStmt.setDate(1, promet.getDatum());
-			prepStmt.setLong(2, promet.getId());
-			prepStmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		return promet;
-	}
+//	public Promet updatePromet(Promet promet) throws ClassNotFoundException {
+//		try {
+//			prepStmt = DatabaseConnector.conStat()
+//					.prepareStatement("update prometi set prometi_datum= ? where prometi_id= ?");
+//			prepStmt.setDate(1, promet.getDatum());
+//			prepStmt.setLong(2, promet.getId());
+//			prepStmt.executeUpdate();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//
+//		return promet;
+//	}
 
 	public void removePromet(Long prometId) throws ClassNotFoundException {
 		try {

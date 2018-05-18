@@ -56,3 +56,63 @@ null
 2018-05-04 11:03:19 ERROR ZanrResource:94 - Greska pri unosu prometa:
 java.util.Date cannot be cast to java.sql.Date
 2018-05-07 13:19:16 ERROR ZanrResource:72 - Ne postoji zanr sa id-om 10
+2018-05-15 14:13:30 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+Provider org.glassfish.json.JsonProviderImpl not found
+2018-05-15 14:13:57 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+Provider org.glassfish.json.JsonProviderImpl not found
+2018-05-15 14:14:04 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+null
+2018-05-15 14:14:10 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+null
+2018-05-15 14:57:04 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 14:57:15 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 14:58:35 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:01:30 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:02:32 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:40:12 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-16 08:54:03 ERROR KorisnikResource:104 - Greska pri unosu korisnika:
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-16 08:54:54 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-17 10:41:43 ERROR KorisnikResource:110 - Postoji email u bazi.
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-18 08:47:31 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:05:03 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:05:43 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:09:52 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:10:25 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:11:34 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:11:43 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:12:33 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:14:58 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 12:50:33 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:51:34 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:52:42 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'
+2018-05-18 12:53:41 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:55:19 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:57:04 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 13:00:44 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 13:25:36 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'

@@ -17,6 +17,10 @@ public class PrometService {
 		return dao.getPrometePoPesmi(pesmaId);
 	}
 
+	public List<Promet> getSviPrometiPoKorisniku(Long korisnikId) throws ClassNotFoundException {
+		return dao.getPrometePoKorisniku(korisnikId);
+	}
+
 	public Promet getPromet(Long prometId) throws ClassNotFoundException {
 		return dao.getPromet(prometId);
 	}
@@ -24,7 +28,7 @@ public class PrometService {
 	public List<Promet> getTop5Songs() throws ClassNotFoundException {
 		return dao.getTop5Songs();
 	}
-	
+
 	public List<Promet> getTop5Artists() throws ClassNotFoundException {
 		return dao.getTop5Artists();
 	}
@@ -43,9 +47,9 @@ public class PrometService {
 		return dao.insertPromet(promet);
 	}
 
-	public Promet updatePromet(Promet promet) throws ClassNotFoundException {
-		return dao.updatePromet(promet);
-	}
+	// public Promet updatePromet(Promet promet) throws ClassNotFoundException {
+	// return dao.updatePromet(promet);
+	// }
 
 	public void deletePromet(Long prometId) throws ClassNotFoundException {
 		dao.removePromet(prometId);
