@@ -1,11 +1,11 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Izvodjac {
+public class IzvodjacDTO {
 
 	private Long id;
 	private String ime;
 
-	public Izvodjac() {
+	public IzvodjacDTO() {
 	}
 
 	public Long getId() {

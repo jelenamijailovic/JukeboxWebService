@@ -1,12 +1,12 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Korisnik {
+public class KorisnikDTO {
 
 	private Long id;
 	private String sifra;
 	private String email;
 
-	public Korisnik() {
+	public KorisnikDTO() {
 	}
 
 	public Long getId() {
@@ -32,5 +32,4 @@ public class Korisnik {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 }

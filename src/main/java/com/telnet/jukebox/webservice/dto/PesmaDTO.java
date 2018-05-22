@@ -1,6 +1,6 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Pesma {
+public class PesmaDTO {
 
 	private Long id;
 	private String naziv;
@@ -10,7 +10,7 @@ public class Pesma {
 	private Long izvodjacId;
 	private Long cenaId;
 
-	public Pesma() {
+	public PesmaDTO() {
 
 	}
 
@@ -69,5 +69,4 @@ public class Pesma {
 	public void setCenaId(Long cenaId) {
 		this.cenaId = cenaId;
 	}
-
 }

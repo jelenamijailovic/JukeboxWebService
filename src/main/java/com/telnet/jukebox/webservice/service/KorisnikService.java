@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Formatter;
 import java.util.List;
@@ -12,6 +13,7 @@ import javax.json.JsonException;
 import javax.ws.rs.core.Application;
 
 import com.telnet.jukebox.webservice.database.DAOKorisnik;
+import com.telnet.jukebox.webservice.dto.KorisnikDTO;
 import com.telnet.jukebox.webservice.model.Korisnik;
 
 import io.jsonwebtoken.Jwts;
@@ -21,28 +23,33 @@ public class KorisnikService extends Application {
 
 	DAOKorisnik dao = new DAOKorisnik();
 
-	public List<Korisnik> getKorisnici() throws ClassNotFoundException {
-		List<Korisnik> korisnici = dao.getKorisnici();
-		for (int i = 0; i < korisnici.size(); i++) {
-			korisnici.get(i).setSifra(encryptPassword(korisnici.get(i).getSifra()));
+	public List<KorisnikDTO> getKorisnici() throws ClassNotFoundException {
+		List<KorisnikDTO> list = new ArrayList<KorisnikDTO>();
+
+		for (int i = 0; i < dao.getKorisnici().size(); i++) {
+			list.add(entityToDTO(dao.getKorisnici().get(i)));
 		}
-		return korisnici;
+
+		// for (int i = 0; i < list.size(); i++) {
+		// list.get(i).setSifra(encryptPassword(list.get(i).getSifra()));
+		// }
+		return list;
 	}
 
-	public Korisnik getKorisnik(Long korisnikId) throws ClassNotFoundException {
-		Korisnik korisnik = dao.getKorisnik(korisnikId);
+	public KorisnikDTO getKorisnik(Long korisnikId) throws ClassNotFoundException {
+		KorisnikDTO korisnik = entityToDTO(dao.getKorisnik(korisnikId));
 		korisnik.setSifra(encryptPassword(korisnik.getSifra()));
 		return korisnik;
 	}
 
-	public Korisnik insertKorisnik(Korisnik korisnik) throws ClassNotFoundException, SQLException {
-		Korisnik korisnikNovi = dao.insertKorisnik(korisnik);
+	public KorisnikDTO insertKorisnik(KorisnikDTO korisnik) throws ClassNotFoundException, SQLException {
+		KorisnikDTO korisnikNovi = entityToDTO(dao.insertKorisnik(DTOToEntity(korisnik)));
 
 		return korisnikNovi;
 	}
 
-	public Korisnik updateKorisnik(Korisnik korisnik) throws ClassNotFoundException {
-		Korisnik korisnikNovi = dao.updateKorisnik(korisnik);
+	public KorisnikDTO updateKorisnik(KorisnikDTO korisnik) throws ClassNotFoundException {
+		KorisnikDTO korisnikNovi = entityToDTO(dao.updateKorisnik(DTOToEntity(korisnik)));
 		korisnikNovi.setSifra(encryptPassword(korisnikNovi.getSifra()));
 		return korisnikNovi;
 	}
@@ -77,7 +84,7 @@ public class KorisnikService extends Application {
 	}
 
 	public String login(String email, String sifra) throws ClassNotFoundException, JsonException {
-		Korisnik korisnik = dao.loginKorisnik(email, sifra);
+		KorisnikDTO korisnik = entityToDTO(dao.loginKorisnik(email, sifra));
 
 		String jwt = "";
 
@@ -86,12 +93,28 @@ public class KorisnikService extends Application {
 			String id = korisnik.getId().toString();
 
 			jwt = Jwts.builder().signWith(SignatureAlgorithm.HS256, sifra.getBytes()).setId(id)
-					.setSubject(korisnik.getEmail()).setExpiration(new Date(time + 900000)).compact();
+					.setSubject(korisnik.getEmail()).setExpiration(new Date(time + 15000)).compact();
 			// JsonObject json = Json.createObjectBuilder().add("JWT", jwt).build();
 			return jwt;
 		}
 
 		return jwt;
+	}
+
+	public Korisnik DTOToEntity(KorisnikDTO korisnik) {
+		Korisnik entity = new Korisnik();
+		entity.setId(korisnik.getId());
+		entity.setSifra(korisnik.getSifra());
+		entity.setEmail(korisnik.getEmail());
+		return entity;
+	}
+
+	public KorisnikDTO entityToDTO(Korisnik korisnik) {
+		KorisnikDTO dto = new KorisnikDTO();
+		dto.setId(korisnik.getId());
+		dto.setSifra(korisnik.getSifra());
+		dto.setEmail(korisnik.getEmail());
+		return dto;
 	}
 
 }

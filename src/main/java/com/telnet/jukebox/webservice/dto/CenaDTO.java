@@ -1,11 +1,11 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Cena {
+public class CenaDTO {
 
 	private Long id;
 	private Long kolicina;
 
-	public Cena() {
+	public CenaDTO() {
 	}
 
 	public Long getId() {
@@ -23,5 +23,4 @@ public class Cena {
 	public void setKolicina(Long kolicina) {
 		this.kolicina = kolicina;
 	}
-
 }

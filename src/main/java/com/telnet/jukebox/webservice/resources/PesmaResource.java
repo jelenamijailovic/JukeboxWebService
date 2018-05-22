@@ -14,9 +14,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.RequestBody;
 
-import com.telnet.jukebox.webservice.model.Pesma;
-import com.telnet.jukebox.webservice.model.Promet;
+import com.telnet.jukebox.webservice.dto.PesmaDTO;
+import com.telnet.jukebox.webservice.dto.PrometDTO;
 import com.telnet.jukebox.webservice.service.PesmaService;
 import com.telnet.jukebox.webservice.service.PrometService;
 
@@ -28,7 +29,7 @@ import javax.ws.rs.core.GenericEntity;
 
 public class PesmaResource {
 
-	final static Logger logger = Logger.getLogger(ZanrResource.class);
+	final static Logger logger = Logger.getLogger(PesmaResource.class);
 
 	PesmaService pesmaService = new PesmaService();
 	PrometService prometService = new PrometService();
@@ -38,8 +39,9 @@ public class PesmaResource {
 	public Response getSvePesme() throws ClassNotFoundException {
 		logger.info("Prikaz svih pesama");
 
-		List<Pesma> pesme = pesmaService.getSvePesme();
-		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+		List<PesmaDTO> pesme = pesmaService.getSvePesme();
+
+		GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
 		};
 
 		Response r;
@@ -52,8 +54,8 @@ public class PesmaResource {
 			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.info("Pesme su uspesno prikazane");
-		}
 
+		}
 		return r;
 	}
 
@@ -62,7 +64,7 @@ public class PesmaResource {
 	public Response getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz pesme sa id-om " + pesmaId);
 
-		Pesma p = pesmaService.getPesma(pesmaId);
+		PesmaDTO p = pesmaService.getPesma(pesmaId);
 
 		Response r;
 
@@ -81,15 +83,15 @@ public class PesmaResource {
 	}
 
 	@POST
-	@Path("/{zanrId}/{izvodjacId}/{cenaId}")
-	public Pesma addPesma(@PathParam("izvodjacId") Long izvodjacId, @PathParam("zanrId") Long zanrId,
-			@PathParam("cenaId") Long cenaId, Pesma pesma) throws ClassNotFoundException {
+	// @Path("/{zanrId}/{izvodjacId}/{cenaId}")
+
+	public PesmaDTO addPesma(@RequestBody PesmaDTO pesma) throws ClassNotFoundException {
 		logger.info("Unosenje pesme");
 
-		Pesma p = new Pesma();
+		PesmaDTO p = new PesmaDTO();
 
 		try {
-			p = pesmaService.addPesma(izvodjacId, zanrId, cenaId, pesma);
+			p = pesmaService.addPesma(pesma.getIzvodjacId(), pesma.getCenaId(), pesma);
 			logger.info("Pesma je uspesno uneta");
 		} catch (Exception e) {
 			logger.error("Greska pri unosu pesme:\n" + e.getMessage());
@@ -100,12 +102,13 @@ public class PesmaResource {
 
 	@PUT
 	@Path("/{pesmaId}")
-	public Pesma updatePesma(@PathParam("pesmaId") Long pesmaId, Pesma pesma) throws ClassNotFoundException {
+	public PesmaDTO updatePesma(@PathParam("pesmaId") Long pesmaId, @RequestBody PesmaDTO pesma)
+			throws ClassNotFoundException {
 		pesma.setId(pesmaId);
 
 		logger.info("Modifikovanje pesme sa id-om " + pesmaId);
 
-		Pesma p = pesmaService.getPesma(pesmaId);
+		PesmaDTO p = pesmaService.getPesma(pesmaId);
 
 		if (p.getId() == 0) {
 			logger.error("Pesma sa id-om " + pesmaId + " ne moze biti modifikovana jer ne postoji");
@@ -122,7 +125,7 @@ public class PesmaResource {
 	public void deletePesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Brisanje pesme sa id-om " + pesmaId);
 
-		Pesma p = pesmaService.getPesma(pesmaId);
+		PesmaDTO p = pesmaService.getPesma(pesmaId);
 
 		if (p.getId() == 0) {
 			logger.error("Pesma sa id-om " + pesmaId + " ne moze biti obrisana jer ne postoji");
@@ -138,11 +141,11 @@ public class PesmaResource {
 	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa za pesmu sa id-om " + pesmaId);
 
-		List<Promet> prometi = prometService.getSviPrometiPoPesmi(pesmaId);
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getSviPrometiPoPesmi(pesmaId);
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
-		Pesma p = pesmaService.getPesma(pesmaId);
+		PesmaDTO p = pesmaService.getPesma(pesmaId);
 
 		Response r;
 

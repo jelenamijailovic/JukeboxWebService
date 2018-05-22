@@ -1,6 +1,7 @@
 package com.telnet.jukebox.webservice.database;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,9 +21,10 @@ public class DAOPesma {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery(
-					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id");
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id join zanrovi z on i.zanr_id=z.zanrovi_id join cene c on p.cena_id=c.cene_id order by pesme_id");
 			while (resultSet.next()) {
 				Pesma pesma = new Pesma();
 				pesma.setId(resultSet.getLong(1));
@@ -32,6 +34,7 @@ public class DAOPesma {
 				pesma.setCenaKolicina(resultSet.getLong(5));
 				pesme.add(pesma);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -39,6 +42,7 @@ public class DAOPesma {
 		}
 
 		return pesme;
+
 	}
 
 	public List<Pesma> getPesmePoIzvodjacu(Long izvodjacId) throws ClassNotFoundException {
@@ -72,7 +76,7 @@ public class DAOPesma {
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
-					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where z.zanrovi_id= ?");
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on i.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where z.zanrovi_id= ?");
 			prepStmt.setLong(1, zanrId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
@@ -124,7 +128,7 @@ public class DAOPesma {
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
-					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where p.pesme_id= ?");
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on i.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where p.pesme_id= ?");
 			prepStmt.setLong(1, pesmaId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
@@ -144,23 +148,21 @@ public class DAOPesma {
 		return pesma;
 	}
 
-	public Pesma insertPesma(Long izvodjacId, Long zanrId, Long cenaId, Pesma pesma) throws ClassNotFoundException {
+	public Pesma insertPesma(Long izvodjacId, Long cenaId, Pesma pesma) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat()
-					.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, zanr_id, cena_id) values(?,?,?,?)");
+					.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, cena_id) values(?,?,?)");
 			prepStmt.setString(1, pesma.getNaziv());
 			prepStmt.setLong(2, izvodjacId);
-			prepStmt.setLong(3, zanrId);
-			prepStmt.setLong(4, cenaId);
+			prepStmt.setLong(3, cenaId);
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
 				pesma.setId(resultSet.getLong(1));
 			}
-			prepStmt = DatabaseConnector.conStat()
-					.prepareStatement("select cene_kolicina from cene where cene_id=?");
+			prepStmt = DatabaseConnector.conStat().prepareStatement("select cene_kolicina from cene where cene_id=?");
 			prepStmt.setLong(1, cenaId);
-			resultSet= prepStmt.executeQuery();
+			resultSet = prepStmt.executeQuery();
 			if (resultSet.next()) {
 				pesma.setCenaKolicina(resultSet.getLong(1));
 			}

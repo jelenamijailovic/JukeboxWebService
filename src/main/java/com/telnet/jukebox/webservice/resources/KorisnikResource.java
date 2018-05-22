@@ -17,9 +17,9 @@ import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 
-import com.telnet.jukebox.webservice.model.Korisnik;
+import com.telnet.jukebox.webservice.dto.KorisnikDTO;
+import com.telnet.jukebox.webservice.dto.PrometDTO;
 import com.telnet.jukebox.webservice.model.Login;
-import com.telnet.jukebox.webservice.model.Promet;
 import com.telnet.jukebox.webservice.service.KorisnikService;
 import com.telnet.jukebox.webservice.service.PrometService;
 
@@ -39,8 +39,8 @@ public class KorisnikResource {
 	public Response getKorisnici() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
 
-		List<Korisnik> korisnici = korisnikService.getKorisnici();
-		GenericEntity<List<Korisnik>> list = new GenericEntity<List<Korisnik>>(korisnici) {
+		List<KorisnikDTO> korisnici = korisnikService.getKorisnici();
+		GenericEntity<List<KorisnikDTO>> list = new GenericEntity<List<KorisnikDTO>>(korisnici) {
 		};
 
 		Response r;
@@ -63,7 +63,7 @@ public class KorisnikResource {
 	public Response getKorisnik(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz korisnika sa id-om " + korisnikId);
 
-		Korisnik k = korisnikService.getKorisnik(korisnikId);
+		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
 
 		Response r;
 
@@ -82,12 +82,12 @@ public class KorisnikResource {
 	}
 
 	@POST
-	public Response addKorisnika(Korisnik korisnik) throws ClassNotFoundException {
+	public Response addKorisnika(KorisnikDTO korisnik) throws ClassNotFoundException {
 		logger.info("Unosenje korisnika");
 
 		Response r;
 		try {
-			Korisnik k = korisnikService.insertKorisnik(korisnik);
+			KorisnikDTO k = korisnikService.insertKorisnik(korisnik);
 			r = Response.ok(k).header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "POST")
 					.allow("OPTIONS").build();
 
@@ -108,13 +108,13 @@ public class KorisnikResource {
 
 	@PUT
 	@Path("/{korisnikId}")
-	public Korisnik updateIzvodjac(@PathParam("korisnikId") Long korisnikId, Korisnik korisnik)
+	public KorisnikDTO updateKorisnik(@PathParam("korisnikId") Long korisnikId, KorisnikDTO korisnik)
 			throws ClassNotFoundException {
 		korisnik.setId(korisnikId);
 
 		logger.info("Modifikovanje korisnika sa id-om " + korisnikId);
 
-		Korisnik k = korisnikService.getKorisnik(korisnikId);
+		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
 
 		if (k.getId() == 0) {
 			logger.error("Korisnik sa id-om " + korisnikId + " ne moze biti modifikovan jer ne postoji");
@@ -131,7 +131,7 @@ public class KorisnikResource {
 	public void deleteIzvodjac(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
 		logger.info("Brisanje korisnika sa id-om " + korisnikId);
 
-		Korisnik k = korisnikService.getKorisnik(korisnikId);
+		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
 
 		if (k.getId() == 0) {
 			logger.error("Korisnik sa id-om " + korisnikId + " ne moze biti obrisan jer ne postoji");
@@ -144,14 +144,14 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}/prometi")
-	public Response getSvePesmePoIzvodjacu(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
+	public Response getSviPrometiPoKorisniku(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + korisnikId);
 
-		List<Promet> prometi = prometService.getSviPrometiPoKorisniku(korisnikId);
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getSviPrometiPoKorisniku(korisnikId);
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
-		Korisnik k = korisnikService.getKorisnik(korisnikId);
+		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
 
 		Response r;
 
@@ -172,7 +172,7 @@ public class KorisnikResource {
 	@POST
 	@Path("/login")
 	public Response login(Login login) {
-		logger.info("Unosenje korisnika");
+		logger.info("Login korisnika");
 
 		try {
 			if (korisnikService.login(login.getEmail(), login.getSifra()) != "") {
@@ -181,9 +181,11 @@ public class KorisnikResource {
 						.allow("OPTIONS").build();
 			}
 		} catch (ClassNotFoundException e) {
+			logger.error("Resorurce not found");
 			System.out.println("Resorurce not found");
 			e.printStackTrace();
 		}
+		logger.error("Pogresna sifra!!!");
 		return Response.status(Response.Status.CONFLICT).header("Access-Control-Allow-Origin", "*")
 				.entity("Pogresna sifra!!!").header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 	}

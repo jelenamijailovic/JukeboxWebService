@@ -8162,3 +8162,1251 @@ Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'
 2018-05-18 13:45:56 INFO  KorisnikResource:176 - Unosenje korisnika
 2018-05-18 13:46:10 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
 2018-05-18 13:46:10 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-18 13:46:35 INFO  KorisnikResource:87 - Unosenje korisnika
+2018-05-18 13:46:35 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'nove' for key 'korisnici_email_UNIQUE'
+2018-05-18 13:46:44 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-18 13:46:44 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-18 13:47:12 INFO  KorisnikResource:176 - Unosenje korisnika
+2018-05-18 13:48:25 INFO  KorisnikResource:176 - Unosenje korisnika
+2018-05-18 13:50:32 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:51:34 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:51:34 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:51:34 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:51:34 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:51:34 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:51:34 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:51:39 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:51:40 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:52:04 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:52:04 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:52:04 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:52:04 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:52:04 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:52:04 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:52:11 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:52:38 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:52:38 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:52:38 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:52:38 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:52:38 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:52:38 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:52:48 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:54:29 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:54:29 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:54:29 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:54:29 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:54:29 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:54:29 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:55:57 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:55:57 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:55:57 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:55:57 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:55:57 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:55:57 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:57:06 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 13:57:06 INFO  KorisnikResource:94 - Korisnik je uspesno unet
+2018-05-18 13:58:28 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:58:28 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:58:28 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:58:28 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:58:28 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:58:28 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:58:41 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 13:58:58 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:58:58 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:58:58 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:58:58 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:58:58 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:58:58 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:59:03 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:59:03 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:59:03 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:59:03 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:59:03 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 13:59:03 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:59:06 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 13:59:06 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 13:59:06 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 13:59:06 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 13:59:06 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 13:59:06 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:00:10 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:00:10 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:00:10 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:00:10 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:00:10 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:00:10 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:03:11 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:03:11 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:03:11 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:03:11 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:03:11 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:03:11 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:08:21 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:08:21 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:08:21 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:08:21 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:08:21 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:08:21 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:09:26 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:09:26 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:09:26 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:09:26 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:09:26 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:09:26 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:09:33 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:09:33 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:09:33 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:09:33 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:09:33 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:09:33 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:10:00 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-18 14:10:00 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-18 14:10:00 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-18 14:10:00 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-18 14:10:25 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-18 14:10:25 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-18 14:10:25 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-18 14:10:25 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-18 14:10:25 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-18 14:10:25 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-18 14:10:29 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:10:29 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:10:29 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:10:29 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:10:29 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:10:29 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:14:23 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:14:23 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:14:23 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:14:23 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:14:23 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:14:23 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:14:38 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:14:38 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:14:41 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:14:41 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:14:43 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:14:43 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:14:44 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:14:44 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:31:34 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 14:31:34 INFO  KorisnikResource:94 - Korisnik je uspesno unet
+2018-05-18 14:31:54 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:31:54 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:31:54 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:31:54 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:31:54 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:31:54 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:32:05 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 14:32:05 INFO  KorisnikResource:94 - Korisnik je uspesno unet
+2018-05-18 14:32:07 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 14:32:07 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:12 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 14:32:12 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:28 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:32:29 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:02 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:03 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:05 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:06 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:07 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:07 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:09 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:09 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:13 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:33:14 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:50:24 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:50:24 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:50:24 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:50:24 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:50:24 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:50:24 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:50:44 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:51:46 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:52:43 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:52:47 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:54:33 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:54:33 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:54:33 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:54:33 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:54:33 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:54:33 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:54:39 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:55:29 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:55:29 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:55:29 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:55:29 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:55:29 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:55:29 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:55:46 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:57:26 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:57:26 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:57:26 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:57:26 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:57:26 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:57:26 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:57:34 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:57:55 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:57:55 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:57:55 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:57:55 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:57:55 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:57:55 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:58:10 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:58:11 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 14:58:53 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 14:58:53 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 14:58:53 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 14:58:53 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 14:58:53 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 14:58:53 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 14:59:04 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:05 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:00:05 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:00:05 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:00:05 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:00:05 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:00:05 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:00:14 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:16 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:16 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:17 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:17 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:17 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:18 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:18 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:18 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:00:19 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:01:13 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:01:13 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:01:13 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:01:13 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:01:13 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:01:13 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:01:21 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:01:22 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:01:23 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:01:27 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:01:46 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:01:46 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:01:46 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:01:46 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:01:46 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:01:46 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:02:00 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:02:04 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:03:19 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:03:19 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:03:19 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:03:19 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:03:19 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:03:19 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:03:27 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:03:52 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:03:52 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:03:52 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:03:52 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:03:52 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:03:52 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:03:59 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:05:06 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:05:06 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:05:06 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:05:06 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:05:06 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:05:06 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:06:01 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:06:01 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:06:01 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:06:01 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:06:01 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:06:01 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:06:06 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:06:07 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:06:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:06:12 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:09:51 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:09:51 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:09:51 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:09:51 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:09:51 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:09:51 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:11:58 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:12:06 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:12:06 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:12:06 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:12:06 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:12:06 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:12:06 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:12:17 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:13:34 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:13:34 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:13:34 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:13:34 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:13:34 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:13:34 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:13:46 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:14:50 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:14:50 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:14:50 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:14:50 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:14:50 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:14:50 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:14:58 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:16:01 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:16:01 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:16:01 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:16:01 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:16:01 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:16:01 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:16:09 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:17:09 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:17:09 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:17:09 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:17:09 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:17:09 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:17:09 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:17:15 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:18:31 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:18:31 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:18:31 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:18:31 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:18:31 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:18:31 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:18:38 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:18:59 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:18:59 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:18:59 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:18:59 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:18:59 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:18:59 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:19:06 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:19:47 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:19:47 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:19:47 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:19:47 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:19:47 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:19:47 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:20:08 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:22:24 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:22:24 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:22:24 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:22:24 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:22:24 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:22:24 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:22:34 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:22:49 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:22:49 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:22:49 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:22:49 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:22:49 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:22:49 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:22:59 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:29:32 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:29:32 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:29:32 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:29:32 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:29:32 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:29:32 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:29:40 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:32:00 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:32:00 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:32:00 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:32:00 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:32:00 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:32:00 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:32:20 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:33:25 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:33:25 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:33:25 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:33:25 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:33:25 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:33:25 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:33:31 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:33:49 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:33:49 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:33:49 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:33:49 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:33:49 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:33:49 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:33:54 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:34:17 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:34:17 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:34:17 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:34:17 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:34:17 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:34:17 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:34:19 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:34:19 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:34:19 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:34:19 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:34:19 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:34:19 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:34:20 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:34:20 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:34:20 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:34:20 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:34:20 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:34:20 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:34:35 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:34:35 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:34:35 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:34:35 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:34:35 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:34:35 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:35:20 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:35:20 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:35:20 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:35:20 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:35:20 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:35:20 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:35:28 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:40:03 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:40:03 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:40:03 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:40:03 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:40:03 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:40:03 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:40:11 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:40:48 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:40:48 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:40:48 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:40:48 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:40:48 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:40:48 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:41:11 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:41:46 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:41:46 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:41:46 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:41:46 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:41:46 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:41:46 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:41:54 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:41:56 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:42:25 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:42:25 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:42:25 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:42:25 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:42:25 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:42:25 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:42:33 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:43:02 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:43:02 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:43:02 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:43:02 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:43:02 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:43:02 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:43:09 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:44:44 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:44:44 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:44:44 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:44:44 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:44:44 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:44:44 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:44:50 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:48:41 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:48:41 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:48:41 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:48:41 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:48:41 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:48:41 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:48:51 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:57:27 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:57:27 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:57:27 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:57:27 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:57:27 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:57:27 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 15:57:36 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 15:58:48 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 15:58:48 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 15:58:48 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 15:58:48 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 15:58:48 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 15:58:48 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:00:09 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:00:09 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:00:09 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:00:09 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:00:09 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:00:09 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:00:27 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:00:27 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:00:27 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:00:27 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:00:27 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:00:27 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:00:58 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:00:58 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:00:58 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:00:58 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:00:58 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:00:58 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:01:05 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:02:54 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:02:54 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:02:54 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:02:54 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:02:54 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:02:54 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:03:00 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:03 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:04 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:04 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:04 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:05 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:05 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:05 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:03:31 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:03:31 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:03:31 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:03:31 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:03:31 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:03:31 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:03:36 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:05:43 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:05:43 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:05:43 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:05:43 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:05:43 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:05:43 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:05:51 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:06:36 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:06:36 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:06:36 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:06:36 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:06:36 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:06:36 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:08:21 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:09:39 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:09:39 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:07 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:10:07 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:10:07 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:07 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:10:07 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:10:07 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:09 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:09 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:12 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:10:12 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:10:12 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:12 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:10:12 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:12 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:10:23 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:23 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:24 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:24 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:27 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:10:27 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:27 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:10:27 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:10:27 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:10:27 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:30 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:30 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:40 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:10:40 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:40 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:10:40 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:40 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:10:40 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:10:40 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:40 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:55 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:55 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:10:56 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:10:56 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:11:42 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:11:42 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:11:42 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:11:42 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:11:42 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:11:42 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:16:40 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:16:40 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:16:40 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:16:40 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:16:40 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:16:40 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:16:44 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:16:44 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:17:50 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:17:50 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:17:50 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:17:50 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:17:50 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:17:50 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:18:33 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:18:33 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:18:33 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:18:33 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:18:33 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:18:33 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:18:51 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:18:51 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:18:51 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:18:51 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:18:51 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:18:51 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:19:00 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:19:00 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:19:00 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:19:00 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:19:00 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:19:00 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:20:06 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:20:06 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:20:06 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:20:06 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:20:06 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:20:06 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:20:14 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:22:42 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:22:42 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:22:42 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:22:42 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:22:42 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:22:42 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:22:51 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:25:34 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:25:34 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:25:34 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:25:34 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:25:34 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:25:34 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:25:41 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:26:27 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:26:33 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:26:33 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:26:33 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:26:33 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:26:33 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:26:33 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:26:36 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:26:53 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:26:53 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:26:53 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:26:53 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:26:53 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:26:53 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:26:58 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:29:02 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:29:02 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:29:02 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:29:02 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:29:02 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:29:02 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:29:20 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:39 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:30:39 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:30:39 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:30:39 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:30:39 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:30:39 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:30:45 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:46 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:47 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:47 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:47 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:30:56 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:30:56 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:30:56 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:30:56 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:30:56 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:30:56 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:31:00 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:31:28 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:31:28 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:31:28 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:31:28 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:31:28 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:31:28 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:31:36 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:32:44 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:32:44 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:32:44 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:32:44 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:32:44 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:32:44 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:32:53 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:32:54 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:32:55 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:05 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:36:05 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:36:05 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:36:05 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:36:05 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:36:05 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:36:09 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:11 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:12 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:12 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:13 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:13 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:24 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:36:24 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:36:24 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:36:24 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:36:24 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:36:24 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:36:30 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:36:30 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:36:30 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:36:30 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:36:30 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:36:30 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:36:35 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:36:43 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:36:43 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:36:43 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:36:43 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:36:43 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:36:43 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:36:46 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:37:10 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:37:10 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:37:10 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:37:10 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:37:10 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:37:10 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:37:14 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:37:33 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:37:33 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:37:33 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:37:33 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:37:33 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:37:33 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:37:38 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:38:08 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:38:08 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:38:08 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:38:08 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:38:08 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:38:08 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:38:12 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:08 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:39:08 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:39:08 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:39:08 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:39:08 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:39:08 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:39:18 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:19 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:20 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:20 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:21 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:21 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:39:21 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:40:15 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:40:15 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:40:15 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:40:15 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:40:15 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:40:15 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:40:19 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:46:24 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:46:24 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:46:24 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:46:24 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:46:24 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:46:24 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:46:31 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:46:49 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:46:49 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:46:49 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:46:49 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:46:49 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:46:49 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:46:51 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:46:51 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:46:51 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:46:51 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:46:51 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:46:51 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:47:07 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:47:19 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:47:19 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:47:19 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:47:19 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:47:19 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:47:19 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:47:23 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:48:36 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:48:36 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:48:36 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:48:36 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:48:36 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:48:36 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:48:44 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:52:47 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:52:47 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:52:47 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:52:47 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:52:47 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:52:47 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:52:51 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:53:53 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:53:53 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:53:53 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:53:53 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:53:53 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:53:53 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:53:59 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:54:12 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:54:12 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:54:12 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:54:12 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:54:12 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:54:12 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:54:16 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:54:57 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:54:57 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:54:57 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:54:57 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:54:57 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:54:57 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:55:01 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:55:28 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:55:28 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:55:28 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:55:28 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:55:28 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:55:28 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:55:34 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:56:34 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:56:34 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:56:34 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:56:34 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:56:34 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:56:34 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:57:42 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:57:42 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:57:42 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:57:42 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:57:42 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:57:42 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:57:54 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:59:31 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-18 16:59:31 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-18 16:59:31 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-18 16:59:31 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-18 16:59:31 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-18 16:59:31 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-18 16:59:39 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:59:44 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:59:45 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:59:50 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 16:59:59 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-18 17:00:25 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-18 17:00:25 ERROR KorisnikResource:101 - Greska pri unosu korisnika:
+Data source rejected establishment of connection,  message from server: "Too many connections"
+2018-05-18 17:00:56 INFO  KorisnikResource:40 - Prikaz svih izvodjaca
+2018-05-18 17:00:56 INFO  KorisnikResource:55 - Korisnici su uspesno prikazani
+2018-05-21 09:04:13 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:04:13 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:04:13 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:04:14 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:04:14 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:04:14 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:04:17 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:04:17 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:04:17 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:04:17 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:04:17 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:04:17 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:04:48 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:04:48 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:04:48 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:04:48 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:04:48 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:04:48 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:06:45 INFO  KorisnikResource:40 - Prikaz svih izvodjaca
+2018-05-21 09:06:45 INFO  KorisnikResource:55 - Korisnici su uspesno prikazani
+2018-05-21 09:07:39 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:07:39 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:07:39 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:07:39 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:07:39 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:07:39 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:07:47 INFO  KorisnikResource:86 - Unosenje korisnika
+2018-05-21 09:07:47 INFO  KorisnikResource:94 - Korisnik je uspesno unet
+2018-05-21 09:07:57 INFO  KorisnikResource:40 - Prikaz svih izvodjaca
+2018-05-21 09:07:57 INFO  KorisnikResource:55 - Korisnici su uspesno prikazani
+2018-05-21 09:08:06 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:08:23 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:08:23 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:08:23 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:08:23 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:08:23 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:08:23 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:08:42 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:12:04 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:12:04 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:12:04 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:12:04 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:12:04 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:12:04 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:12:15 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:12:25 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:12:28 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:12:49 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:12:49 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:12:49 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:12:49 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:12:49 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:12:49 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:13:26 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:13:26 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:13:26 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:13:26 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:13:26 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:13:26 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:14:15 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:14:15 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:14:15 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:14:15 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:14:15 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:14:15 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:14:20 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:14:32 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:15:29 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:15:29 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:15:29 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:15:29 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:15:29 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:15:29 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:15:34 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:15:40 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:16:53 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:16:53 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:16:53 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:16:53 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:16:53 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:16:53 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:19:06 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:19:06 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:19:06 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:19:06 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:19:06 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:19:06 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:20:08 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:20:08 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:20:08 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:20:08 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:20:08 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:20:08 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:20:15 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-21 09:20:15 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-21 09:22:13 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:22:13 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:22:13 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:22:13 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:22:13 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:22:13 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:22:34 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:22:34 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:22:34 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:22:34 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:22:34 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:22:34 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:22:55 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:22:55 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:22:55 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:22:55 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:22:55 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:22:55 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:23:01 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:23:06 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:23:10 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:23:23 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:23:23 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:23:23 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:23:23 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:23:23 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:23:23 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:25:43 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:25:49 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:30:46 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:30:46 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:30:46 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:30:46 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:30:46 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:30:46 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:30:54 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:33:31 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:33:31 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:33:31 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:33:31 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:33:31 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:33:31 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:33:35 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:33:39 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:33:40 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:33:41 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:34:41 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:34:41 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:34:41 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:34:41 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:34:41 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:34:41 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:34:45 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:34:48 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:36:13 INFO  ZanrResource:82 - Prikaz top 5 pesama
+2018-05-21 09:36:13 INFO  ZanrResource:107 - Prikaz top 5 izvodjaca
+2018-05-21 09:36:13 INFO  ZanrResource:39 - Prikaz svih pesama
+2018-05-21 09:36:13 INFO  ZanrResource:97 - Top 5 pesama je uspesno prikazano
+2018-05-21 09:36:13 INFO  ZanrResource:122 - Top 5 izvodjaca je uspesno prikazano
+2018-05-21 09:36:13 INFO  ZanrResource:54 - Pesme su uspesno prikazane
+2018-05-21 09:36:18 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:36:22 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:36:23 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 09:36:25 INFO  KorisnikResource:175 - Unosenje korisnika
+2018-05-21 10:41:22 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 10:41:23 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 10:42:57 INFO  ZanrResource:40 - Prikaz svih pesama
+2018-05-21 10:42:58 INFO  ZanrResource:55 - Pesme su uspesno prikazane
+2018-05-21 10:46:09 INFO  ZanrResource:40 - Prikaz svih pesama
+2018-05-21 10:46:09 INFO  ZanrResource:55 - Pesme su uspesno prikazane
+2018-05-21 10:48:09 INFO  ZanrResource:40 - Prikaz svih pesama
+2018-05-21 10:48:09 INFO  ZanrResource:55 - Pesme su uspesno prikazane
+2018-05-21 10:49:12 INFO  ZanrResource:42 - Prikaz svih pesama
+2018-05-21 10:49:12 INFO  ZanrResource:57 - Pesme su uspesno prikazane
+2018-05-21 11:03:04 INFO  ZanrResource:89 - Unosenje pesme
+2018-05-21 11:03:04 INFO  ZanrResource:95 - Pesma je uspesno uneta
+2018-05-21 11:03:15 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 11:03:15 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 11:07:38 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 11:07:38 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 11:12:34 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 11:12:34 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 13:53:46 INFO  ZanrResource:42 - Prikaz svih pesama
+2018-05-21 13:53:47 INFO  ZanrResource:57 - Pesme su uspesno prikazane
+2018-05-21 13:54:00 INFO  ZanrResource:42 - Prikaz svih pesama
+2018-05-21 13:54:01 INFO  ZanrResource:57 - Pesme su uspesno prikazane
+2018-05-21 13:54:51 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 13:54:51 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 13:55:52 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 13:55:52 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 13:56:57 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 13:56:58 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 13:58:18 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 13:58:19 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:02:14 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:02:14 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:05:19 INFO  ZanrResource:143 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 14:05:19 INFO  ZanrResource:161 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 14:05:20 INFO  ZanrResource:143 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 14:05:21 INFO  ZanrResource:161 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 14:05:21 INFO  ZanrResource:143 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 14:05:21 INFO  ZanrResource:161 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 14:08:12 INFO  ZanrResource:142 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 14:08:12 INFO  ZanrResource:160 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 14:11:52 INFO  ZanrResource:142 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 14:11:52 INFO  ZanrResource:160 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 14:11:58 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:11:58 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:16:25 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:19:58 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:23:20 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:23:21 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:26:14 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:26:15 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:28:52 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:28:52 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:29:54 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:31:13 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:33:03 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:33:03 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:34:48 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:34:49 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:35:54 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:35:54 INFO  ZanrResource:56 - Pesme su uspesno prikazane
+2018-05-21 14:36:20 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-21 14:36:20 INFO  ZanrResource:53 - Zanrovi su uspesno prikazani
+2018-05-21 14:36:42 INFO  ZanrResource:65 - Prikaz pesme sa id-om 12
+2018-05-21 14:36:42 INFO  ZanrResource:79 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 14:38:40 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:38:40 INFO  ZanrResource:57 - Pesme su uspesno prikazane
+2018-05-21 14:40:38 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:42:45 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:44:02 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 14:45:50 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:45:57 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 14:47:12 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:47:12 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 14:47:49 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 14:48:34 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 14:49:16 INFO  ZanrResource:68 - Prikaz pesme sa id-om 11
+2018-05-21 14:49:47 INFO  ZanrResource:68 - Prikaz pesme sa id-om 12
+2018-05-21 14:49:47 INFO  ZanrResource:82 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 14:50:01 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-21 14:50:01 INFO  ZanrResource:53 - Zanrovi su uspesno prikazani
+2018-05-21 14:50:09 INFO  ZanrResource:68 - Prikaz pesme sa id-om 12
+2018-05-21 14:50:09 INFO  ZanrResource:82 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 14:58:43 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 15:00:16 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:15:02 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 15:15:03 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:22:41 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 15:22:41 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:24:40 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 15:24:40 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:26:43 INFO  ZanrResource:41 - Prikaz svih pesama
+2018-05-21 15:26:44 INFO  ZanrResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:30:17 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-21 15:30:17 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:38:02 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-21 15:38:02 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:38:44 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-21 15:38:45 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 15:53:02 INFO  PesmaResource:77 - Prikaz pesme sa id-om 12
+2018-05-21 15:53:03 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 15:53:08 INFO  PesmaResource:77 - Prikaz pesme sa id-om 23
+2018-05-21 15:53:08 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 23
+2018-05-21 15:54:08 INFO  PesmaResource:77 - Prikaz pesme sa id-om 23
+2018-05-21 15:54:08 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 23
+2018-05-21 15:54:15 INFO  PesmaResource:77 - Prikaz pesme sa id-om 12
+2018-05-21 15:54:15 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 15:54:16 INFO  PesmaResource:77 - Prikaz pesme sa id-om 12
+2018-05-21 15:54:16 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 15:54:17 INFO  PesmaResource:77 - Prikaz pesme sa id-om 12
+2018-05-21 15:54:17 INFO  PesmaResource:91 - Uspesno prikazana pesma sa id-om 12
+2018-05-21 15:54:22 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-21 15:54:22 INFO  ZanrResource:53 - Zanrovi su uspesno prikazani
+2018-05-21 15:54:38 INFO  ZanrResource:142 - Prikaz pesama za zanr sa id-om 22
+2018-05-21 15:54:38 INFO  ZanrResource:160 - Uspesan prikaz pesama za zanr sa id-om 22
+2018-05-21 16:05:58 INFO  PesmaResource:42 - Prikaz svih pesama
+2018-05-21 16:05:58 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 16:07:02 INFO  PesmaResource:42 - Prikaz svih pesama
+2018-05-21 16:07:03 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 16:08:05 INFO  PesmaResource:42 - Prikaz svih pesama
+2018-05-21 16:08:05 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 16:09:02 INFO  PesmaResource:42 - Prikaz svih pesama
+2018-05-21 16:09:02 INFO  PesmaResource:58 - Pesme su uspesno prikazane
+2018-05-21 16:17:30 INFO  PesmaResource:42 - Prikaz svih pesama
+2018-05-21 16:28:57 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-21 16:28:57 INFO  ZanrResource:53 - Zanrovi su uspesno prikazani
+2018-05-21 16:30:30 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-21 16:30:30 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-22 08:28:03 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-22 08:28:03 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-22 08:28:17 INFO  ZanrResource:38 - Prikaz svih zanrova
+2018-05-22 08:28:17 INFO  ZanrResource:54 - Zanrovi su uspesno prikazani
+2018-05-22 08:28:36 INFO  ZanrResource:39 - Prikaz svih izvodjaca
+2018-05-22 08:28:36 INFO  ZanrResource:54 - Izvodjaci su uspesno prikazani
+2018-05-22 08:28:42 INFO  ZanrResource:35 - Prikaz svih prometa
+2018-05-22 08:28:42 INFO  ZanrResource:50 - Prometi su uspesno prikazani
+2018-05-22 08:31:54 INFO  ZanrResource:35 - Prikaz svih prometa
+2018-05-22 08:31:54 INFO  ZanrResource:50 - Prometi su uspesno prikazani
+2018-05-22 08:32:55 INFO  CenaResource:38 - Prikaz svih cena
+2018-05-22 08:32:55 INFO  CenaResource:53 - Cene su uspesno prikazane
+2018-05-22 08:33:05 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:33:05 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:34:10 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:34:10 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:34:12 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:34:13 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:34:13 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:34:13 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:34:14 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:34:14 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:34:55 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 08:34:55 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 08:41:19 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-22 08:41:19 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-22 08:41:35 INFO  ZanrResource:35 - Prikaz svih prometa
+2018-05-22 08:41:35 INFO  ZanrResource:50 - Prometi su uspesno prikazani
+2018-05-22 08:42:03 INFO  ZanrResource:131 - Unosenje prometa
+2018-05-22 08:42:03 INFO  ZanrResource:140 - Promet je uspesno unet
+2018-05-22 12:54:03 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 12:54:03 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 12:54:07 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 12:54:07 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 12:54:16 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 12:54:16 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 12:54:42 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 12:54:42 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 12:54:45 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 12:54:45 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 12:55:28 INFO  KorisnikResource:87 - Unosenje korisnika
+2018-05-22 12:55:28 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-22 12:55:31 INFO  KorisnikResource:41 - Prikaz svih izvodjaca
+2018-05-22 12:55:31 INFO  KorisnikResource:56 - Korisnici su uspesno prikazani
+2018-05-22 13:18:10 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:25:18 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:25:18 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:25:28 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:25:29 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:26:41 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:26:41 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:26:50 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:26:50 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:36:12 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:36:12 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:40:13 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:40:14 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:47:55 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:47:55 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:48:04 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:48:04 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:48:35 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:48:35 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:48:47 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:48:47 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:48:52 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:48:52 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:48:58 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:48:58 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:51:25 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:51:25 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:53:23 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:53:23 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:53:30 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:53:30 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 13:53:38 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 13:53:38 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 13:53:52 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 13:53:52 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:13:09 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:13:09 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:13:11 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:13:11 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:13:16 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:13:16 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:41:55 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:41:55 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:44:56 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:44:56 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:48:41 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:48:42 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:51:41 INFO  ZanrResource:133 - Unosenje prometa
+2018-05-22 14:51:42 INFO  ZanrResource:142 - Promet je uspesno unet
+2018-05-22 14:51:48 INFO  ZanrResource:37 - Prikaz svih prometa
+2018-05-22 14:51:48 INFO  ZanrResource:52 - Prometi su uspesno prikazani
+2018-05-22 14:59:00 INFO  PesmaResource:92 - Unosenje pesme
+2018-05-22 14:59:00 INFO  PesmaResource:98 - Pesma je uspesno uneta
+2018-05-22 15:04:12 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-22 15:04:12 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-22 15:05:46 INFO  PesmaResource:92 - Unosenje pesme
+2018-05-22 15:05:46 INFO  PesmaResource:98 - Pesma je uspesno uneta
+2018-05-22 15:05:55 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-22 15:05:55 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-22 15:19:16 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-22 15:19:16 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-22 15:19:44 INFO  PesmaResource:111 - Modifikovanje pesme sa id-om 25
+2018-05-22 15:19:44 INFO  PesmaResource:119 - Pesma sa id-om 25 je uspesno modifikovana
+2018-05-22 15:19:50 INFO  PesmaResource:68 - Prikaz pesme sa id-om 25
+2018-05-22 15:19:50 INFO  PesmaResource:82 - Uspesno prikazana pesma sa id-om 25
+2018-05-22 15:19:54 INFO  PesmaResource:41 - Prikaz svih pesama
+2018-05-22 15:19:54 INFO  PesmaResource:57 - Pesme su uspesno prikazane

@@ -16,8 +16,8 @@ import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 
-import com.telnet.jukebox.webservice.model.Pesma;
-import com.telnet.jukebox.webservice.model.Zanr;
+import com.telnet.jukebox.webservice.dto.PesmaDTO;
+import com.telnet.jukebox.webservice.dto.ZanrDTO;
 import com.telnet.jukebox.webservice.service.PesmaService;
 import com.telnet.jukebox.webservice.service.ZanrService;
 
@@ -36,15 +36,14 @@ public class ZanrResource {
 	public Response getZanrovi() throws ClassNotFoundException {
 		logger.info("Prikaz svih zanrova");
 
-		List<Zanr> zanrovi = zanrService.getZanrovi();
-		GenericEntity<List<Zanr>> list = new GenericEntity<List<Zanr>>(zanrovi) {
+		List<ZanrDTO> zanrovi = zanrService.getZanrovi();
+		GenericEntity<List<ZanrDTO>> list = new GenericEntity<List<ZanrDTO>>(zanrovi) {
 		};
 
 		Response r;
 
 		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
-					.entity("Ne postoje uneti zanrovi")
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti zanrovi")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje uneti zanrovi");
 		} else {
@@ -61,7 +60,7 @@ public class ZanrResource {
 	public Response getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz zanra sa id-om " + zanrId);
 
-		Zanr z = zanrService.getZanr(zanrId);
+		ZanrDTO z = zanrService.getZanr(zanrId);
 
 		Response r;
 
@@ -80,10 +79,10 @@ public class ZanrResource {
 	}
 
 	@POST
-	public Zanr addZanr(Zanr zanr) throws ClassNotFoundException {
+	public ZanrDTO addZanr(ZanrDTO zanr) throws ClassNotFoundException {
 		logger.info("Unosenje zanra");
 
-		Zanr z = new Zanr();
+		ZanrDTO z = new ZanrDTO();
 
 		try {
 			z = zanrService.addZanr(zanr);
@@ -97,15 +96,15 @@ public class ZanrResource {
 
 	@PUT
 	@Path("/{zanrId}")
-	public Zanr updateZanr(@PathParam("zanrId") Long zanrId, Zanr zanr) throws ClassNotFoundException {
+	public ZanrDTO updateZanr(@PathParam("zanrId") Long zanrId, ZanrDTO zanr) throws ClassNotFoundException {
 		zanr.setId(zanrId);
 
 		logger.info("Modifikovanje zanra sa id-om " + zanrId);
 
-		Zanr z = zanrService.getZanr(zanrId);
+		ZanrDTO z = zanrService.getZanr(zanrId);
 
 		if (z.getId() == 0) {
-//			 || z.getNaziv() == null
+			// || z.getNaziv() == null
 			logger.error("Zanr sa id-om " + zanrId + " ne moze biti modifikovan jer ne postoji");
 		} else {
 			z = zanrService.updateZanr(zanr);
@@ -120,7 +119,7 @@ public class ZanrResource {
 	public void deleteZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
 		logger.info("Brisanje zanra sa id-om " + zanrId);
 
-		Zanr z = zanrService.getZanr(zanrId);
+		ZanrDTO z = zanrService.getZanr(zanrId);
 
 		if (z.getId() == 0) {
 			logger.error("Zanr sa id-om " + zanrId + " ne moze biti obrisan jer ne postoji");
@@ -131,21 +130,16 @@ public class ZanrResource {
 
 	}
 
-	// @Path("/{zanrId}/pesme")
-	// public PesmaResource getPesmeResource() {
-	// return new PesmaResource();
-	// }
-
 	@GET
 	@Path("/{zanrId}/pesme")
 	public Response getSvePesmePoZanru(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za zanr sa id-om " + zanrId);
 
-		List<Pesma> pesme = pesmaService.getSvePesmePoZanru(zanrId);
-		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+		List<PesmaDTO> pesme = pesmaService.getSvePesmePoZanru(zanrId);
+		GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
 		};
 
-		Zanr z = zanrService.getZanr(zanrId);
+		ZanrDTO z = zanrService.getZanr(zanrId);
 
 		Response r;
 

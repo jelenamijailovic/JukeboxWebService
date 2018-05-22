@@ -1,9 +1,8 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
 import java.sql.Date;
 
-public class Promet {
-
+public class PrometDTO {
 	private Long id;
 	private Date datum;
 	private Long pesmaId;
@@ -14,7 +13,7 @@ public class Promet {
 	private Long idKor;
 	private String emailKor;
 
-	public Promet() {
+	public PrometDTO() {
 	}
 
 	public Long getId() {
@@ -88,5 +87,4 @@ public class Promet {
 	public void setIdKor(Long idKor) {
 		this.idKor = idKor;
 	}
-
 }

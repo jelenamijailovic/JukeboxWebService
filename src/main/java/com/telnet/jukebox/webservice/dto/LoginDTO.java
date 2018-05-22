@@ -1,9 +1,12 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Login {
+public class LoginDTO {
 
 	private String email;
 	private String sifra;
+
+	public LoginDTO() {
+	}
 
 	public String getEmail() {
 		return email;
@@ -21,5 +24,4 @@ public class Login {
 
 		this.sifra = sifra;
 	}
-
 }

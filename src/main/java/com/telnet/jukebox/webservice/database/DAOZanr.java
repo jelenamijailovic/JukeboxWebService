@@ -65,7 +65,7 @@ public class DAOZanr {
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
-			    zanr.setId(resultSet.getLong(1));
+				zanr.setId(resultSet.getLong(1));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -96,8 +96,7 @@ public class DAOZanr {
 
 	public void removeZanr(Long zanrId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
-					.prepareStatement("delete from zanrovi where zanrovi_id= ?");
+			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from zanrovi where zanrovi_id= ?");
 			prepStmt.setLong(1, zanrId);
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {

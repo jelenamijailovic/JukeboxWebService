@@ -1,11 +1,11 @@
-package com.telnet.jukebox.webservice.model;
+package com.telnet.jukebox.webservice.dto;
 
-public class Zanr {
+public class ZanrDTO {
 
 	private Long id;
 	private String naziv;
 
-	public Zanr() {
+	public ZanrDTO() {
 	}
 
 	public Long getId() {

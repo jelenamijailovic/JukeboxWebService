@@ -16,8 +16,8 @@ import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 
-import com.telnet.jukebox.webservice.model.Izvodjac;
-import com.telnet.jukebox.webservice.model.Pesma;
+import com.telnet.jukebox.webservice.dto.IzvodjacDTO;
+import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.service.IzvodjacService;
 import com.telnet.jukebox.webservice.service.PesmaService;
 
@@ -37,8 +37,8 @@ public class IzvodjacResource {
 	public Response getIzvodjaci() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
 
-		List<Izvodjac> izvodjaci = izvodjacService.getIzvodjaci();
-		GenericEntity<List<Izvodjac>> list = new GenericEntity<List<Izvodjac>>(izvodjaci) {
+		List<IzvodjacDTO> izvodjaci = izvodjacService.getIzvodjaci();
+		GenericEntity<List<IzvodjacDTO>> list = new GenericEntity<List<IzvodjacDTO>>(izvodjaci) {
 		};
 
 		Response r;
@@ -61,7 +61,7 @@ public class IzvodjacResource {
 	public Response getIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz izvodjaca sa id-om " + izvodjacId);
 
-		Izvodjac i = izvodjacService.getIzvodjac(izvodjacId);
+		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
 
 		Response r;
 
@@ -80,10 +80,10 @@ public class IzvodjacResource {
 	}
 
 	@POST
-	public Izvodjac addIzvodjaca(Izvodjac izvodjac) throws ClassNotFoundException {
+	public IzvodjacDTO addIzvodjaca(IzvodjacDTO izvodjac) throws ClassNotFoundException {
 		logger.info("Unosenje izvodjaca");
 
-		Izvodjac i = new Izvodjac();
+		IzvodjacDTO i = new IzvodjacDTO();
 
 		try {
 			i = izvodjacService.addIzvodjac(izvodjac);
@@ -97,13 +97,13 @@ public class IzvodjacResource {
 
 	@PUT
 	@Path("/{izvodjacId}")
-	public Izvodjac updateIzvodjac(@PathParam("izvodjacId") Long izvodjacId, Izvodjac izvodjac)
+	public IzvodjacDTO updateIzvodjac(@PathParam("izvodjacId") Long izvodjacId, IzvodjacDTO izvodjac)
 			throws ClassNotFoundException {
 		izvodjac.setId(izvodjacId);
 
 		logger.info("Modifikovanje izvodjaca sa id-om " + izvodjacId);
 
-		Izvodjac i = izvodjacService.getIzvodjac(izvodjacId);
+		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
 
 		if (i.getId() == 0) {
 			logger.error("Izvodjac sa id-om " + izvodjacId + " ne moze biti modifikovan jer ne postoji");
@@ -120,7 +120,7 @@ public class IzvodjacResource {
 	public void deleteIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
 		logger.info("Brisanje izvodjaca sa id-om " + izvodjacId);
 
-		Izvodjac i = izvodjacService.getIzvodjac(izvodjacId);
+		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
 
 		if (i.getId() == 0) {
 			logger.error("Izvodjac sa id-om " + izvodjacId + " ne moze biti obrisan jer ne postoji");
@@ -136,11 +136,11 @@ public class IzvodjacResource {
 	public Response getSvePesmePoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + izvodjacId);
 
-		List<Pesma> pesme = pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
-		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+		List<PesmaDTO> pesme = pesmaService.getSvePesmePoIzvodjacu(izvodjacId);
+		GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
 		};
 
-		Izvodjac i = izvodjacService.getIzvodjac(izvodjacId);
+		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
 
 		Response r;
 

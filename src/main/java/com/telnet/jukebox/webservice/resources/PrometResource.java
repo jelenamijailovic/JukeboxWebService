@@ -15,8 +15,9 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
+import org.springframework.web.bind.annotation.RequestBody;
 
-import com.telnet.jukebox.webservice.model.Promet;
+import com.telnet.jukebox.webservice.dto.PrometDTO;
 import com.telnet.jukebox.webservice.service.PrometService;
 
 @Path("/prometi")
@@ -34,8 +35,8 @@ public class PrometResource {
 	public Response getSviPrometi() throws ClassNotFoundException {
 		logger.info("Prikaz svih prometa");
 
-		List<Promet> prometi = prometService.getSviPrometi();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getSviPrometi();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
@@ -58,7 +59,7 @@ public class PrometResource {
 	public Response getPromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa sa id-om " + prometId);
 
-		Promet p = prometService.getPromet(prometId);
+		PrometDTO p = prometService.getPromet(prometId);
 
 		Response r;
 
@@ -81,8 +82,8 @@ public class PrometResource {
 	public Response getTop5Songs() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 pesama");
 
-		List<Promet> prometi = prometService.getTop5Songs();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getTop5Songs();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
@@ -99,15 +100,15 @@ public class PrometResource {
 
 		return r;
 	}
-	
+
 	@SuppressWarnings("unused")
 	@GET
 	@Path("/top5artists")
 	public Response getTop5Artists() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 izvodjaca");
 
-		List<Promet> prometi = prometService.getTop5Artists();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getTop5Artists();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
@@ -126,16 +127,16 @@ public class PrometResource {
 	}
 
 	@POST
-	@Path("/{pesmaId}")
-	public Response addPromet(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
+	// @Path("/{pesmaId}")
+	public Response addPromet(@RequestBody PrometDTO promet) throws ClassNotFoundException {
 		logger.info("Unosenje prometa");
 
-		Promet promet = prometService.addPromet(pesmaId);
+		PrometDTO promet1 = prometService.addPromet(promet.getPesmaId(), promet.getIdKor(), promet);
 
 		Response r;
 
 		try {
-			r = Response.ok(promet).header("Access-Control-Allow-Origin", "*")
+			r = Response.ok(promet1).header("Access-Control-Allow-Origin", "*")
 					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 			logger.info("Promet je uspesno unet");
 		} catch (Exception e) {
@@ -148,25 +149,27 @@ public class PrometResource {
 		return r;
 	}
 
-//	@PUT
-//	@Path("/{prometId}")
-//	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
-//			throws ClassNotFoundException {
-//		promet.setId(prometId);
-//
-//		logger.info("Modifikovanje prometa sa id-om " + prometId);
-//
-//		Promet p = prometService.getPromet(prometId);
-//
-//		if (p.getId() == 0) {
-//			logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
-//		} else {
-//			p = prometService.updatePromet(promet);
-//			logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
-//		}
-//
-//		return promet;
-//	}
+	// @PUT
+	// @Path("/{prometId}")
+	// public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId,
+	// Promet promet)
+	// throws ClassNotFoundException {
+	// promet.setId(prometId);
+	//
+	// logger.info("Modifikovanje prometa sa id-om " + prometId);
+	//
+	// Promet p = prometService.getPromet(prometId);
+	//
+	// if (p.getId() == 0) {
+	// logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer
+	// ne postoji");
+	// } else {
+	// p = prometService.updatePromet(promet);
+	// logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
+	// }
+	//
+	// return promet;
+	// }
 
 	@DELETE
 	@Path("/{prometId}")
@@ -174,7 +177,7 @@ public class PrometResource {
 	public void deletePromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
 		logger.info("Brisanje prometa sa id-om " + prometId);
 
-		Promet p = prometService.getPromet(prometId);
+		PrometDTO p = prometService.getPromet(prometId);
 
 		if (p.getId() == 0) {
 			logger.error("Promet sa id-om " + prometId + " ne moze biti obrisan jer ne postoji");

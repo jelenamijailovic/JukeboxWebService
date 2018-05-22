@@ -116,3 +116,13 @@ null
 Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
 2018-05-18 13:25:36 ERROR KorisnikResource:99 - Postoji email u bazi.
 Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'
+2018-05-18 13:46:35 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'nove' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:07 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:12 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 17:00:25 ERROR KorisnikResource:101 - Greska pri unosu korisnika:
+Data source rejected establishment of connection,  message from server: "Too many connections"
+2018-05-22 12:55:28 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
