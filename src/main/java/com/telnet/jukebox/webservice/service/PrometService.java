@@ -70,12 +70,14 @@ public class PrometService {
 		java.util.Date datum = new java.util.Date();
 		java.sql.Date date = new java.sql.Date(datum.getTime());
 
+		promet.setPesmaId(pid);
+		promet.setIdKor(kid);
+		
 		promet.setDatum(date);
 
 		PrometDTO promet1 = entityToDTO(dao.insertPromet(pid, kid, DTOToEntity(promet)));
 
-		promet1.setPesmaId(pid);
-		promet1.setIdKor(kid);
+		
 
 		return promet1;
 	}

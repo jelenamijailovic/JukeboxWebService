@@ -9410,3 +9410,7 @@ null
 2018-05-22 15:19:50 INFO  PesmaResource:82 - Uspesno prikazana pesma sa id-om 25
 2018-05-22 15:19:54 INFO  PesmaResource:41 - Prikaz svih pesama
 2018-05-22 15:19:54 INFO  PesmaResource:57 - Pesme su uspesno prikazane
+2018-05-23 09:09:44 INFO  ZanrResource:132 - Unosenje prometa
+2018-05-23 09:09:44 INFO  ZanrResource:141 - Promet je uspesno unet
+2018-05-23 09:09:51 INFO  ZanrResource:36 - Prikaz svih prometa
+2018-05-23 09:09:51 INFO  ZanrResource:51 - Prometi su uspesno prikazani
