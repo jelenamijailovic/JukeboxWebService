@@ -4,24 +4,24 @@ import java.sql.Date;
 
 public class Promet {
 
-	private Long id;
+	private int id;
 	private Date datum;
-	private Long pesmaId;
+	private int pesmaId;
 	private String pesmaNaziv;
-	private Long cenaKolicina;
-	private Long repetition;
+	private int cenaKolicina;
+	private int repetition;
 	private String izvodjacIme;
-	private Long idKor;
+	private int idKor;
 	private String emailKor;
 
 	public Promet() {
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -41,27 +41,27 @@ public class Promet {
 		this.pesmaNaziv = pesmaNaziv;
 	}
 
-	public Long getCenaKolicina() {
+	public int getCenaKolicina() {
 		return cenaKolicina;
 	}
 
-	public void setCenaKolicina(Long cenaKolicina) {
+	public void setCenaKolicina(int cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
 	}
 
-	public Long getPesmaId() {
+	public int getPesmaId() {
 		return pesmaId;
 	}
 
-	public void setPesmaId(Long pesmaId) {
+	public void setPesmaId(int pesmaId) {
 		this.pesmaId = pesmaId;
 	}
 
-	public Long getRepetition() {
+	public int getRepetition() {
 		return repetition;
 	}
 
-	public void setRepetition(Long repetition) {
+	public void setRepetition(int repetition) {
 		this.repetition = repetition;
 	}
 
@@ -81,11 +81,11 @@ public class Promet {
 		this.emailKor = emailKor;
 	}
 
-	public Long getIdKor() {
+	public int getIdKor() {
 		return idKor;
 	}
 
-	public void setIdKor(Long idKor) {
+	public void setIdKor(int idKor) {
 		this.idKor = idKor;
 	}
 

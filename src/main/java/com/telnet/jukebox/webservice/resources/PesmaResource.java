@@ -61,7 +61,7 @@ public class PesmaResource {
 
 	@GET
 	@Path("/{pesmaId}")
-	public Response getPesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
+	public Response getPesma(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz pesme sa id-om " + pesmaId);
 
 		PesmaDTO p = pesmaService.getPesma(pesmaId);
@@ -102,7 +102,7 @@ public class PesmaResource {
 
 	@PUT
 	@Path("/{pesmaId}")
-	public PesmaDTO updatePesma(@PathParam("pesmaId") Long pesmaId, @RequestBody PesmaDTO pesma)
+	public PesmaDTO updatePesma(@PathParam("pesmaId") int pesmaId, @RequestBody PesmaDTO pesma)
 			throws ClassNotFoundException {
 		pesma.setId(pesmaId);
 
@@ -122,7 +122,7 @@ public class PesmaResource {
 
 	@DELETE
 	@Path("/{pesmaId}")
-	public void deletePesma(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
+	public void deletePesma(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Brisanje pesme sa id-om " + pesmaId);
 
 		PesmaDTO p = pesmaService.getPesma(pesmaId);
@@ -138,7 +138,7 @@ public class PesmaResource {
 
 	@GET
 	@Path("/{pesmaId}/prometi")
-	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
+	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa za pesmu sa id-om " + pesmaId);
 
 		List<PrometDTO> prometi = prometService.getSviPrometiPoPesmi(pesmaId);

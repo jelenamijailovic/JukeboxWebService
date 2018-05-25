@@ -58,7 +58,7 @@ public class IzvodjacResource {
 
 	@GET
 	@Path("/{izvodjacId}")
-	public Response getIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
+	public Response getIzvodjac(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz izvodjaca sa id-om " + izvodjacId);
 
 		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
@@ -97,7 +97,7 @@ public class IzvodjacResource {
 
 	@PUT
 	@Path("/{izvodjacId}")
-	public IzvodjacDTO updateIzvodjac(@PathParam("izvodjacId") Long izvodjacId, IzvodjacDTO izvodjac)
+	public IzvodjacDTO updateIzvodjac(@PathParam("izvodjacId") int izvodjacId, IzvodjacDTO izvodjac)
 			throws ClassNotFoundException {
 		izvodjac.setId(izvodjacId);
 
@@ -117,7 +117,7 @@ public class IzvodjacResource {
 
 	@DELETE
 	@Path("/{izvodjacId}")
-	public void deleteIzvodjac(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
+	public void deleteIzvodjac(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Brisanje izvodjaca sa id-om " + izvodjacId);
 
 		IzvodjacDTO i = izvodjacService.getIzvodjac(izvodjacId);
@@ -133,7 +133,7 @@ public class IzvodjacResource {
 
 	@GET
 	@Path("/{izvodjacId}/pesme")
-	public Response getSvePesmePoIzvodjacu(@PathParam("izvodjacId") Long izvodjacId) throws ClassNotFoundException {
+	public Response getSvePesmePoIzvodjacu(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + izvodjacId);
 
 		List<PesmaDTO> pesme = pesmaService.getSvePesmePoIzvodjacu(izvodjacId);

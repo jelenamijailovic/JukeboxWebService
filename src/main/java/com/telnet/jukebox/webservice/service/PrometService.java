@@ -3,13 +3,22 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.telnet.jukebox.webservice.database.DAOPromet;
+import javax.ws.rs.HeaderParam;
+import javax.xml.bind.DatatypeConverter;
+
+import com.telnet.jukebox.webservice.database.PrometDAO;
 import com.telnet.jukebox.webservice.dto.PrometDTO;
 import com.telnet.jukebox.webservice.model.Promet;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+
 public class PrometService {
 
-	DAOPromet dao = new DAOPromet();
+	PrometDAO dao = new PrometDAO();
+	KorisnikService korisnikService= new KorisnikService();
 
 	public List<PrometDTO> getSviPrometi() throws ClassNotFoundException {
 		List<PrometDTO> list = new ArrayList<PrometDTO>();
@@ -21,7 +30,7 @@ public class PrometService {
 		return list;
 	}
 
-	public List<PrometDTO> getSviPrometiPoPesmi(Long pesmaId) throws ClassNotFoundException {
+	public List<PrometDTO> getSviPrometiPoPesmi(int pesmaId) throws ClassNotFoundException {
 		List<PrometDTO> list = new ArrayList<PrometDTO>();
 
 		for (int i = 0; i < dao.getPrometePoPesmi(pesmaId).size(); i++) {
@@ -31,7 +40,7 @@ public class PrometService {
 		return list;
 	}
 
-	public List<PrometDTO> getSviPrometiPoKorisniku(Long korisnikId) throws ClassNotFoundException {
+	public List<PrometDTO> getSviPrometiPoKorisniku(int korisnikId) throws ClassNotFoundException {
 		List<PrometDTO> list = new ArrayList<PrometDTO>();
 
 		for (int i = 0; i < dao.getPrometePoKorisniku(korisnikId).size(); i++) {
@@ -41,7 +50,7 @@ public class PrometService {
 		return list;
 	}
 
-	public PrometDTO getPromet(Long prometId) throws ClassNotFoundException {
+	public PrometDTO getPromet(int prometId) throws ClassNotFoundException {
 		return entityToDTO(dao.getPromet(prometId));
 	}
 
@@ -65,17 +74,27 @@ public class PrometService {
 		return list;
 	}
 
-	public PrometDTO addPromet(Long pid, Long kid, PrometDTO promet) throws ClassNotFoundException {
-
+	public PrometDTO addPromet(int pesmaId, int korisnikId, PrometDTO promet) throws ClassNotFoundException {
+//
+//		KorisnikDTO kor= korisnikService.
+		
 		java.util.Date datum = new java.util.Date();
 		java.sql.Date date = new java.sql.Date(datum.getTime());
 
-		promet.setPesmaId(pid);
-		promet.setIdKor(kid);
+		promet.setPesmaId(pesmaId);
+		
+//		Jws<Claims> claims = Jwts.parser()
+//				  .setSigningKey("sifra".getBytes())
+//				  .parseClaimsJws(Authorization);
+//		String id= claims.getBody().getId();
+//		System.out.println(id);
+//		Long idKor= Long.parseLong(id);
+//		System.out.println(idKor);
+		promet.setIdKor(korisnikId);
 		
 		promet.setDatum(date);
 
-		PrometDTO promet1 = entityToDTO(dao.insertPromet(pid, kid, DTOToEntity(promet)));
+		PrometDTO promet1 = entityToDTO(dao.insertPromet(pesmaId, korisnikId, DTOToEntity(promet)));
 
 		
 
@@ -86,7 +105,7 @@ public class PrometService {
 	// return dao.updatePromet(promet);
 	// }
 
-	public void deletePromet(Long prometId) throws ClassNotFoundException {
+	public void deletePromet(int prometId) throws ClassNotFoundException {
 		dao.removePromet(prometId);
 	}
 
@@ -113,5 +132,7 @@ public class PrometService {
 		dto.setEmailKor(promet.getEmailKor());
 		return dto;
 	}
+	
+	 
 
 }

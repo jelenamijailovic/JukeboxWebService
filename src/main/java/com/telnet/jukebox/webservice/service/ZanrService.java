@@ -3,13 +3,13 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.telnet.jukebox.webservice.database.DAOZanr;
+import com.telnet.jukebox.webservice.database.ZanrDAO;
 import com.telnet.jukebox.webservice.dto.ZanrDTO;
 import com.telnet.jukebox.webservice.model.Zanr;
 
 public class ZanrService {
 
-	DAOZanr dao = new DAOZanr();
+	ZanrDAO dao = new ZanrDAO();
 
 	public List<ZanrDTO> getZanrovi() throws ClassNotFoundException {
 		List<ZanrDTO> list = new ArrayList<ZanrDTO>();
@@ -21,7 +21,7 @@ public class ZanrService {
 		return list;
 	}
 
-	public ZanrDTO getZanr(Long id) throws ClassNotFoundException {
+	public ZanrDTO getZanr(int id) throws ClassNotFoundException {
 		return entityToDTO(dao.getZanr(id));
 	}
 
@@ -33,7 +33,7 @@ public class ZanrService {
 		return entityToDTO(dao.updateZanr(DTOToEntity(zanr)));
 	}
 
-	public void removeZanr(Long id) throws ClassNotFoundException {
+	public void removeZanr(int id) throws ClassNotFoundException {
 		dao.removeZanr(id);
 	}
 

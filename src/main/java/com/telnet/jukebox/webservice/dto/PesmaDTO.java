@@ -2,23 +2,23 @@ package com.telnet.jukebox.webservice.dto;
 
 public class PesmaDTO {
 
-	private Long id;
+	private int id;
 	private String naziv;
 	private String izvodjacIme;
 	private String zanrIme;
-	private Long cenaKolicina;
-	private Long izvodjacId;
-	private Long cenaId;
+	private int cenaKolicina;
+	private int izvodjacId;
+	private int cenaId;
 
 	public PesmaDTO() {
 
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -46,27 +46,27 @@ public class PesmaDTO {
 		this.zanrIme = zanrIme;
 	}
 
-	public Long getCenaKolicina() {
+	public int getCenaKolicina() {
 		return cenaKolicina;
 	}
 
-	public void setCenaKolicina(Long cenaKolicina) {
+	public void setCenaKolicina(int cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
 	}
 
-	public Long getIzvodjacId() {
+	public int getIzvodjacId() {
 		return izvodjacId;
 	}
 
-	public void setIzvodjacId(Long izvodjacId) {
+	public void setIzvodjacId(int izvodjacId) {
 		this.izvodjacId = izvodjacId;
 	}
 
-	public Long getCenaId() {
+	public int getCenaId() {
 		return cenaId;
 	}
 
-	public void setCenaId(Long cenaId) {
+	public void setCenaId(int cenaId) {
 		this.cenaId = cenaId;
 	}
 }

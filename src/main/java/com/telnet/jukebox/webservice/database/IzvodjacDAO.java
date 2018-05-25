@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.telnet.jukebox.webservice.model.Izvodjac;
 
-public class DAOIzvodjac {
+public class IzvodjacDAO {
 
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
@@ -24,7 +24,7 @@ public class DAOIzvodjac {
 			resultSet = stmt.executeQuery("select * from izvodjaci");
 			while (resultSet.next()) {
 				Izvodjac izvodjac = new Izvodjac();
-				izvodjac.setId(resultSet.getLong(1));
+				izvodjac.setId(resultSet.getInt(1));
 				izvodjac.setIme(resultSet.getString(2));
 				izvodjaci.add(izvodjac);
 			}
@@ -37,15 +37,15 @@ public class DAOIzvodjac {
 		return izvodjaci;
 	}
 
-	public Izvodjac getIzvodjac(Long izvodjacId) throws ClassNotFoundException {
+	public Izvodjac getIzvodjac(int izvodjacId) throws ClassNotFoundException {
 		Izvodjac izvodjac = new Izvodjac();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
-			prepStmt.setLong(1, izvodjacId);
+			prepStmt.setInt(1, izvodjacId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
-				izvodjac.setId(resultSet.getLong(1));
+				izvodjac.setId(resultSet.getInt(1));
 				izvodjac.setIme(resultSet.getString(2));
 				return izvodjac;
 			}
@@ -65,7 +65,7 @@ public class DAOIzvodjac {
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
-				izvodjac.setId(resultSet.getLong(1));
+				izvodjac.setId(resultSet.getInt(1));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -81,7 +81,7 @@ public class DAOIzvodjac {
 			prepStmt = DatabaseConnector.conStat()
 					.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
 			prepStmt.setString(1, izvodjac.getIme());
-			prepStmt.setLong(2, izvodjac.getId());
+			prepStmt.setInt(2, izvodjac.getId());
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -92,10 +92,10 @@ public class DAOIzvodjac {
 		return izvodjac;
 	}
 
-	public void removeIzvodjac(long izvodjacId) throws ClassNotFoundException {
+	public void removeIzvodjac(int izvodjacId) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from izvodjaci where izvodjaci_id= ?");
-			prepStmt.setLong(1, izvodjacId);
+			prepStmt.setInt(1, izvodjacId);
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

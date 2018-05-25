@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.telnet.jukebox.webservice.model.Cena;
 
-public class DAOCena {
+public class CenaDAO {
 
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
@@ -24,8 +24,8 @@ public class DAOCena {
 			resultSet = stmt.executeQuery("select * from cene");
 			while (resultSet.next()) {
 				Cena cena = new Cena();
-				cena.setId(resultSet.getLong(1));
-				cena.setKolicina(resultSet.getLong(2));
+				cena.setId(resultSet.getInt(1));
+				cena.setKolicina(resultSet.getInt(2));
 				cene.add(cena);
 			}
 		} catch (SQLException e) {
@@ -37,16 +37,16 @@ public class DAOCena {
 		return cene;
 	}
 
-	public Cena getCena(Long cenaId) throws ClassNotFoundException {
+	public Cena getCena(int cenaId) throws ClassNotFoundException {
 		Cena cena = new Cena();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from cene where cene_id= ?");
-			prepStmt.setLong(1, cenaId);
+			prepStmt.setInt(1, cenaId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
-				cena.setId(resultSet.getLong(1));
-				cena.setKolicina(resultSet.getLong(2));
+				cena.setId(resultSet.getInt(1));
+				cena.setKolicina(resultSet.getInt(2));
 				return cena;
 			}
 		} catch (SQLException e) {
@@ -61,11 +61,11 @@ public class DAOCena {
 	public Cena insertCena(Cena cena) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into cene (cene_kolicina) values(?)");
-			prepStmt.setLong(1, cena.getKolicina());
+			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
-				cena.setId(resultSet.getLong(1));
+				cena.setId(resultSet.getInt(1));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -80,8 +80,8 @@ public class DAOCena {
 		try {
 			prepStmt = DatabaseConnector.conStat()
 					.prepareStatement("update cene set cene_kolicina= ? where cene_id= ?");
-			prepStmt.setLong(1, cena.getKolicina());
-			prepStmt.setLong(2, cena.getId());
+			prepStmt.setInt(1, cena.getKolicina());
+			prepStmt.setInt(2, cena.getId());
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -92,10 +92,10 @@ public class DAOCena {
 		return cena;
 	}
 
-	public void removeCena(Long cenaId) throws ClassNotFoundException {
+	public void removeCena(int cenaId) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from cene where cene_id= ?");
-			prepStmt.setLong(1, cenaId);
+			prepStmt.setInt(1, cenaId);
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

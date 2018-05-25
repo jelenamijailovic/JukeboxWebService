@@ -13,8 +13,9 @@ import java.util.Formatter;
 import java.util.List;
 
 import com.telnet.jukebox.webservice.model.Korisnik;
+import com.telnet.jukebox.webservice.model.Login;
 
-public class DAOKorisnik {
+public class KorisnikDAO {
 
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
@@ -28,7 +29,7 @@ public class DAOKorisnik {
 			resultSet = stmt.executeQuery("select * from korisnici");
 			while (resultSet.next()) {
 				Korisnik korisnik = new Korisnik();
-				korisnik.setId(resultSet.getLong(1));
+				korisnik.setId(resultSet.getInt(1));
 				korisnik.setEmail(resultSet.getString(2));
 				korisnik.setSifra(resultSet.getString(3));
 				korisnici.add(korisnik);
@@ -42,7 +43,7 @@ public class DAOKorisnik {
 		return korisnici;
 	}
 
-	public Korisnik getKorisnik(Long korisnikId) throws ClassNotFoundException {
+	public Korisnik getKorisnik(int korisnikId) throws ClassNotFoundException {
 		Korisnik korisnik = new Korisnik();
 
 		try {
@@ -50,7 +51,7 @@ public class DAOKorisnik {
 			prepStmt.setLong(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
-				korisnik.setId(resultSet.getLong(1));
+				korisnik.setId(resultSet.getInt(1));
 				korisnik.setEmail(resultSet.getString(2));
 				korisnik.setSifra(resultSet.getString(3));
 				return korisnik;
@@ -74,7 +75,7 @@ public class DAOKorisnik {
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
-				korisnik.setId(resultSet.getLong(1));
+				korisnik.setId(resultSet.getInt(1));
 			}
 		} catch (IOException e) {
 			System.out.println("insert");
@@ -84,17 +85,17 @@ public class DAOKorisnik {
 		return korisnik;
 	}
 
-	public Korisnik loginKorisnik(String email, String sifra) throws ClassNotFoundException {
+	public Korisnik loginKorisnik(Login login) throws ClassNotFoundException {
 		Korisnik korisnik = new Korisnik();
-		String sifra1 = encryptPassword(sifra);
+		String sifra1 = encryptPassword(login.getSifra());
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from korisnici where korisnici_email= ?");
-			prepStmt.setString(1, email);
+			prepStmt.setString(1, login.getEmail());
 			resultSet = prepStmt.executeQuery();
 
 			while (resultSet.next()) {
-				korisnik.setId(resultSet.getLong(1));
+				korisnik.setId(resultSet.getInt(1));
 				korisnik.setEmail(resultSet.getString(2));
 				korisnik.setSifra(resultSet.getString(3));
 
@@ -102,7 +103,7 @@ public class DAOKorisnik {
 			String korSifra = korisnik.getSifra();
 
 			if (korSifra.equals(sifra1)) {
-				korisnik.setSifra(sifra);
+				korisnik.setSifra(login.getSifra());
 			} else {
 				System.out.println("Pogresna sifra");
 				korisnik.setSifra(null);
@@ -126,7 +127,7 @@ public class DAOKorisnik {
 					"update korisnici set korisnici_sifra=?, korisnici_email=? where korisnici_id= ?");
 			prepStmt.setString(1, korisnik.getSifra());
 			prepStmt.setString(2, korisnik.getEmail());
-			prepStmt.setLong(3, korisnik.getId());
+			prepStmt.setInt(3, korisnik.getId());
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -137,10 +138,10 @@ public class DAOKorisnik {
 		return korisnik;
 	}
 
-	public void deleteKorisnik(Long korisnikId) throws ClassNotFoundException {
+	public void deleteKorisnik(int korisnikId) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from korisnici where korisnici_id= ?");
-			prepStmt.setLong(1, korisnikId);
+			prepStmt.setInt(1, korisnikId);
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

@@ -10,7 +10,7 @@ import java.util.List;
 
 import com.telnet.jukebox.webservice.model.Promet;
 
-public class DAOPromet {
+public class PrometDAO {
 
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
@@ -25,10 +25,10 @@ public class DAOPromet {
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id=k.korisnici_id");
 			while (resultSet.next()) {
 				Promet promet = new Promet();
-				promet.setId(resultSet.getLong(1));
+				promet.setId(resultSet.getInt(1));
 				promet.setDatum(resultSet.getDate(2));
 				promet.setPesmaNaziv(resultSet.getString(3));
-				promet.setCenaKolicina(resultSet.getLong(4));
+				promet.setCenaKolicina(resultSet.getInt(4));
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
@@ -41,20 +41,20 @@ public class DAOPromet {
 		return prometi;
 	}
 
-	public List<Promet> getPrometePoKorisniku(Long korisnikId) throws ClassNotFoundException {
+	public List<Promet> getPrometePoKorisniku(int korisnikId) throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where k.korisnici_id= ?");
-			prepStmt.setLong(1, korisnikId);
+			prepStmt.setInt(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
 				Promet promet = new Promet();
-				promet.setId(resultSet.getLong(1));
+				promet.setId(resultSet.getInt(1));
 				promet.setDatum(resultSet.getDate(2));
 				promet.setPesmaNaziv(resultSet.getString(3));
-				promet.setCenaKolicina(resultSet.getLong(4));
+				promet.setCenaKolicina(resultSet.getInt(4));
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
@@ -67,20 +67,20 @@ public class DAOPromet {
 		return prometi;
 	}
 
-	public List<Promet> getPrometePoPesmi(Long pesmaId) throws ClassNotFoundException {
+	public List<Promet> getPrometePoPesmi(int pesmaId) throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where pe.pesme_id= ?");
-			prepStmt.setLong(1, pesmaId);
+			prepStmt.setInt(1, pesmaId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
 				Promet promet = new Promet();
-				promet.setId(resultSet.getLong(1));
+				promet.setId(resultSet.getInt(1));
 				promet.setDatum(resultSet.getDate(2));
 				promet.setPesmaNaziv(resultSet.getString(3));
-				promet.setCenaKolicina(resultSet.getLong(4));
+				promet.setCenaKolicina(resultSet.getInt(4));
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
@@ -93,19 +93,19 @@ public class DAOPromet {
 		return prometi;
 	}
 
-	public Promet getPromet(Long prometId) throws ClassNotFoundException {
+	public Promet getPromet(int prometId) throws ClassNotFoundException {
 		Promet promet = new Promet();
 
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where pr.prometi_id= ?");
-			prepStmt.setLong(1, prometId);
+			prepStmt.setInt(1, prometId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
-				promet.setId(resultSet.getLong(1));
+				promet.setId(resultSet.getInt(1));
 				promet.setDatum(resultSet.getDate(2));
 				promet.setPesmaNaziv(resultSet.getString(3));
-				promet.setCenaKolicina(resultSet.getLong(4));
+				promet.setCenaKolicina(resultSet.getInt(4));
 				promet.setEmailKor(resultSet.getString(5));
 				return promet;
 			}
@@ -124,15 +124,15 @@ public class DAOPromet {
 		try {
 			stmt = DatabaseConnector.conStat().createStatement();
 			resultSet = stmt.executeQuery(
-					"select pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id group by pe.pesme_naziv, pe.cena_id order by repetition desc limit 5;");
-			Long i = (long) 1;
+					"select pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id group by pe.pesme_naziv, pe.cena_id, k.korisnici_email order by repetition desc limit 5;");
+			int i = 1;
 			while (resultSet.next()) {
 				Promet promet = new Promet();
 				promet.setId(i++);
 				promet.setPesmaNaziv(resultSet.getString(1));
-				promet.setRepetition(resultSet.getLong(2));
-				promet.setCenaKolicina(resultSet.getLong(3));
-				promet.setEmailKor(resultSet.getString(5));
+				promet.setRepetition(resultSet.getInt(2));
+				promet.setCenaKolicina(resultSet.getInt(3));
+				promet.setEmailKor(resultSet.getString(4));
 				prometi.add(promet);
 			}
 		} catch (SQLException e) {
@@ -151,12 +151,12 @@ public class DAOPromet {
 			stmt = DatabaseConnector.conStat().createStatement();
 			resultSet = stmt.executeQuery(
 					"select i.izvodjaci_ime, count(pr.pesma_id) as repetition from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join izvodjaci i on pe.izvodjac_id= i.izvodjaci_id group by pe.izvodjac_id order by repetition desc limit 5;");
-			Long i = (long) 1;
+			int i = 1;
 			while (resultSet.next()) {
 				Promet promet = new Promet();
 				promet.setId(i++);
 				promet.setIzvodjacIme(resultSet.getString(1));
-				promet.setRepetition(resultSet.getLong(2));
+				promet.setRepetition(resultSet.getInt(2));
 				prometi.add(promet);
 			}
 		} catch (SQLException e) {
@@ -168,17 +168,17 @@ public class DAOPromet {
 		return prometi;
 	}
 
-	public Promet insertPromet(Long pid, Long kid, Promet promet) throws ClassNotFoundException {
+	public Promet insertPromet(int pesmaId, int korisnikId, Promet promet) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat()
 					.prepareStatement("insert into prometi (prometi_datum, pesma_id, korisnik_id) values(?,?,?)");
 			prepStmt.setDate(1, promet.getDatum());
-			prepStmt.setLong(2, pid);
-			prepStmt.setLong(3, kid);
+			prepStmt.setInt(2, pesmaId);
+			prepStmt.setInt(3, korisnikId);
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
-				promet.setId(resultSet.getLong(1));
+				promet.setId(resultSet.getInt(1));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -205,10 +205,10 @@ public class DAOPromet {
 	// return promet;
 	// }
 
-	public void removePromet(Long prometId) throws ClassNotFoundException {
+	public void removePromet(int prometId) throws ClassNotFoundException {
 		try {
 			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from prometi where prometi_id= ?");
-			prepStmt.setLong(1, prometId);
+			prepStmt.setInt(1, prometId);
 			prepStmt.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

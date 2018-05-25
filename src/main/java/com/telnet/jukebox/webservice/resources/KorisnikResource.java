@@ -11,7 +11,9 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -60,7 +62,7 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}")
-	public Response getKorisnik(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
+	public Response getKorisnik(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz korisnika sa id-om " + korisnikId);
 
 		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
@@ -84,6 +86,7 @@ public class KorisnikResource {
 	@POST
 	public Response addKorisnika(KorisnikDTO korisnik) throws ClassNotFoundException {
 		logger.info("Unosenje korisnika");
+		
 
 		Response r;
 		try {
@@ -108,7 +111,7 @@ public class KorisnikResource {
 
 	@PUT
 	@Path("/{korisnikId}")
-	public KorisnikDTO updateKorisnik(@PathParam("korisnikId") Long korisnikId, KorisnikDTO korisnik)
+	public KorisnikDTO updateKorisnik(@PathParam("korisnikId") int korisnikId, KorisnikDTO korisnik)
 			throws ClassNotFoundException {
 		korisnik.setId(korisnikId);
 
@@ -128,7 +131,7 @@ public class KorisnikResource {
 
 	@DELETE
 	@Path("/{korisnikId}")
-	public void deleteIzvodjac(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
+	public void deleteIzvodjac(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Brisanje korisnika sa id-om " + korisnikId);
 
 		KorisnikDTO k = korisnikService.getKorisnik(korisnikId);
@@ -144,8 +147,33 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}/prometi")
-	public Response getSviPrometiPoKorisniku(@PathParam("korisnikId") Long korisnikId) throws ClassNotFoundException {
+	public Response getSviPrometiPoKorisniku(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + korisnikId);
+		/*String authenticationheader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+		System.out.println(authenticationheader);
+		logger.info(authenticationheader);*/
+		
+		/*HttpClient client = HttpClientBuilder.create().build();
+		HttpGet request = new HttpGet();
+		HttpResponse response;
+		try {
+			response = client.execute(request);
+			Header[] headers = response.getAllHeaders();
+			for (Header header : headers) {
+				System.out.println("Key : " + header.getName() 
+				      + " ,Value : " + header.getValue());
+			}
+
+			//get header by 'key'
+			String server = response.getFirstHeader("Server").getValue();
+			System.out.println(server);
+		} catch (ClientProtocolException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}*/
+			
+		
 
 		List<PrometDTO> prometi = prometService.getSviPrometiPoKorisniku(korisnikId);
 		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
@@ -175,10 +203,9 @@ public class KorisnikResource {
 		logger.info("Login korisnika");
 
 		try {
-			if (korisnikService.login(login.getEmail(), login.getSifra()) != "") {
-				return Response.ok(korisnikService.login(login.getEmail(), login.getSifra()))
-						.header("Access-Control-Allow-Origin", "*").header("Access-Control-Allow-Methods", "POST")
-						.allow("OPTIONS").build();
+			if (korisnikService.login(login) != "") {
+				return Response.ok(korisnikService.login(login)).header("Access-Control-Allow-Origin", "*")
+						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 			}
 		} catch (ClassNotFoundException e) {
 			logger.error("Resorurce not found");
@@ -189,5 +216,23 @@ public class KorisnikResource {
 		return Response.status(Response.Status.CONFLICT).header("Access-Control-Allow-Origin", "*")
 				.entity("Pogresna sifra!!!").header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 	}
+
+	
+
+	/*
+	 * @GET
+	 * 
+	 * @Path("/getuser") public Response getInfoFromtoken(ContainerRequestContext
+	 * requestContex) { // ErrorMessages messages = new
+	 * ErrorMessages("Token is not valid",401); Response responses =
+	 * Response.status(Status.UNAUTHORIZED).entity("Token is not valid").build();
+	 * try { return Response.status(Status.ACCEPTED)
+	 * .entity(KorisnikService.getDataFromToken(requestContex.getHeaderString(
+	 * "Authorization"))).build();
+	 * 
+	 * } catch (Exception ex) {
+	 * 
+	 * throw new WebApplicationException(responses); } }
+	 */
 
 }

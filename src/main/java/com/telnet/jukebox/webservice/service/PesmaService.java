@@ -3,15 +3,15 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.telnet.jukebox.webservice.database.DAOPesma;
+import com.telnet.jukebox.webservice.database.PesmaDAO;
 import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.model.Pesma;
 
 public class PesmaService {
 
-	DAOPesma dao = new DAOPesma();
+	PesmaDAO dao = new PesmaDAO();
 
-	public List<PesmaDTO> getSvePesmePoIzvodjacu(Long izvodjacId) throws ClassNotFoundException {
+	public List<PesmaDTO> getSvePesmePoIzvodjacu(int izvodjacId) throws ClassNotFoundException {
 		List<PesmaDTO> list = new ArrayList<PesmaDTO>();
 
 		for (int i = 0; i < dao.getPesmePoIzvodjacu(izvodjacId).size(); i++) {
@@ -21,7 +21,7 @@ public class PesmaService {
 		return list;
 	}
 
-	public List<PesmaDTO> getSvePesmePoZanru(Long zanrId) throws ClassNotFoundException {
+	public List<PesmaDTO> getSvePesmePoZanru(int zanrId) throws ClassNotFoundException {
 		List<PesmaDTO> list = new ArrayList<PesmaDTO>();
 
 		for (int i = 0; i < dao.getPesmePoZanru(zanrId).size(); i++) {
@@ -31,7 +31,7 @@ public class PesmaService {
 		return list;
 	}
 
-	public List<PesmaDTO> getSvePesmePoCeni(Long cenaId) throws ClassNotFoundException {
+	public List<PesmaDTO> getSvePesmePoCeni(int cenaId) throws ClassNotFoundException {
 		List<PesmaDTO> list = new ArrayList<PesmaDTO>();
 
 		for (int i = 0; i < dao.getPesmePoCeni(cenaId).size(); i++) {
@@ -51,12 +51,12 @@ public class PesmaService {
 		return list;
 	}
 
-	public PesmaDTO getPesma(Long pesmaId) throws ClassNotFoundException {
+	public PesmaDTO getPesma(int pesmaId) throws ClassNotFoundException {
 		return entityToDTO(dao.getPesma(pesmaId));
 
 	}
 
-	public PesmaDTO addPesma(Long izvodjacId, Long cenaId, PesmaDTO pesma) throws ClassNotFoundException {
+	public PesmaDTO addPesma(int izvodjacId, int cenaId, PesmaDTO pesma) throws ClassNotFoundException {
 		return entityToDTO(dao.insertPesma(izvodjacId, cenaId, DTOToEntity(pesma)));
 	}
 
@@ -64,7 +64,7 @@ public class PesmaService {
 		return entityToDTO(dao.updatePesma(DTOToEntity(pesma)));
 	}
 
-	public void deletePesma(Long pesmaId) throws ClassNotFoundException {
+	public void deletePesma(int pesmaId) throws ClassNotFoundException {
 		dao.removePesma(pesmaId);
 	}
 

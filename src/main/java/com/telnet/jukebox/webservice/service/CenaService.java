@@ -3,13 +3,13 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.telnet.jukebox.webservice.database.DAOCena;
+import com.telnet.jukebox.webservice.database.CenaDAO;
 import com.telnet.jukebox.webservice.dto.CenaDTO;
 import com.telnet.jukebox.webservice.model.Cena;
 
 public class CenaService {
 
-	DAOCena dao = new DAOCena();
+	CenaDAO dao = new CenaDAO();
 
 	public List<CenaDTO> getCene() throws ClassNotFoundException {
 		List<CenaDTO> list = new ArrayList<CenaDTO>();
@@ -21,7 +21,7 @@ public class CenaService {
 		return list;
 	}
 
-	public CenaDTO getCena(Long id) throws ClassNotFoundException {
+	public CenaDTO getCena(int id) throws ClassNotFoundException {
 		return entityToDTO(dao.getCena(id));
 	}
 
@@ -33,7 +33,7 @@ public class CenaService {
 		return entityToDTO(dao.updateCena(DTOToEntity(cena)));
 	}
 
-	public void removeCena(Long id) throws ClassNotFoundException {
+	public void removeCena(int id) throws ClassNotFoundException {
 		dao.removeCena(id);
 	}
 

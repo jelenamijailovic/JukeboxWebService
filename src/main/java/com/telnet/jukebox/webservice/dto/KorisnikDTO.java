@@ -2,18 +2,18 @@ package com.telnet.jukebox.webservice.dto;
 
 public class KorisnikDTO {
 
-	private Long id;
+	private int id;
 	private String sifra;
 	private String email;
 
 	public KorisnikDTO() {
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

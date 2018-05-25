@@ -3,13 +3,13 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.telnet.jukebox.webservice.database.DAOIzvodjac;
+import com.telnet.jukebox.webservice.database.IzvodjacDAO;
 import com.telnet.jukebox.webservice.dto.IzvodjacDTO;
 import com.telnet.jukebox.webservice.model.Izvodjac;
 
 public class IzvodjacService {
 
-	DAOIzvodjac dao = new DAOIzvodjac();
+	IzvodjacDAO dao = new IzvodjacDAO();
 
 	public List<IzvodjacDTO> getIzvodjaci() throws ClassNotFoundException {
 		List<IzvodjacDTO> list = new ArrayList<IzvodjacDTO>();
@@ -21,7 +21,7 @@ public class IzvodjacService {
 		return list;
 	}
 
-	public IzvodjacDTO getIzvodjac(Long id) throws ClassNotFoundException {
+	public IzvodjacDTO getIzvodjac(int id) throws ClassNotFoundException {
 		return entityToDTO(dao.getIzvodjac(id));
 	}
 
@@ -33,7 +33,7 @@ public class IzvodjacService {
 		return entityToDTO(dao.updateIzvodjac(DTOToEntity(izvodjac)));
 	}
 
-	public void removeIzvodjac(Long id) throws ClassNotFoundException {
+	public void removeIzvodjac(int id) throws ClassNotFoundException {
 		dao.removeIzvodjac(id);
 	}
 

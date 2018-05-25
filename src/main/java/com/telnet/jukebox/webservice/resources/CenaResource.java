@@ -57,7 +57,7 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}")
-	public Response getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public Response getCena(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 		logger.info("Prikaz cene sa id-om " + cenaId);
 
 		CenaDTO c = cenaService.getCena(cenaId);
@@ -96,7 +96,7 @@ public class CenaResource {
 
 	@PUT
 	@Path("/{cenaId}")
-	public CenaDTO updateIzvodjac(@PathParam("cenaId") Long cenaId, CenaDTO cena) throws ClassNotFoundException {
+	public CenaDTO updateIzvodjac(@PathParam("cenaId") int cenaId, CenaDTO cena) throws ClassNotFoundException {
 		cena.setId(cenaId);
 
 		logger.info("Modifikovanje cene sa id-om " + cenaId);
@@ -115,7 +115,7 @@ public class CenaResource {
 
 	@DELETE
 	@Path("/{cenaId}")
-	public void deleteCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public void deleteCena(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 		logger.info("Brisanje cene sa id-om " + cenaId);
 
 		CenaDTO c = cenaService.getCena(cenaId);
@@ -131,7 +131,7 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}/pesme")
-	public Response getSvePesmePoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public Response getSvePesmePoCeni(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 
 		logger.info("Prikaz pesama za cenu sa id-om " + cenaId);
 

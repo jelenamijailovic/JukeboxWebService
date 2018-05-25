@@ -57,7 +57,7 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}")
-	public Response getZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
+	public Response getZanr(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz zanra sa id-om " + zanrId);
 
 		ZanrDTO z = zanrService.getZanr(zanrId);
@@ -96,7 +96,7 @@ public class ZanrResource {
 
 	@PUT
 	@Path("/{zanrId}")
-	public ZanrDTO updateZanr(@PathParam("zanrId") Long zanrId, ZanrDTO zanr) throws ClassNotFoundException {
+	public ZanrDTO updateZanr(@PathParam("zanrId") int zanrId, ZanrDTO zanr) throws ClassNotFoundException {
 		zanr.setId(zanrId);
 
 		logger.info("Modifikovanje zanra sa id-om " + zanrId);
@@ -116,7 +116,7 @@ public class ZanrResource {
 
 	@DELETE
 	@Path("/{zanrId}")
-	public void deleteZanr(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
+	public void deleteZanr(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Brisanje zanra sa id-om " + zanrId);
 
 		ZanrDTO z = zanrService.getZanr(zanrId);
@@ -132,7 +132,7 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}/pesme")
-	public Response getSvePesmePoZanru(@PathParam("zanrId") Long zanrId) throws ClassNotFoundException {
+	public Response getSvePesmePoZanru(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za zanr sa id-om " + zanrId);
 
 		List<PesmaDTO> pesme = pesmaService.getSvePesmePoZanru(zanrId);

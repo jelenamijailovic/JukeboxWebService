@@ -2,18 +2,18 @@ package com.telnet.jukebox.webservice.model;
 
 public class Korisnik {
 
-	private Long id;
+	private int id;
 	private String sifra;
 	private String email;
 
 	public Korisnik() {
 	}
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
