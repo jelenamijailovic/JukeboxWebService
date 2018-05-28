@@ -7,7 +7,9 @@ import javax.ws.rs.HeaderParam;
 import javax.xml.bind.DatatypeConverter;
 
 import com.telnet.jukebox.webservice.database.PrometDAO;
+import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.dto.PrometDTO;
+import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Promet;
 
 import io.jsonwebtoken.Claims;
@@ -108,6 +110,8 @@ public class PrometService {
 	public void deletePromet(int prometId) throws ClassNotFoundException {
 		dao.removePromet(prometId);
 	}
+	
+	
 
 	public Promet DTOToEntity(PrometDTO promet) {
 		Promet entity = new Promet();

@@ -116,7 +116,7 @@ public class KorisnikService extends Application {
 			jwt= Jwts.builder()
 					  .claim("email", korisnik.getEmail())
 					  .claim("id", korisnik.getId())
-					  .setExpiration(new Date(time + 60000))
+					  .setExpiration(new Date(time + 600000000))
 					  .signWith(
 					    SignatureAlgorithm.HS256,
 					    "sifra".getBytes()

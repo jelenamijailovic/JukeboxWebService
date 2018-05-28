@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import com.telnet.jukebox.webservice.model.Pesma;
 
@@ -44,17 +45,17 @@ public class PesmaDAO {
 		return pesme;
 
 	}
-	
+
 	public List<Pesma> getSvePesmePagination(int page) throws ClassNotFoundException {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
 			Connection con = DatabaseConnector.conStat();
-			int offsetNum= (page-1)*5;
+			int offsetNum = (page - 1) * 5;
 			prepStmt = con.prepareStatement(
 					"select ceil((select count(*) from pesme)/5) 'broj strana', p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id join zanrovi z on i.zanr_id=z.zanrovi_id join cene c on p.cena_id=c.cene_id order by pesme_id limit 5 offset ?");
 			prepStmt.setInt(1, offsetNum);
-			resultSet= prepStmt.executeQuery();
+			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
 				Pesma pesma = new Pesma();
 				pesma.setBrojStrana(resultSet.getInt(1));
@@ -71,7 +72,7 @@ public class PesmaDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		return pesme;
 
 	}
@@ -79,7 +80,6 @@ public class PesmaDAO {
 	public List<Pesma> getPesmePoIzvodjacu(int izvodjacId) throws ClassNotFoundException {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
-		
 		try {
 			Connection con = DatabaseConnector.conStat();
 			prepStmt = con.prepareStatement(
@@ -191,8 +191,7 @@ public class PesmaDAO {
 	public Pesma insertPesma(int izvodjacId, int cenaId, Pesma pesma) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, cena_id) values(?,?,?)");
+			prepStmt = con.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, cena_id) values(?,?,?)");
 			prepStmt.setString(1, pesma.getNaziv());
 			prepStmt.setInt(2, izvodjacId);
 			prepStmt.setInt(3, cenaId);
@@ -220,8 +219,7 @@ public class PesmaDAO {
 	public Pesma updatePesma(Pesma pesma) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("update pesme set pesme_naziv= ? where pesme_id= ?");
+			prepStmt = con.prepareStatement("update pesme set pesme_naziv= ? where pesme_id= ?");
 			prepStmt.setString(1, pesma.getNaziv());
 			prepStmt.setInt(2, pesma.getId());
 			prepStmt.executeUpdate();
@@ -247,6 +245,45 @@ public class PesmaDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+
+	public List<Pesma> recomended(int korisnikId) {
+		Random randomGenerator = new Random();
+		// List<Pesma> catalogue= daoPesma.getSvePesme();
+		List<Pesma> recomended = new ArrayList<Pesma>();
+		List<Pesma> poZanru = new ArrayList<Pesma>();
+
+		int zanr = 0;
+
+		try {
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
+					"select z.zanrovi_id, pe.pesme_naziv, count(pr.pesma_id) as repetition, k.korisnici_id from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join izvodjaci i on i.izvodjaci_id=pe.izvodjac_id join zanrovi z on z.zanrovi_id=i.zanr_id join korisnici k on pr.korisnik_id= k.korisnici_id group by pe.pesme_naziv, k.korisnici_email, z.zanrovi_id having k.korisnici_id=? order by repetition desc limit 1;");
+			prepStmt.setInt(1, korisnikId);
+			resultSet = prepStmt.executeQuery();
+			while (resultSet.next()) {
+				zanr = resultSet.getInt(1);
+			}
+			con.close();
+
+			poZanru = getPesmePoZanru(zanr);
+
+			for (int i = 0; i < 3; i++) {
+				int index = randomGenerator.nextInt(poZanru.size());
+				Pesma randomPesma = new Pesma();
+				randomPesma = poZanru.get(index);
+				recomended.add(randomPesma);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		return recomended;
+
 	}
 
 }

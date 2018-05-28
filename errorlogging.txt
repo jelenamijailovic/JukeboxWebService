@@ -189,3 +189,7 @@ Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
 2018-05-25 15:50:18 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
 2018-05-25 15:50:18 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
 2018-05-25 15:52:28 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:14:01 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:19:22 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:22:16 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:24:40 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.

@@ -8,7 +8,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
+import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Promet;
 
 public class PrometDAO {
@@ -16,6 +18,7 @@ public class PrometDAO {
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
+	PesmaDAO daoPesma = new PesmaDAO();
 
 	public List<Promet> getSvePromete() throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
@@ -155,6 +158,8 @@ public class PrometDAO {
 		return prometi;
 	}
 
+	
+
 	public List<Promet> getTop5Artists() throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
 
@@ -184,8 +189,7 @@ public class PrometDAO {
 	public Promet insertPromet(int pesmaId, int korisnikId, Promet promet) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("insert into prometi (prometi_datum, pesma_id, korisnik_id) values(?,?,?)");
+			prepStmt = con.prepareStatement("insert into prometi (prometi_datum, pesma_id, korisnik_id) values(?,?,?)");
 			prepStmt.setDate(1, promet.getDatum());
 			prepStmt.setInt(2, pesmaId);
 			prepStmt.setInt(3, korisnikId);

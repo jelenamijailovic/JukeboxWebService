@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -20,6 +21,11 @@ import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.dto.PrometDTO;
 import com.telnet.jukebox.webservice.service.PesmaService;
 import com.telnet.jukebox.webservice.service.PrometService;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 
 import javax.ws.rs.core.GenericEntity;
 
@@ -58,7 +64,7 @@ public class PesmaResource {
 		}
 		return r;
 	}
-	
+
 	@SuppressWarnings("unused")
 	@GET
 	@Path("/pagination/{page}")
@@ -158,6 +164,50 @@ public class PesmaResource {
 		} else {
 			pesmaService.deletePesma(pesmaId);
 			logger.info("Pesma sa id-om " + pesmaId + " je uspesno obrisana");
+		}
+
+	}
+
+	@SuppressWarnings("unused")
+	@GET
+	@Path("/recomended")
+	public Response recomended(@HeaderParam("Authorization") String authorization) throws ClassNotFoundException {
+		logger.info("Preporucujemo");
+
+		try {
+			Jws<Claims> claims = Jwts.parser().setSigningKey("sifra".getBytes()).parseClaimsJws(authorization);
+
+			int id = (int) claims.getBody().get("id");
+
+			List<PesmaDTO> pesme = pesmaService.recomended(id);
+
+			GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
+			};
+
+			System.out.println("Korisnik id from token is  :" + id);
+			
+			Response r;
+
+			if (list == null) {
+				r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
+						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+				logger.error("Ne postoje unete pesme");
+			} else {
+				r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+				logger.info("Pesme su uspesno prikazane");
+
+			}
+			return r;
+		} catch (ExpiredJwtException e) {
+			// TODO: handle exception
+			Response r;
+			r = Response.status(401).header("Access-Control-Allow-Origin", "*")
+					.entity("Greska pri unosu prometa:\n" + e.getMessage())
+					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
+			logger.error("Token je istekao. Ulogujte se ponovo.");
+			System.out.println("Token je istekao. Ulogujte se ponovo.");
+			return r;
 		}
 
 	}

@@ -77,6 +77,16 @@ public class PesmaService {
 	public void deletePesma(int pesmaId) throws ClassNotFoundException {
 		dao.removePesma(pesmaId);
 	}
+	
+	public List<PesmaDTO> recomended(int korisnikId){
+		List<PesmaDTO> list = new ArrayList<PesmaDTO>();
+
+		for (int i = 0; i < dao.recomended(korisnikId).size(); i++) {
+			list.add(entityToDTO(dao.recomended(korisnikId).get(i)));
+		}
+
+		return list;
+	}
 
 	public Pesma DTOToEntity(PesmaDTO pesma) {
 		Pesma entity = new Pesma();
