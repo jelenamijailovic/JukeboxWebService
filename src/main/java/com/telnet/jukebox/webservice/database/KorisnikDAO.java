@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -25,7 +26,8 @@ public class KorisnikDAO {
 		List<Korisnik> korisnici = new ArrayList<>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from korisnici");
 			while (resultSet.next()) {
 				Korisnik korisnik = new Korisnik();
@@ -34,6 +36,7 @@ public class KorisnikDAO {
 				korisnik.setSifra(resultSet.getString(3));
 				korisnici.add(korisnik);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -47,7 +50,8 @@ public class KorisnikDAO {
 		Korisnik korisnik = new Korisnik();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from korisnici where korisnici_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("select * from korisnici where korisnici_id= ?");
 			prepStmt.setLong(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
@@ -56,6 +60,7 @@ public class KorisnikDAO {
 				korisnik.setSifra(resultSet.getString(3));
 				return korisnik;
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -68,8 +73,8 @@ public class KorisnikDAO {
 
 	public Korisnik insertKorisnik(Korisnik korisnik) throws ClassNotFoundException, SQLException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
-					.prepareStatement("insert into korisnici (korisnici_email, korisnici_sifra) values (?,?)");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("insert into korisnici (korisnici_email, korisnici_sifra) values (?,?)");
 			prepStmt.setString(1, korisnik.getEmail());
 			prepStmt.setString(2, encryptPassword(korisnik.getSifra()));
 			prepStmt.executeUpdate();
@@ -77,6 +82,7 @@ public class KorisnikDAO {
 			if (resultSet.next()) {
 				korisnik.setId(resultSet.getInt(1));
 			}
+			con.close();
 		} catch (IOException e) {
 			System.out.println("insert");
 			e.printStackTrace();
@@ -90,7 +96,8 @@ public class KorisnikDAO {
 		String sifra1 = encryptPassword(login.getSifra());
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from korisnici where korisnici_email= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("select * from korisnici where korisnici_email= ?");
 			prepStmt.setString(1, login.getEmail());
 			resultSet = prepStmt.executeQuery();
 
@@ -109,7 +116,7 @@ public class KorisnikDAO {
 				korisnik.setSifra(null);
 				korisnik.setEmail(null);
 			}
-
+			con.close();
 		} catch (SQLException e) {
 
 		} catch (IOException e) {
@@ -123,12 +130,14 @@ public class KorisnikDAO {
 
 	public Korisnik updateKorisnik(Korisnik korisnik) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"update korisnici set korisnici_sifra=?, korisnici_email=? where korisnici_id= ?");
 			prepStmt.setString(1, korisnik.getSifra());
 			prepStmt.setString(2, korisnik.getEmail());
 			prepStmt.setInt(3, korisnik.getId());
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -140,9 +149,11 @@ public class KorisnikDAO {
 
 	public void deleteKorisnik(int korisnikId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from korisnici where korisnici_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("delete from korisnici where korisnici_id= ?");
 			prepStmt.setInt(1, korisnikId);
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

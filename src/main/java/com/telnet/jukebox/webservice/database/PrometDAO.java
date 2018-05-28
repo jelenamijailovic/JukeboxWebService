@@ -1,6 +1,7 @@
 package com.telnet.jukebox.webservice.database;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +21,8 @@ public class PrometDAO {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id=k.korisnici_id");
 			while (resultSet.next()) {
@@ -32,6 +34,7 @@ public class PrometDAO {
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -45,7 +48,8 @@ public class PrometDAO {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where k.korisnici_id= ?");
 			prepStmt.setInt(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
@@ -58,6 +62,7 @@ public class PrometDAO {
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -71,7 +76,8 @@ public class PrometDAO {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from (prometi pr join pesme pe on pr.pesma_id=pe.pesme_id)join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where pe.pesme_id= ?");
 			prepStmt.setInt(1, pesmaId);
 			resultSet = prepStmt.executeQuery();
@@ -84,6 +90,7 @@ public class PrometDAO {
 				promet.setEmailKor(resultSet.getString(5));
 				prometi.add(promet);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -97,7 +104,8 @@ public class PrometDAO {
 		Promet promet = new Promet();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select pr.prometi_id, pr.prometi_datum, pe.pesme_naziv, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id=pe.pesme_id join cene c on pe.cena_id=c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id where pr.prometi_id= ?");
 			prepStmt.setInt(1, prometId);
 			resultSet = prepStmt.executeQuery();
@@ -109,6 +117,7 @@ public class PrometDAO {
 				promet.setEmailKor(resultSet.getString(5));
 				return promet;
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -122,7 +131,8 @@ public class PrometDAO {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery(
 					"select pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id group by pe.pesme_naziv, pe.cena_id, k.korisnici_email order by repetition desc limit 5;");
 			int i = 1;
@@ -135,6 +145,7 @@ public class PrometDAO {
 				promet.setEmailKor(resultSet.getString(4));
 				prometi.add(promet);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -148,7 +159,8 @@ public class PrometDAO {
 		List<Promet> prometi = new ArrayList<Promet>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery(
 					"select i.izvodjaci_ime, count(pr.pesma_id) as repetition from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join izvodjaci i on pe.izvodjac_id= i.izvodjaci_id group by pe.izvodjac_id order by repetition desc limit 5;");
 			int i = 1;
@@ -159,6 +171,7 @@ public class PrometDAO {
 				promet.setRepetition(resultSet.getInt(2));
 				prometi.add(promet);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -170,7 +183,8 @@ public class PrometDAO {
 
 	public Promet insertPromet(int pesmaId, int korisnikId, Promet promet) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con
 					.prepareStatement("insert into prometi (prometi_datum, pesma_id, korisnik_id) values(?,?,?)");
 			prepStmt.setDate(1, promet.getDatum());
 			prepStmt.setInt(2, pesmaId);
@@ -180,6 +194,7 @@ public class PrometDAO {
 			if (resultSet.next()) {
 				promet.setId(resultSet.getInt(1));
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -207,9 +222,11 @@ public class PrometDAO {
 
 	public void removePromet(int prometId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from prometi where prometi_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("delete from prometi where prometi_id= ?");
 			prepStmt.setInt(1, prometId);
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

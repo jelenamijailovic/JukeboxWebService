@@ -65,12 +65,13 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(6));
 				pesme.add(pesma);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-
+		
 		return pesme;
 
 	}
@@ -78,8 +79,10 @@ public class PesmaDAO {
 	public List<Pesma> getPesmePoIzvodjacu(int izvodjacId) throws ClassNotFoundException {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
+		
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where i.izvodjaci_id= ?");
 			prepStmt.setLong(1, izvodjacId);
 			resultSet = prepStmt.executeQuery();
@@ -92,6 +95,7 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(5));
 				pesme.add(pesma);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -105,7 +109,8 @@ public class PesmaDAO {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on i.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where z.zanrovi_id= ?");
 			prepStmt.setInt(1, zanrId);
 			resultSet = prepStmt.executeQuery();
@@ -118,6 +123,7 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(5));
 				pesme.add(pesma);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -131,7 +137,8 @@ public class PesmaDAO {
 		List<Pesma> pesme = new ArrayList<Pesma>();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where c.cene_id= ?");
 			prepStmt.setLong(1, cenaId);
 			resultSet = prepStmt.executeQuery();
@@ -144,6 +151,7 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(5));
 				pesme.add(pesma);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -157,7 +165,8 @@ public class PesmaDAO {
 		Pesma pesma = new Pesma();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement(
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement(
 					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on i.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where p.pesme_id= ?");
 			prepStmt.setInt(1, pesmaId);
 			resultSet = prepStmt.executeQuery();
@@ -169,6 +178,7 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(5));
 				return pesma;
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -180,7 +190,8 @@ public class PesmaDAO {
 
 	public Pesma insertPesma(int izvodjacId, int cenaId, Pesma pesma) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con
 					.prepareStatement("insert into pesme (pesme_naziv, izvodjac_id, cena_id) values(?,?,?)");
 			prepStmt.setString(1, pesma.getNaziv());
 			prepStmt.setInt(2, izvodjacId);
@@ -196,6 +207,7 @@ public class PesmaDAO {
 			if (resultSet.next()) {
 				pesma.setCenaKolicina(resultSet.getInt(1));
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -207,11 +219,13 @@ public class PesmaDAO {
 
 	public Pesma updatePesma(Pesma pesma) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con
 					.prepareStatement("update pesme set pesme_naziv= ? where pesme_id= ?");
 			prepStmt.setString(1, pesma.getNaziv());
 			prepStmt.setInt(2, pesma.getId());
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -223,9 +237,11 @@ public class PesmaDAO {
 
 	public void removePesma(int pesmaId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from pesme where pesme_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("delete from pesme where pesme_id= ?");
 			prepStmt.setInt(1, pesmaId);
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

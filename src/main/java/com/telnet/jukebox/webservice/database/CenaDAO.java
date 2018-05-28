@@ -1,6 +1,7 @@
 package com.telnet.jukebox.webservice.database;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +21,8 @@ public class CenaDAO {
 		List<Cena> cene = new ArrayList<Cena>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from cene");
 			while (resultSet.next()) {
 				Cena cena = new Cena();
@@ -28,6 +30,7 @@ public class CenaDAO {
 				cena.setKolicina(resultSet.getInt(2));
 				cene.add(cena);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -41,7 +44,8 @@ public class CenaDAO {
 		Cena cena = new Cena();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from cene where cene_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("select * from cene where cene_id= ?");
 			prepStmt.setInt(1, cenaId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
@@ -49,6 +53,7 @@ public class CenaDAO {
 				cena.setKolicina(resultSet.getInt(2));
 				return cena;
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -60,13 +65,15 @@ public class CenaDAO {
 
 	public Cena insertCena(Cena cena) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into cene (cene_kolicina) values(?)");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("insert into cene (cene_kolicina) values(?)");
 			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
 				cena.setId(resultSet.getInt(1));
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -78,11 +85,13 @@ public class CenaDAO {
 
 	public Cena updateCena(Cena cena) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con
 					.prepareStatement("update cene set cene_kolicina= ? where cene_id= ?");
 			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.setInt(2, cena.getId());
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -94,9 +103,11 @@ public class CenaDAO {
 
 	public void removeCena(int cenaId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from cene where cene_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("delete from cene where cene_id= ?");
 			prepStmt.setInt(1, cenaId);
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

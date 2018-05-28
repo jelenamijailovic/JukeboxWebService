@@ -1,6 +1,7 @@
 package com.telnet.jukebox.webservice.database;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -20,7 +21,8 @@ public class IzvodjacDAO {
 		List<Izvodjac> izvodjaci = new ArrayList<Izvodjac>();
 
 		try {
-			stmt = DatabaseConnector.conStat().createStatement();
+			Connection con = DatabaseConnector.conStat();
+			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from izvodjaci");
 			while (resultSet.next()) {
 				Izvodjac izvodjac = new Izvodjac();
@@ -28,6 +30,7 @@ public class IzvodjacDAO {
 				izvodjac.setIme(resultSet.getString(2));
 				izvodjaci.add(izvodjac);
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -41,7 +44,8 @@ public class IzvodjacDAO {
 		Izvodjac izvodjac = new Izvodjac();
 
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
 			prepStmt.setInt(1, izvodjacId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {
@@ -49,6 +53,7 @@ public class IzvodjacDAO {
 				izvodjac.setIme(resultSet.getString(2));
 				return izvodjac;
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -60,13 +65,15 @@ public class IzvodjacDAO {
 
 	public Izvodjac insertIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("insert into izvodjaci (izvodjaci_ime) values (?)");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("insert into izvodjaci (izvodjaci_ime) values (?)");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.executeUpdate();
 			resultSet = prepStmt.getGeneratedKeys();
 			if (resultSet.next()) {
 				izvodjac.setId(resultSet.getInt(1));
 			}
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -78,11 +85,13 @@ public class IzvodjacDAO {
 
 	public Izvodjac updateIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat()
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con
 					.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.setInt(2, izvodjac.getId());
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -94,9 +103,11 @@ public class IzvodjacDAO {
 
 	public void removeIzvodjac(int izvodjacId) throws ClassNotFoundException {
 		try {
-			prepStmt = DatabaseConnector.conStat().prepareStatement("delete from izvodjaci where izvodjaci_id= ?");
+			Connection con = DatabaseConnector.conStat();
+			prepStmt = con.prepareStatement("delete from izvodjaci where izvodjaci_id= ?");
 			prepStmt.setInt(1, izvodjacId);
 			prepStmt.executeUpdate();
+			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
