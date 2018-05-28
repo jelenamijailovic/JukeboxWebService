@@ -21,7 +21,6 @@ import org.apache.log4j.Logger;
 
 import com.telnet.jukebox.webservice.database.KorisnikDAO;
 import com.telnet.jukebox.webservice.dto.LoginDTO;
-import com.telnet.jukebox.webservice.jwt.Token;
 import com.telnet.jukebox.webservice.service.KorisnikService;
 import com.telnet.jukebox.webservice.service.LoginService;
 

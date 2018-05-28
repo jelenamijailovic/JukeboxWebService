@@ -9,6 +9,7 @@ public class PesmaDTO {
 	private int cenaKolicina;
 	private int izvodjacId;
 	private int cenaId;
+	private int brojStrana;
 
 	public PesmaDTO() {
 
@@ -68,5 +69,13 @@ public class PesmaDTO {
 
 	public void setCenaId(int cenaId) {
 		this.cenaId = cenaId;
+	}
+
+	public int getBrojStrana() {
+		return brojStrana;
+	}
+
+	public void setBrojStrana(int brojStrana) {
+		this.brojStrana = brojStrana;
 	}
 }

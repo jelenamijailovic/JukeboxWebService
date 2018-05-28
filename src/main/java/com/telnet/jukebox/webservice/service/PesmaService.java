@@ -50,6 +50,16 @@ public class PesmaService {
 
 		return list;
 	}
+	
+	public List<PesmaDTO> getSvePesmePagination(int page) throws ClassNotFoundException {
+		List<PesmaDTO> list = new ArrayList<PesmaDTO>();
+
+		for (int i = 0; i < dao.getSvePesmePagination(page).size(); i++) {
+			list.add(entityToDTO(dao.getSvePesmePagination(page).get(i)));
+		}
+
+		return list;
+	}
 
 	public PesmaDTO getPesma(int pesmaId) throws ClassNotFoundException {
 		return entityToDTO(dao.getPesma(pesmaId));
@@ -70,6 +80,7 @@ public class PesmaService {
 
 	public Pesma DTOToEntity(PesmaDTO pesma) {
 		Pesma entity = new Pesma();
+		entity.setBrojStrana(pesma.getBrojStrana());
 		entity.setId(pesma.getId());
 		entity.setNaziv(pesma.getNaziv());
 		entity.setIzvodjacIme(pesma.getIzvodjacIme());
@@ -80,6 +91,7 @@ public class PesmaService {
 
 	public PesmaDTO entityToDTO(Pesma pesma) {
 		PesmaDTO dto = new PesmaDTO();
+		dto.setBrojStrana(pesma.getBrojStrana());
 		dto.setId(pesma.getId());
 		dto.setNaziv(pesma.getNaziv());
 		dto.setIzvodjacIme(pesma.getIzvodjacIme());

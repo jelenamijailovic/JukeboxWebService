@@ -11762,3 +11762,240 @@ Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
 2018-05-25 15:53:57 INFO  PesmaResource:56 - Pesme su uspesno prikazane
 2018-05-25 15:53:58 INFO  PesmaResource:40 - Prikaz svih pesama
 2018-05-25 15:53:58 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 09:24:40 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:24:40 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:25:24 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:25:25 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:26:56 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:26:57 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:28:37 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:28:37 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:28:41 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:28:41 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:33:03 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:33:03 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 09:33:15 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 09:33:16 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:25:06 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:25:06 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:27:03 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:27:03 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:27:03 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:27:03 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:27:23 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:27:23 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:27:39 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:27:39 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:27:39 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:27:40 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:27:44 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:27:44 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:27:49 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:27:49 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:28:12 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:28:12 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:28:12 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:28:12 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:28:15 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:28:15 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:29:15 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:29:15 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:31:46 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:31:46 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:31:46 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:31:46 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:32:35 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:32:35 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:32:46 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:32:46 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:32:57 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:32:57 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:33:01 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:33:01 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:33:05 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:33:05 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:33:46 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:33:46 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:34:03 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:34:03 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:35:01 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:35:01 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:36:42 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:36:43 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:36:51 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:36:51 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:36:51 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:36:51 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:38:02 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:38:02 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:38:02 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:38:02 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:38:06 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:38:06 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:38:09 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:38:09 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:38:25 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:38:25 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:38:26 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:38:26 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:39:04 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:39:04 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:39:04 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:39:05 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:40:40 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:40:40 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:40:40 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:40:40 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:40:55 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:40:55 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:40:55 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:40:55 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:41:15 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:41:15 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:41:15 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:41:15 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:41:26 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 10:41:26 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:41:26 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:41:26 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 10:43:23 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:43:24 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:43:27 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:43:27 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:43:28 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:43:28 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:43:30 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:43:30 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:43:31 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:43:31 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:44:04 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:44:05 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:47:39 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:47:40 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:48:06 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 10:48:06 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 10:50:15 INFO  PesmaResource:68 - Prikaz svih pesama
+2018-05-28 10:50:15 INFO  PesmaResource:85 - Pesme su uspesno prikazane
+2018-05-28 11:03:03 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:06:04 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:15:35 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:18:37 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:18:37 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:19:56 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:19:56 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:19:58 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:19:58 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:21:09 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:21:09 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:21:09 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:21:09 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:22:00 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:22:00 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:22:00 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:22:01 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:22:02 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:22:02 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:22:37 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:22:37 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:22:38 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:22:38 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:22:59 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:23:00 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:23:02 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:23:02 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:23:02 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:23:02 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:23:09 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:23:09 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:23:09 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:23:09 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:23:22 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:23:22 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:23:22 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:23:22 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:23:40 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:23:40 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:23:40 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:23:40 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:24:12 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:24:12 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:24:12 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:24:12 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:24:28 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:24:28 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:24:28 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:24:28 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:24:56 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:24:56 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:24:56 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:24:56 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:25:17 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:25:17 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:25:35 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:25:35 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:25:35 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:25:35 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:25:38 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:25:38 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:25:58 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:25:58 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:25:58 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:25:58 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:26:00 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:26:00 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:26:43 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:26:43 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:26:43 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:26:43 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:27:00 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:27:00 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:27:00 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:27:00 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:28:28 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:28:28 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:28:29 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:28:29 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:28:44 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:28:44 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:28:44 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:28:44 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:28:56 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:28:56 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:28:56 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:28:56 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:29:09 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:29:09 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:29:09 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:29:09 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:30:31 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:30:31 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:30:31 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:30:31 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:30:39 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:30:39 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:30:39 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:30:39 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:30:48 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:30:48 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:30:48 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:30:48 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:31:02 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:31:02 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:31:03 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:31:03 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:33:52 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:33:52 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:33:52 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:33:52 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:35:01 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:35:01 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:35:01 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:35:01 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:35:19 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:35:19 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:35:19 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:35:19 INFO  PesmaResource:56 - Pesme su uspesno prikazane
+2018-05-28 11:35:42 INFO  PesmaResource:40 - Prikaz svih pesama
+2018-05-28 11:35:42 INFO  PesmaResource:66 - Prikaz svih pesama
+2018-05-28 11:35:42 INFO  PesmaResource:82 - Pesme su uspesno prikazane
+2018-05-28 11:35:42 INFO  PesmaResource:56 - Pesme su uspesno prikazane

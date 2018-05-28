@@ -9,6 +9,7 @@ public class Pesma {
 	private int cenaKolicina;
 	private int izvodjacId;
 	private int cenaId;
+	private int brojStrana;
 
 	public Pesma() {
 
@@ -68,6 +69,14 @@ public class Pesma {
 
 	public void setCenaId(int cenaId) {
 		this.cenaId = cenaId;
+	}
+
+	public int getBrojStrana() {
+		return brojStrana;
+	}
+
+	public void setBrojStrana(int brojStrana) {
+		this.brojStrana = brojStrana;
 	}
 
 }

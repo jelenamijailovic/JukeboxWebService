@@ -44,6 +44,36 @@ public class PesmaDAO {
 		return pesme;
 
 	}
+	
+	public List<Pesma> getSvePesmePagination(int page) throws ClassNotFoundException {
+		List<Pesma> pesme = new ArrayList<Pesma>();
+
+		try {
+			Connection con = DatabaseConnector.conStat();
+			int offsetNum= (page-1)*5;
+			prepStmt = con.prepareStatement(
+					"select ceil((select count(*) from pesme)/5) 'broj strana', p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id join zanrovi z on i.zanr_id=z.zanrovi_id join cene c on p.cena_id=c.cene_id order by pesme_id limit 5 offset ?");
+			prepStmt.setInt(1, offsetNum);
+			resultSet= prepStmt.executeQuery();
+			while (resultSet.next()) {
+				Pesma pesma = new Pesma();
+				pesma.setBrojStrana(resultSet.getInt(1));
+				pesma.setId(resultSet.getInt(2));
+				pesma.setNaziv(resultSet.getString(3));
+				pesma.setIzvodjacIme(resultSet.getString(4));
+				pesma.setZanrIme(resultSet.getString(5));
+				pesma.setCenaKolicina(resultSet.getInt(6));
+				pesme.add(pesma);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return pesme;
+
+	}
 
 	public List<Pesma> getPesmePoIzvodjacu(int izvodjacId) throws ClassNotFoundException {
 		List<Pesma> pesme = new ArrayList<Pesma>();

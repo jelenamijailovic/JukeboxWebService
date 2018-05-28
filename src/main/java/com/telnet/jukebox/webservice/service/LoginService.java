@@ -12,7 +12,6 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.telnet.jukebox.webservice.jwt.Token;
 import com.telnet.jukebox.webservice.resources.LoginResource;
 
 

@@ -58,6 +58,32 @@ public class PesmaResource {
 		}
 		return r;
 	}
+	
+	@SuppressWarnings("unused")
+	@GET
+	@Path("/pagination/{page}")
+	public Response getSvePesmePagination(@PathParam("page") int page) throws ClassNotFoundException {
+		logger.info("Prikaz svih pesama");
+
+		List<PesmaDTO> pesme = pesmaService.getSvePesmePagination(page);
+
+		GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
+		};
+
+		Response r;
+
+		if (list == null) {
+			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.error("Ne postoje unete pesme");
+		} else {
+			r = Response.ok(list).header("Access-Control-Allow-Origin", "*")
+					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+			logger.info("Pesme su uspesno prikazane");
+
+		}
+		return r;
+	}
 
 	@GET
 	@Path("/{pesmaId}")
