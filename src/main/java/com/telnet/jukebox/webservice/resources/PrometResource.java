@@ -1,23 +1,38 @@
 package com.telnet.jukebox.webservice.resources;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.HeaderParam;
 import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
+//import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.container.ContainerRequestContext;
+import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
+import org.glassfish.jersey.server.ContainerRequest;
+import org.springframework.web.bind.annotation.RequestBody;
 
-import com.telnet.jukebox.webservice.model.Promet;
+import com.telnet.jukebox.webservice.dto.KorisnikDTO;
+import com.telnet.jukebox.webservice.dto.PrometDTO;
+import com.telnet.jukebox.webservice.model.Login;
 import com.telnet.jukebox.webservice.service.PrometService;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.Jws;
+import io.jsonwebtoken.Jwts;
 
 @Path("/prometi")
 @Produces({ MediaType.APPLICATION_JSON })
@@ -25,7 +40,7 @@ import com.telnet.jukebox.webservice.service.PrometService;
 
 public class PrometResource {
 
-	final static Logger logger = Logger.getLogger(ZanrResource.class);
+	final static Logger logger = Logger.getLogger(PrometResource.class);
 
 	public PrometService prometService = new PrometService();
 
@@ -34,8 +49,8 @@ public class PrometResource {
 	public Response getSviPrometi() throws ClassNotFoundException {
 		logger.info("Prikaz svih prometa");
 
-		List<Promet> prometi = prometService.getSviPrometi();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getSviPrometi();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
@@ -55,10 +70,10 @@ public class PrometResource {
 
 	@GET
 	@Path("/{prometId}")
-	public Response getPromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
+	public Response getPromet(@PathParam("prometId") int prometId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa sa id-om " + prometId);
 
-		Promet p = prometService.getPromet(prometId);
+		PrometDTO p = prometService.getPromet(prometId);
 
 		Response r;
 
@@ -76,19 +91,18 @@ public class PrometResource {
 		return r;
 	}
 
-	@SuppressWarnings("unused")
 	@GET
 	@Path("/top5songs")
 	public Response getTop5Songs() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 pesama");
 
-		List<Promet> prometi = prometService.getTop5Songs();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getTop5Songs();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
 
-		if (list == null) {
+		if (prometi == null) {
 			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje pesme");
@@ -100,15 +114,15 @@ public class PrometResource {
 
 		return r;
 	}
-	
+
 	@SuppressWarnings("unused")
 	@GET
 	@Path("/top5artists")
 	public Response getTop5Artists() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 izvodjaca");
 
-		List<Promet> prometi = prometService.getTop5Artists();
-		GenericEntity<List<Promet>> list = new GenericEntity<List<Promet>>(prometi) {
+		List<PrometDTO> prometi = prometService.getTop5Artists();
+		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
 		};
 
 		Response r;
@@ -126,56 +140,113 @@ public class PrometResource {
 		return r;
 	}
 
+	/*
+	 * @GET
+	 * 
+	 * @Path("/checkJWT") public Response checkJWT (ContainerRequestContext
+	 * requestContext) { Response r; String authenticationheader =
+	 * requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+	 * System.out.println(authenticationheader);
+	 * 
+	 * r = Response.ok(authenticationheader).header("Access-Control-Allow-Origin",
+	 * "*") .header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
+	 * 
+	 * logger.info(authenticationheader);
+	 * 
+	 * return r;
+	 * 
+	 * }
+	 */
 	@POST
-	@Path("/{pesmaId}")
-	public Response addPromet(@PathParam("pesmaId") Long pesmaId) throws ClassNotFoundException {
+	// @Path("/{pesmaId}")
+	public Response addPromet(@HeaderParam("Authorization") String authorization, @RequestBody PrometDTO promet)
+			throws ClassNotFoundException {
 		logger.info("Unosenje prometa");
 
-		Promet promet = prometService.addPromet(pesmaId);
-
-		Response r;
-
+		// String authenticationheader =
+		// requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+		System.out.println(authorization);
+		logger.info(authorization);
+		
 		try {
-			r = Response.ok(promet).header("Access-Control-Allow-Origin", "*")
-					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
-			logger.info("Promet je uspesno unet");
-		} catch (Exception e) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			Jws<Claims> claims = Jwts.parser().setSigningKey("sifra".getBytes()).parseClaimsJws(authorization);
+
+			int id = (int) claims.getBody().get("id");
+			promet.setIdKor(id);
+
+			System.out.println("Korisnik id from token si  :" + id);
+			/*
+			 * System.out.println("LONG ID IS :"+id);
+			 * System.out.println("CLIMES SIZE "+claims.getBody().size());
+			 * System.out.println(id);
+			 */
+			// Long idKor= Long.parseLong(id);
+			/*
+			 * System.out.println(idKor); promet.setIdKor(idKor);
+			 * 
+			 * /*Jws<Claims> claims = Jwts.parser()
+			 * .setSigningKey(login.getSifra().getBytes()) .parseClaimsJws(Authorization);
+			 * Object exp = claims.getBody(); System.out.println(exp);
+			 */
+
+			// logger.info("podaci:"+ exp);
+
+			PrometDTO promet1 = prometService.addPromet(promet.getPesmaId(), promet.getIdKor(), promet);
+			Response r;
+			try {
+				r = Response.ok(promet1).header("Access-Control-Allow-Origin", "*")
+						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
+				logger.info("Promet je uspesno unet");
+			} catch (Exception e) {
+				r = Response.status(403).header("Access-Control-Allow-Origin", "*")
+						.entity("Greska pri unosu prometa:\n" + e.getMessage())
+						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
+				logger.error("Greska pri unosu prometa:\n" + e.getMessage());
+			}
+			return r;
+		} catch (ExpiredJwtException e) {
+			// TODO: handle exception
+			Response r;
+			r = Response.status(401).header("Access-Control-Allow-Origin", "*")
 					.entity("Greska pri unosu prometa:\n" + e.getMessage())
 					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
-			logger.error("Greska pri unosu prometa:\n" + e.getMessage());
+			logger.error("Token je istekao. Ulogujte se ponovo.");
+			System.out.println("Token je istekao. Ulogujte se ponovo.");
+			return r;
 		}
-
-		return r;
+		
+		
 	}
 
-	@PUT
-	@Path("/{prometId}")
-	public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId, Promet promet)
-			throws ClassNotFoundException {
-		promet.setId(prometId);
-
-		logger.info("Modifikovanje prometa sa id-om " + prometId);
-
-		Promet p = prometService.getPromet(prometId);
-
-		if (p.getId() == 0) {
-			logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer ne postoji");
-		} else {
-			p = prometService.updatePromet(promet);
-			logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
-		}
-
-		return promet;
-	}
+	// @PUT
+	// @Path("/{prometId}")
+	// public Promet updatePrometPoPesmi(@PathParam("prometId") Long prometId,
+	// Promet promet)
+	// throws ClassNotFoundException {
+	// promet.setId(prometId);
+	//
+	// logger.info("Modifikovanje prometa sa id-om " + prometId);
+	//
+	// Promet p = prometService.getPromet(prometId);
+	//
+	// if (p.getId() == 0) {
+	// logger.error("Promet sa id-om " + prometId + " ne moze biti modifikovan jer
+	// ne postoji");
+	// } else {
+	// p = prometService.updatePromet(promet);
+	// logger.info("Promet sa id-om " + prometId + " je uspesno modifikovan");
+	// }
+	//
+	// return promet;
+	// }
 
 	@DELETE
 	@Path("/{prometId}")
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public void deletePromet(@PathParam("prometId") Long prometId) throws ClassNotFoundException {
+	public void deletePromet(@PathParam("prometId") int prometId) throws ClassNotFoundException {
 		logger.info("Brisanje prometa sa id-om " + prometId);
 
-		Promet p = prometService.getPromet(prometId);
+		PrometDTO p = prometService.getPromet(prometId);
 
 		if (p.getId() == 0) {
 			logger.error("Promet sa id-om " + prometId + " ne moze biti obrisan jer ne postoji");

@@ -1,34 +1,27 @@
 package com.telnet.jukebox.webservice.model;
 
 import java.sql.Date;
-import java.text.ParseException;
 
 public class Promet {
 
-	private long id;
+	private int id;
 	private Date datum;
-	private Long pesmaId;
+	private int pesmaId;
 	private String pesmaNaziv;
-	private Long cenaKolicina;
-	private Long repetition;
+	private int cenaKolicina;
+	private int repetition;
 	private String izvodjacIme;
+	private int idKor;
+	private String emailKor;
 
 	public Promet() {
 	}
 
-	public Promet(long id, Date datum) throws ParseException {
-		super();
-		// DateFormat df = new SimpleDateFormat("MMM dd hh:mm:ss yyyy", Locale.ENGLISH);
-		this.id = id;
-		// this.datum = df.parse(df.format(datum));
-		this.datum = datum;
-	}
-
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -48,27 +41,27 @@ public class Promet {
 		this.pesmaNaziv = pesmaNaziv;
 	}
 
-	public Long getCenaKolicina() {
+	public int getCenaKolicina() {
 		return cenaKolicina;
 	}
 
-	public void setCenaKolicina(Long cenaKolicina) {
+	public void setCenaKolicina(int cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
 	}
 
-	public Long getPesmaId() {
+	public int getPesmaId() {
 		return pesmaId;
 	}
 
-	public void setPesmaId(Long pesmaId) {
+	public void setPesmaId(int pesmaId) {
 		this.pesmaId = pesmaId;
 	}
 
-	public Long getRepetition() {
+	public int getRepetition() {
 		return repetition;
 	}
 
-	public void setRepetition(Long repetition) {
+	public void setRepetition(int repetition) {
 		this.repetition = repetition;
 	}
 
@@ -78,6 +71,22 @@ public class Promet {
 
 	public void setIzvodjacIme(String izvodjacIme) {
 		this.izvodjacIme = izvodjacIme;
+	}
+
+	public String getEmailKor() {
+		return emailKor;
+	}
+
+	public void setEmailKor(String emailKor) {
+		this.emailKor = emailKor;
+	}
+
+	public int getIdKor() {
+		return idKor;
+	}
+
+	public void setIdKor(int idKor) {
+		this.idKor = idKor;
 	}
 
 }

@@ -56,3 +56,140 @@ null
 2018-05-04 11:03:19 ERROR ZanrResource:94 - Greska pri unosu prometa:
 java.util.Date cannot be cast to java.sql.Date
 2018-05-07 13:19:16 ERROR ZanrResource:72 - Ne postoji zanr sa id-om 10
+2018-05-15 14:13:30 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+Provider org.glassfish.json.JsonProviderImpl not found
+2018-05-15 14:13:57 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+Provider org.glassfish.json.JsonProviderImpl not found
+2018-05-15 14:14:04 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+null
+2018-05-15 14:14:10 ERROR KorisnikResource:192 - Greska pri unosu korisnika:
+null
+2018-05-15 14:57:04 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 14:57:15 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 14:58:35 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:01:30 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:02:32 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-15 15:40:12 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-16 08:54:03 ERROR KorisnikResource:104 - Greska pri unosu korisnika:
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-16 08:54:54 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-17 10:41:43 ERROR KorisnikResource:110 - Postoji email u bazi.
+Duplicate entry 'bzv' for key 'korisnici_email_UNIQUE'
+2018-05-18 08:47:31 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:05:03 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:05:43 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:09:52 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:10:25 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:11:34 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:11:43 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:12:33 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 09:14:58 ERROR KorisnikResource:112 - Greska pri unosu korisnika:
+Data truncation: Data too long for column 'korisnici_sifra' at row 1
+2018-05-18 12:50:33 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:51:34 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:52:42 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'
+2018-05-18 12:53:41 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:55:19 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 12:57:04 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-18 13:00:44 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 13:25:36 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'promenasasifromnova' for key 'korisnici_email_UNIQUE'
+2018-05-18 13:46:35 ERROR KorisnikResource:100 - Postoji email u bazi.
+Duplicate entry 'nove' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:07 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 14:32:12 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'n@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-18 17:00:25 ERROR KorisnikResource:101 - Greska pri unosu korisnika:
+Data source rejected establishment of connection,  message from server: "Too many connections"
+2018-05-22 12:55:28 ERROR KorisnikResource:102 - Greska pri unosu korisnika:
+null
+2018-05-23 12:43:02 ERROR KorisnikResource:191 - Pogresna sifra!!!
+2018-05-23 12:50:30 ERROR KorisnikResource:191 - Pogresna sifra!!!
+2018-05-23 13:55:35 ERROR KorisnikResource:191 - Pogresna sifra!!!
+2018-05-24 10:43:28 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:45:29 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:46:47 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:46:54 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:47:08 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:47:47 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:48:41 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:17 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:19 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:20 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:22 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:23 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:39 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:40 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:41 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:42 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:42 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:49:42 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 10:54:20 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:25:04 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:33:03 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-24 12:33:03 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-24 12:36:48 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:36:49 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:36:49 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:36:49 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:36:49 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 12:39:42 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry '' for key 'korisnici_email_UNIQUE'
+2018-05-24 12:39:43 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry '' for key 'korisnici_email_UNIQUE'
+2018-05-24 12:40:57 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'm@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-24 12:42:39 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'mi@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-24 15:20:32 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 15:20:52 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-24 15:21:04 ERROR KorisnikResource:102 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-25 10:46:21 ERROR KorisnikResource:215 - Pogresna sifra!!!
+2018-05-25 15:38:12 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:39:51 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:39:51 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:39:57 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:39:57 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:39:57 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:40:15 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:43:06 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:20 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:45 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:45 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:53 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:53 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:45:53 ERROR PrometResource:212 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:48:44 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:50:18 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:50:18 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
+2018-05-25 15:52:28 ERROR PrometResource:213 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:14:01 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:19:22 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:22:16 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
+2018-05-28 15:24:40 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.

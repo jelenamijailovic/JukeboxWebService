@@ -10,24 +10,27 @@ import java.util.Properties;
 public class DatabaseConnector {
 
 	public static Connection conStat() throws ClassNotFoundException, IOException, SQLException {
-//		Connection con = null;
+		// Connection con = null;
 
-//		try {
-//			Class.forName("com.mysql.jdbc.Driver");
-//			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jukebox?useSSL=false", "root", "qqq");
-//
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return conn;
+		// try {
+		// Class.forName("com.mysql.jdbc.Driver");
+		// conn =
+		// DriverManager.getConnection("jdbc:mysql://localhost:3306/jukebox?useSSL=false",
+		// "root", "qqq");
+		//
+		// } catch (SQLException e) {
+		// e.printStackTrace();
+		// }
+		// return conn;
 		Properties props = new Properties();
-		FileInputStream in = new FileInputStream("/home/dev-10/Documents/rest/JukeboxWebService/src/main/resources/aplication.properties");
+		FileInputStream in = new FileInputStream(
+				"/home/dev-10/Documents/rest/JukeboxWebService/src/main/resources/aplication.properties");
 		props.load(in);
 		in.close();
 
 		String driver = props.getProperty("jdbc.driver");
 		if (driver != null) {
-		    Class.forName(driver) ;
+			Class.forName(driver);
 		}
 
 		String url = props.getProperty("jdbc.url");
@@ -35,7 +38,7 @@ public class DatabaseConnector {
 		String password = props.getProperty("jdbc.password");
 
 		Connection con = DriverManager.getConnection(url, username, password);
-		
+
 		return con;
 	}
 

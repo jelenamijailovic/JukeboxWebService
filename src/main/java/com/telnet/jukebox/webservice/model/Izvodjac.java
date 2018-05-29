@@ -2,23 +2,17 @@ package com.telnet.jukebox.webservice.model;
 
 public class Izvodjac {
 
-	private long id;
+	private int id;
 	private String ime;
 
 	public Izvodjac() {
 	}
 
-	public Izvodjac(long id, String ime) {
-		super();
-		this.id = id;
-		this.ime = ime;
-	}
-
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

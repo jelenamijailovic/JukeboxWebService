@@ -2,32 +2,17 @@ package com.telnet.jukebox.webservice.model;
 
 public class Zanr {
 
-	private long id;
+	private int id;
 	private String naziv;
 
 	public Zanr() {
 	}
 
-	public Zanr(long id, String naziv) {
-		super();
-		this.id = id;
-		this.naziv = naziv;
-	}
-
-	// @XmlTransient
-	// public Map<Long, Pesma> getPesme() {
-	// return pesme;
-	// }
-	//
-	// public void setPesme(Map<Long, Pesma> pesme) {
-	// this.pesme = pesme;
-	// }
-
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

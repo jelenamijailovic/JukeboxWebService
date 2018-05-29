@@ -16,8 +16,8 @@ import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
 
-import com.telnet.jukebox.webservice.model.Cena;
-import com.telnet.jukebox.webservice.model.Pesma;
+import com.telnet.jukebox.webservice.dto.CenaDTO;
+import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.service.CenaService;
 import com.telnet.jukebox.webservice.service.PesmaService;
 
@@ -36,8 +36,8 @@ public class CenaResource {
 	public Response getCene() throws ClassNotFoundException {
 		logger.info("Prikaz svih cena");
 
-		List<Cena> cene = cenaService.getCene();
-		GenericEntity<List<Cena>> list = new GenericEntity<List<Cena>>(cene) {
+		List<CenaDTO> cene = cenaService.getCene();
+		GenericEntity<List<CenaDTO>> list = new GenericEntity<List<CenaDTO>>(cene) {
 		};
 
 		Response r;
@@ -57,10 +57,10 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}")
-	public Response getCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public Response getCena(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 		logger.info("Prikaz cene sa id-om " + cenaId);
 
-		Cena c = cenaService.getCena(cenaId);
+		CenaDTO c = cenaService.getCena(cenaId);
 
 		Response r;
 
@@ -79,10 +79,10 @@ public class CenaResource {
 	}
 
 	@POST
-	public Cena addCena(Cena cena) throws ClassNotFoundException {
+	public CenaDTO addCena(CenaDTO cena) throws ClassNotFoundException {
 		logger.info("Unosenje cene");
 
-		Cena c = new Cena();
+		CenaDTO c = new CenaDTO();
 
 		try {
 			c = cenaService.addCena(cena);
@@ -96,12 +96,12 @@ public class CenaResource {
 
 	@PUT
 	@Path("/{cenaId}")
-	public Cena updateIzvodjac(@PathParam("cenaId") Long cenaId, Cena cena) throws ClassNotFoundException {
+	public CenaDTO updateIzvodjac(@PathParam("cenaId") int cenaId, CenaDTO cena) throws ClassNotFoundException {
 		cena.setId(cenaId);
 
 		logger.info("Modifikovanje cene sa id-om " + cenaId);
 
-		Cena c = cenaService.getCena(cenaId);
+		CenaDTO c = cenaService.getCena(cenaId);
 
 		if (c.getId() == 0) {
 			logger.error("Cena sa id-om " + cenaId + " ne moze biti modifikovana jer ne postoji");
@@ -115,10 +115,10 @@ public class CenaResource {
 
 	@DELETE
 	@Path("/{cenaId}")
-	public void deleteCena(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public void deleteCena(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 		logger.info("Brisanje cene sa id-om " + cenaId);
 
-		Cena c = cenaService.getCena(cenaId);
+		CenaDTO c = cenaService.getCena(cenaId);
 
 		if (c.getId() == 0) {
 			logger.error("Cena sa id-om " + cenaId + " ne moze biti obrisana jer ne postoji");
@@ -131,15 +131,15 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}/pesme")
-	public Response getSvePesmePoCeni(@PathParam("cenaId") Long cenaId) throws ClassNotFoundException {
+	public Response getSvePesmePoCeni(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 
 		logger.info("Prikaz pesama za cenu sa id-om " + cenaId);
 
-		List<Pesma> pesme = pesmaService.getSvePesmePoCeni(cenaId);
-		GenericEntity<List<Pesma>> list = new GenericEntity<List<Pesma>>(pesme) {
+		List<PesmaDTO> pesme = pesmaService.getSvePesmePoCeni(cenaId);
+		GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
 		};
 
-		Cena c = cenaService.getCena(cenaId);
+		CenaDTO c = cenaService.getCena(cenaId);
 
 		Response r;
 

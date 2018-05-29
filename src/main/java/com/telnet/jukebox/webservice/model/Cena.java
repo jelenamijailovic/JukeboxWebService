@@ -2,31 +2,25 @@ package com.telnet.jukebox.webservice.model;
 
 public class Cena {
 
-	private long id;
-	private long kolicina;
+	private int id;
+	private int kolicina;
 
 	public Cena() {
 	}
 
-	public Cena(long id, long kolicina) {
-		super();
-		this.id = id;
-		this.kolicina = kolicina;
-	}
-
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
-	public long getKolicina() {
+	public int getKolicina() {
 		return kolicina;
 	}
 
-	public void setKolicina(long kolicina) {
+	public void setKolicina(int kolicina) {
 		this.kolicina = kolicina;
 	}
 

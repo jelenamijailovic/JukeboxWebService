@@ -2,30 +2,24 @@ package com.telnet.jukebox.webservice.model;
 
 public class Pesma {
 
-	private long id;
+	private int id;
 	private String naziv;
 	private String izvodjacIme;
 	private String zanrIme;
-	private long cenaKolicina;
-//	private long cenaId;
-
-	// private Map<Long, Promet> prometi = new HashMap<>();
+	private int cenaKolicina;
+	private int izvodjacId;
+	private int cenaId;
+	private int brojStrana;
 
 	public Pesma() {
 
 	}
 
-	public Pesma(long id, String naziv) {
-		super();
-		this.id = id;
-		this.naziv = naziv;
-	}
-
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -36,15 +30,6 @@ public class Pesma {
 	public void setNaziv(String naziv) {
 		this.naziv = naziv;
 	}
-
-	// @XmlTransient
-	// public Map<Long, Promet> getPrometi() {
-	// return prometi;
-	// }
-	//
-	// public void setPrometi(Map<Long, Promet> prometi) {
-	// this.prometi = prometi;
-	// }
 
 	public String getIzvodjacIme() {
 		return izvodjacIme;
@@ -62,20 +47,36 @@ public class Pesma {
 		this.zanrIme = zanrIme;
 	}
 
-	public long getCenaKolicina() {
+	public int getCenaKolicina() {
 		return cenaKolicina;
 	}
 
-	public void setCenaKolicina(long cenaKolicina) {
+	public void setCenaKolicina(int cenaKolicina) {
 		this.cenaKolicina = cenaKolicina;
 	}
 
-//	public long getCenaId() {
-//		return cenaId;
-//	}
-//
-//	public void setCenaId(long cenaId) {
-//		this.cenaId = cenaId;
-//	}
+	public int getIzvodjacId() {
+		return izvodjacId;
+	}
+
+	public void setIzvodjacId(int izvodjacId) {
+		this.izvodjacId = izvodjacId;
+	}
+
+	public int getCenaId() {
+		return cenaId;
+	}
+
+	public void setCenaId(int cenaId) {
+		this.cenaId = cenaId;
+	}
+
+	public int getBrojStrana() {
+		return brojStrana;
+	}
+
+	public void setBrojStrana(int brojStrana) {
+		this.brojStrana = brojStrana;
+	}
 
 }
