@@ -40,7 +40,6 @@ public class PesmaResource {
 	PesmaService pesmaService = new PesmaService();
 	PrometService prometService = new PrometService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getSvePesme() throws ClassNotFoundException {
 		logger.info("Prikaz svih pesama");
@@ -52,8 +51,8 @@ public class PesmaResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
+		if (pesme.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje unete pesme");
 		} else {
@@ -65,7 +64,6 @@ public class PesmaResource {
 		return r;
 	}
 
-	@SuppressWarnings("unused")
 	@GET
 	@Path("/pagination/{page}")
 	public Response getSvePesmePagination(@PathParam("page") int page) throws ClassNotFoundException {
@@ -78,8 +76,8 @@ public class PesmaResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
+		if (pesme.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje unete pesme");
 		} else {
@@ -101,7 +99,7 @@ public class PesmaResource {
 		Response r;
 
 		if (p.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji pesma sa id-om " + pesmaId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji pesma sa id-om " + pesmaId);
@@ -168,7 +166,6 @@ public class PesmaResource {
 
 	}
 
-	@SuppressWarnings("unused")
 	@GET
 	@Path("/recomended")
 	public Response recomended(@HeaderParam("Authorization") String authorization) throws ClassNotFoundException {
@@ -183,13 +180,13 @@ public class PesmaResource {
 
 			GenericEntity<List<PesmaDTO>> list = new GenericEntity<List<PesmaDTO>>(pesme) {
 			};
-
+			logger.info("Korisnik id from token ");
 			System.out.println("Korisnik id from token is  :" + id);
-			
+
 			Response r;
 
-			if (list == null) {
-				r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
+			if (pesme.isEmpty()) {
+				r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
 						.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 				logger.error("Ne postoje unete pesme");
 			} else {
@@ -200,7 +197,6 @@ public class PesmaResource {
 			}
 			return r;
 		} catch (ExpiredJwtException e) {
-			// TODO: handle exception
 			Response r;
 			r = Response.status(401).header("Access-Control-Allow-Origin", "*")
 					.entity("Greska pri unosu prometa:\n" + e.getMessage())
@@ -226,7 +222,7 @@ public class PesmaResource {
 		Response r;
 
 		if (p.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoje prometi za pesmu sa id-om " + pesmaId)
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje prometi za pesmu sa id-om " + pesmaId);

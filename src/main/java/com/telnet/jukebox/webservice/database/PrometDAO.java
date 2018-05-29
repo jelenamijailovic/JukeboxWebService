@@ -8,9 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
-import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Promet;
 
 public class PrometDAO {
@@ -137,7 +135,7 @@ public class PrometDAO {
 			Connection con = DatabaseConnector.conStat();
 			stmt = con.createStatement();
 			resultSet = stmt.executeQuery(
-					"select pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina, k.korisnici_email from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id join korisnici k on pr.korisnik_id= k.korisnici_id group by pe.pesme_naziv, pe.cena_id, k.korisnici_email order by repetition desc limit 5;");
+					"select distinct pe.pesme_naziv, count(pr.pesma_id) as repetition, c.cene_kolicina from prometi pr join pesme pe on pr.pesma_id= pe.pesme_id join cene c on pe.cena_id= c.cene_id group by pe.pesme_naziv, pe.cena_id order by repetition desc limit 5;");
 			int i = 1;
 			while (resultSet.next()) {
 				Promet promet = new Promet();
@@ -145,7 +143,6 @@ public class PrometDAO {
 				promet.setPesmaNaziv(resultSet.getString(1));
 				promet.setRepetition(resultSet.getInt(2));
 				promet.setCenaKolicina(resultSet.getInt(3));
-				promet.setEmailKor(resultSet.getString(4));
 				prometi.add(promet);
 			}
 			con.close();

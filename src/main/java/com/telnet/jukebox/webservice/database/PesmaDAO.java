@@ -268,10 +268,19 @@ public class PesmaDAO {
 
 			poZanru = getPesmePoZanru(zanr);
 
-			for (int i = 0; i < 3; i++) {
+			for (int br = 0; br < 3; br++) {
 				int index = randomGenerator.nextInt(poZanru.size());
 				Pesma randomPesma = new Pesma();
 				randomPesma = poZanru.get(index);
+				for (int i = 0; i < recomended.size(); i++) {
+					if (randomPesma == recomended.get(i)) {
+						System.out.println("Pesma je ponovljena");
+						randomPesma = poZanru.get(index + 1);
+						i = recomended.size();
+					} else {
+						randomPesma = poZanru.get(index);
+					}
+				}
 				recomended.add(randomPesma);
 			}
 		} catch (SQLException e) {

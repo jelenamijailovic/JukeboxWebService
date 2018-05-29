@@ -11,9 +11,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.GenericEntity;
-import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -36,7 +34,6 @@ public class KorisnikResource {
 	KorisnikService korisnikService = new KorisnikService();
 	PrometService prometService = new PrometService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getKorisnici() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
@@ -47,8 +44,8 @@ public class KorisnikResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti korisnici")
+		if (korisnici.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti korisnici")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje uneti korisnici");
 		} else {
@@ -70,7 +67,7 @@ public class KorisnikResource {
 		Response r;
 
 		if (k.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji korisnik sa id-om " + korisnikId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji korisnik sa id-om " + korisnikId);
@@ -102,7 +99,7 @@ public class KorisnikResource {
 			logger.error("Postoji email u bazi.\n" + e.getMessage());
 		} catch (Exception e) {
 			logger.error("Greska pri unosu korisnika:\n" + e.getMessage());
-			r = Response.status(403).header("Access-Control-Allow-Origin", "*").entity("Greska pri unosu korisnika")
+			r = Response.status(400).header("Access-Control-Allow-Origin", "*").entity("Greska pri unosu korisnika")
 					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 		}
 
@@ -184,7 +181,7 @@ public class KorisnikResource {
 		Response r;
 
 		if (k.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoje prometi za korisnika sa id-om " + korisnikId)
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje prometi za korisnika sa id-om " + korisnikId);
@@ -209,7 +206,7 @@ public class KorisnikResource {
 						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 			}
 		} catch (ClassNotFoundException e) {
-			logger.error("Resorurce not found");
+			logger.error("Resource not found");
 			System.out.println("Resorurce not found");
 			e.printStackTrace();
 		}

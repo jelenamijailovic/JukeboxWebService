@@ -1,7 +1,5 @@
 package com.telnet.jukebox.webservice.resources;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -13,20 +11,14 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.container.ContainerRequestContext;
-import javax.ws.rs.container.ContainerRequestFilter;
 import javax.ws.rs.core.GenericEntity;
-import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.apache.log4j.Logger;
-import org.glassfish.jersey.server.ContainerRequest;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import com.telnet.jukebox.webservice.dto.KorisnikDTO;
 import com.telnet.jukebox.webservice.dto.PrometDTO;
-import com.telnet.jukebox.webservice.model.Login;
 import com.telnet.jukebox.webservice.service.PrometService;
 
 import io.jsonwebtoken.Claims;
@@ -44,7 +36,6 @@ public class PrometResource {
 
 	public PrometService prometService = new PrometService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getSviPrometi() throws ClassNotFoundException {
 		logger.info("Prikaz svih prometa");
@@ -55,8 +46,8 @@ public class PrometResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti prometi")
+		if (prometi.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti prometi")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje uneti prometi");
 		} else {
@@ -78,7 +69,7 @@ public class PrometResource {
 		Response r;
 
 		if (p.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji promet sa id-om " + prometId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji promet sa id-om " + prometId);
@@ -102,8 +93,8 @@ public class PrometResource {
 
 		Response r;
 
-		if (prometi == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje pesme")
+		if (prometi.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje pesme")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje pesme");
 		} else {
@@ -115,7 +106,6 @@ public class PrometResource {
 		return r;
 	}
 
-	@SuppressWarnings("unused")
 	@GET
 	@Path("/top5artists")
 	public Response getTop5Artists() throws ClassNotFoundException {
@@ -127,8 +117,8 @@ public class PrometResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje izvodjaci")
+		if (prometi.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje izvodjaci")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje izvodjaci");
 		} else {
@@ -140,23 +130,6 @@ public class PrometResource {
 		return r;
 	}
 
-	/*
-	 * @GET
-	 * 
-	 * @Path("/checkJWT") public Response checkJWT (ContainerRequestContext
-	 * requestContext) { Response r; String authenticationheader =
-	 * requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-	 * System.out.println(authenticationheader);
-	 * 
-	 * r = Response.ok(authenticationheader).header("Access-Control-Allow-Origin",
-	 * "*") .header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
-	 * 
-	 * logger.info(authenticationheader);
-	 * 
-	 * return r;
-	 * 
-	 * }
-	 */
 	@POST
 	// @Path("/{pesmaId}")
 	public Response addPromet(@HeaderParam("Authorization") String authorization, @RequestBody PrometDTO promet)
@@ -167,7 +140,7 @@ public class PrometResource {
 		// requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
 		System.out.println(authorization);
 		logger.info(authorization);
-		
+
 		try {
 			Jws<Claims> claims = Jwts.parser().setSigningKey("sifra".getBytes()).parseClaimsJws(authorization);
 
@@ -198,7 +171,7 @@ public class PrometResource {
 						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 				logger.info("Promet je uspesno unet");
 			} catch (Exception e) {
-				r = Response.status(403).header("Access-Control-Allow-Origin", "*")
+				r = Response.status(400).header("Access-Control-Allow-Origin", "*")
 						.entity("Greska pri unosu prometa:\n" + e.getMessage())
 						.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 				logger.error("Greska pri unosu prometa:\n" + e.getMessage());
@@ -214,8 +187,7 @@ public class PrometResource {
 			System.out.println("Token je istekao. Ulogujte se ponovo.");
 			return r;
 		}
-		
-		
+
 	}
 
 	// @PUT

@@ -31,7 +31,6 @@ public class CenaResource {
 	CenaService cenaService = new CenaService();
 	PesmaService pesmaService = new PesmaService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getCene() throws ClassNotFoundException {
 		logger.info("Prikaz svih cena");
@@ -42,8 +41,8 @@ public class CenaResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete cene")
+		if (cene.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete cene")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje unete cene");
 		} else {
@@ -65,7 +64,7 @@ public class CenaResource {
 		Response r;
 
 		if (c.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji cena sa id-om " + cenaId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji cena sa id-om " + cenaId);
@@ -144,7 +143,7 @@ public class CenaResource {
 		Response r;
 
 		if (c.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoje pesme za cenu sa id-om " + cenaId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoje pesme za cenu sa id-om " + cenaId);

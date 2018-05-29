@@ -1,6 +1,5 @@
 package com.telnet.jukebox.webservice.service;
 
-import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -10,27 +9,15 @@ import java.util.Date;
 import java.util.Formatter;
 import java.util.List;
 
-import javax.json.JsonException;
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.core.Application;
-import javax.ws.rs.core.HttpHeaders;
-import javax.ws.rs.core.Response;
 
 import com.telnet.jukebox.webservice.database.KorisnikDAO;
 import com.telnet.jukebox.webservice.dto.KorisnikDTO;
 import com.telnet.jukebox.webservice.model.Korisnik;
 import com.telnet.jukebox.webservice.model.Login;
-import com.telnet.jukebox.webservice.resources.LoginResource;
 
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.ExpiredJwtException;
-import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.SignatureException;
-import io.jsonwebtoken.UnsupportedJwtException;
 
 public class KorisnikService extends Application {
 
@@ -103,7 +90,6 @@ public class KorisnikService extends Application {
 
 		if (korisnik.getEmail() != null) {
 			Long time = System.currentTimeMillis();
-			int id = korisnik.getId();
 			
 			/*Claims claims = Jwts.claims().setSubject("info");
 			claims.put("id", id);
