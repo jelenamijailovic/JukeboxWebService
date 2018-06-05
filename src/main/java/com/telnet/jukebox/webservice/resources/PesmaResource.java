@@ -26,10 +26,15 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
 
 import javax.ws.rs.core.GenericEntity;
 
 @Path("/pesme")
+@Api(value = "pesme")
 @Produces({ MediaType.APPLICATION_JSON })
 @Consumes({ MediaType.APPLICATION_JSON })
 
@@ -41,6 +46,12 @@ public class PesmaResource {
 	PrometService prometService = new PrometService();
 
 	@GET
+	/*@ApiOperation(value = "Prikazi sve pesme",
+    response = PesmaDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje unete pesme"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getSvePesme() throws ClassNotFoundException {
 		logger.info("Prikaz svih pesama");
 
@@ -66,6 +77,12 @@ public class PesmaResource {
 
 	@GET
 	@Path("/pagination/{page}")
+	/*@ApiOperation(value = "Prikazi sve pesme na datoj strani",
+    response = PesmaDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje unete pesme"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getSvePesmePagination(@PathParam("page") int page) throws ClassNotFoundException {
 		logger.info("Prikaz svih pesama");
 
@@ -91,6 +108,12 @@ public class PesmaResource {
 
 	@GET
 	@Path("/{pesmaId}")
+	/*@ApiOperation(value = "Prikazi pesmu sa datim id-om",
+    response = PesmaDTO.class,
+    responseContainer = "PesmaDTO")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoji pesma sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getPesma(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz pesme sa id-om " + pesmaId);
 
@@ -114,7 +137,9 @@ public class PesmaResource {
 
 	@POST
 	// @Path("/{zanrId}/{izvodjacId}/{cenaId}")
-
+	/*@ApiOperation(value = "Unesi novu pesmu",
+    response = PesmaDTO.class,
+    responseContainer = "PesmaDTO")*/
 	public PesmaDTO addPesma(@RequestBody PesmaDTO pesma) throws ClassNotFoundException {
 		logger.info("Unosenje pesme");
 
@@ -132,6 +157,9 @@ public class PesmaResource {
 
 	@PUT
 	@Path("/{pesmaId}")
+	/*@ApiOperation(value = "Izmeni pesmu sa datim id-om",
+    response = PesmaDTO.class,
+    responseContainer = "PesmaDTO")*/
 	public PesmaDTO updatePesma(@PathParam("pesmaId") int pesmaId, @RequestBody PesmaDTO pesma)
 			throws ClassNotFoundException {
 		pesma.setId(pesmaId);
@@ -152,6 +180,7 @@ public class PesmaResource {
 
 	@DELETE
 	@Path("/{pesmaId}")
+	/*@ApiOperation(value = "Obrisi pesmu sa datim id-om")*/
 	public void deletePesma(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Brisanje pesme sa id-om " + pesmaId);
 
@@ -168,6 +197,13 @@ public class PesmaResource {
 
 	@GET
 	@Path("/recomended")
+	/*@ApiOperation(value = "Prikazi preporucene pesme za korisnika",
+    response = PesmaDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje unete pesme"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz"),
+		      @ApiResponse(code = 401, message = "Greska pri unosu prometa")})*/
 	public Response recomended(@HeaderParam("Authorization") String authorization) throws ClassNotFoundException {
 		logger.info("Preporucujemo");
 
@@ -210,6 +246,12 @@ public class PesmaResource {
 
 	@GET
 	@Path("/{pesmaId}/prometi")
+	/*@ApiOperation(value = "Prikazi promete za datu pesmu",
+    response = PrometDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje prometi za pesmu sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getSviPrometiPoPesmi(@PathParam("pesmaId") int pesmaId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa za pesmu sa id-om " + pesmaId);
 

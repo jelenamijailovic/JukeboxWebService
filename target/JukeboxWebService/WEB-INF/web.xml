@@ -7,14 +7,118 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>com.telnet.jukebox.webservice</param-value>
+            <param-value>com.telnet.jukebox.webservice,
+               io.swagger.jaxrs.listing,
+            com.telnet.jukebox.webservice.resources
+            </param-value>
         </init-param>
+        <!--  <init-param>
+        <param-name>jersey.config.server.provider.packages</param-name>
+        <param-value>
+         
+        </param-value>
+      </init-param> -->
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet-mapping>
+     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/webapi/*</url-pattern>
     </servlet-mapping>
+    
+    
+   <!--  <servlet>
+      <servlet-name>jersey1</servlet-name>
+      <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+      <init-param>
+        <param-name>jersey.config.server.provider.packages</param-name>
+        <param-value>
+            io.swagger.jaxrs.listing,
+            com.telnet.jukebox.webservice,
+            com.telnet.jukebox.webservice.cors,
+            com.telnet.jukebox.webservice.database,
+            com.telnet.jukebox.webservice.dto,
+            com.telnet.jukebox.webservice.model,
+            com.telnet.jukebox.webservice.resources,
+            com.telnet.jukebox.webservice.service
+        </param-value>
+      </init-param>
+      <load-on-startup>1</load-on-startup>
+    </servlet>
+  <servlet-mapping>
+        <servlet-name>jersey1</servlet-name>
+        <url-pattern>/JukeboxWebService/webapi/*</url-pattern>
+    </servlet-mapping> -->
+    
+    
+   
+    
+    
+    
+   <!--  <servlet>
+        <servlet-name>jersey2</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.classnames</param-name>
+            <param-value>
+                io.swagger.jaxrs.listing.ApiListingResource,
+                io.swagger.jaxrs.listing.SwaggerSerializers,
+                com.telnet.jukebox.webservice.MyResource,
+                com.telnet.jukebox.webservice.cors.CORSFilter,
+                com.telnet.jukebox.webservice.database.DatabaseConnector,
+                com.telnet.jukebox.webservice.database.CenaDAO,
+                com.telnet.jukebox.webservice.database.IzvodjacDAO,
+                com.telnet.jukebox.webservice.database.KorisnikDAO,
+                com.telnet.jukebox.webservice.database.PesmaDAO,
+                com.telnet.jukebox.webservice.database.PrometDAO,
+                com.telnet.jukebox.webservice.database.ZanrDAO,
+                com.telnet.jukebox.webservice.dto.CenaDTO,
+                com.telnet.jukebox.webservice.dto.IzvodjacDTO,
+                com.telnet.jukebox.webservice.dto.KorisnikDTO,
+                com.telnet.jukebox.webservice.dto.PesmaDTO,
+                com.telnet.jukebox.webservice.dto.PrometDTO,
+                com.telnet.jukebox.webservice.dto.ZanrDTO,
+                com.telnet.jukebox.webservice.model.Cena,
+                com.telnet.jukebox.webservice.model.Izvodjac,
+                com.telnet.jukebox.webservice.model.Korisnik,
+                com.telnet.jukebox.webservice.model.Pesma,
+                com.telnet.jukebox.webservice.model.Promet,
+                com.telnet.jukebox.webservice.model.Zanr,
+                com.telnet.jukebox.webservice.resource.CenaResource,
+                com.telnet.jukebox.webservice.resource.IzvodjacResource,
+                com.telnet.jukebox.webservice.resource.KorisnikResource,
+                com.telnet.jukebox.webservice.resource.PesmaResource,
+                com.telnet.jukebox.webservice.resource.PrometResource,
+                com.telnet.jukebox.webservice.resource.ZanrResource
+                com.telnet.jukebox.webservice.service.CenaService,
+                com.telnet.jukebox.webservice.service.IzvodjacService,
+                com.telnet.jukebox.webservice.service.KorisnikService,
+                com.telnet.jukebox.webservice.service.PesmaService,
+                com.telnet.jukebox.webservice.service.PrometService,
+                com.telnet.jukebox.webservice.service.ZanrService
+            </param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jersey2</servlet-name>
+        <url-pattern>/webapi/*</url-pattern>
+    </servlet-mapping>
+     -->
+    
+     <servlet>
+        <servlet-name>Jersey2Config</servlet-name>
+        <servlet-class>io.swagger.jersey.config.JerseyJaxrsConfig</servlet-class>
+        <init-param>
+            <param-name>api.version</param-name>
+            <param-value>1.0.0</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.basepath</param-name>
+            <param-value>http://localhost:8080/JukeboxWebService/webapi</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    
+     
     
     <filter>
     <filter-name>CorsFilter</filter-name>
@@ -25,4 +129,12 @@
     <filter-name>CorsFilter</filter-name>
     <url-pattern>/*</url-pattern>
 </filter-mapping>
+
+
+
+   
+    
+
+
+
 </web-app>

@@ -1,3 +1,244 @@
+<!-- <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.telnet.javabrains</groupId>
+	<artifactId>JukeboxWebService</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>JukeboxWebService</name>
+	
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>com.memorynotfound.webservice.rs.jersey</groupId>
+    <artifactId>unit-test-junit</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+    <name>JERSEY - ${project.artifactId}</name>
+    <url>https://memorynotfound.com</url>
+	
+
+	<build>
+		<finalName>JukeboxWebService</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<inherited>true</inherited>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>com.roufid.tutorials.AppTest</mainClass>
+						</manifest>
+					</archive>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>com.telnet.jukebox.webservice.mainPackage.MainClass</mainClass>
+						</manifest>
+					</archive>
+					<source>1.7</source>
+					<target>1.7</target>
+
+					<scanTargets>
+						<scanTarget>inflector.yaml</scanTarget>
+						<scanTarget>src/main/swagger/swagger.yaml</scanTarget>
+					</scanTargets>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
+					<webApp>
+						<contextPath>/</contextPath>
+					</webApp>
+
+				</configuration>
+
+
+			</plugin>
+			
+			
+			
+			<groupId>io.swagger</groupId>
+            <artifactId>swagger-codegen-maven-plugin</artifactId>
+            <version>${swagger.codegen.version}</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <inputSpec>native</inputSpec>
+                       <scanPackages>
+                             <package>com.myproject.restdomain1</package>
+                             <package>com.myproject.restdomain2</package>
+                       <scanPackages>
+                        <language>java</language>
+                        <configOptions>
+                            <sourceFolder>src/gen/java/main</sourceFolder>
+                        </configOptions>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+			
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${surefire.version}</version>
+                <configuration>
+                    <parallel>methods</parallel>
+                    <threadCount>10</threadCount>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.6</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+			
+		</plugins>
+
+
+	</build>
+	
+	
+	
+	 
+	
+	
+	
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.glassfish.jersey</groupId>
+				<artifactId>jersey-bom</artifactId>
+				<version>${jersey.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.glassfish.jersey.containers</groupId>
+			<artifactId>jersey-container-servlet-core</artifactId>
+			use the following artifactId if you don't need servlet 2.x compatibility
+			artifactId>jersey-container-servlet</artifactId
+		</dependency>
+		uncomment this to get JSON support
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-moxy</artifactId>
+		</dependency>
+		https://mvnrepository.com/artifact/log4j/log4j
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		https://mvnrepository.com/artifact/mysql/mysql-connector-java
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
+		</dependency>
+
+		https://mvnrepository.com/artifact/org.junit/junit5-engine
+		<dependency>
+			<groupId>org.junit</groupId>
+			<artifactId>junit5-engine</artifactId>
+			<version>5.0.0-ALPHA</version>
+		</dependency>
+
+		https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-validator</groupId>
+			<artifactId>commons-validator</artifactId>
+			<version>1.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.json</groupId>
+			<artifactId>javax.json-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt</artifactId>
+			<version>0.7.0</version>
+		</dependency>
+
+		http://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+		<dependency> <groupId>io.springfox</groupId> <artifactId>springfox-swagger2</artifactId> 
+			<version>2.4.0</version> </dependency>
+		http://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui
+		<dependency> <groupId>io.springfox</groupId> <artifactId>springfox-swagger-ui</artifactId> 
+			<version>2.4.0</version> </dependency>
+
+		https://mvnrepository.com/artifact/javax.servlet/servlet-api
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+
+		https://mvnrepository.com/artifact/io.swagger/swagger-parser
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-parser</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		https://mvnrepository.com/artifact/io.swagger/swagger-models
+		<dependency> <groupId>io.swagger</groupId> <artifactId>swagger-models</artifactId> 
+			<version>1.5.3</version> </dependency> <dependency> <groupId>io.swagger</groupId> 
+			<artifactId>swagger-inflector</artifactId> <version>1.0.0</version> </dependency>
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jersey2-jaxrs</artifactId>
+			<version>1.5.10</version>
+		</dependency>
+
+https://mvnrepository.com/artifact/org.glassfish.jersey.test-framework.providers/jersey-test-framework-provider-jdk-http
+<dependency>
+    <groupId>org.glassfish.jersey.test-framework.providers</groupId>
+    <artifactId>jersey-test-framework-provider-jetty</artifactId>
+    <version>${jersey.version}</version>
+</dependency>
+
+
+	</dependencies>
+	<properties>
+		<jersey.version>2.16</jersey.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+</project> -->
+
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
@@ -133,10 +374,61 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		
+		<dependency> <groupId>io.swagger</groupId> <artifactId>swagger-models</artifactId> 
+			<version>1.5.3</version> </dependency> <dependency> <groupId>io.swagger</groupId> 
+			<artifactId>swagger-inflector</artifactId> <version>1.0.0</version> </dependency>
+
+		<dependency>
+			<groupId>io.swagger</groupId>
+			<artifactId>swagger-jersey2-jaxrs</artifactId>
+			<version>1.5.10</version>
+		</dependency>
+		
+	<!-- 	 <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>${jersey.version}</version>
+        </dependency>
+
+        testing
+        <dependency>
+            <groupId>org.glassfish.jersey.test-framework.providers</groupId>
+            <artifactId>jersey-test-framework-provider-jetty</artifactId>
+            <version>${jersey.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency> -->
+        
+<dependency>
+<groupId>io.rest-assured</groupId>
+<artifactId>rest-assured</artifactId>
+<version>3.0.3</version>
+</dependency>
+ 
+<dependency>
+<groupId>junit</groupId>
+<artifactId>junit</artifactId>
+<version>4.12</version>
+<scope>test</scope>
+</dependency>
+        
 
 
 	</dependencies>
 	<properties>
+        <junit.version>4.12</junit.version>
 		<jersey.version>2.16</jersey.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>

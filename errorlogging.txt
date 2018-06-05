@@ -194,3 +194,86 @@ Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
 2018-05-28 15:22:16 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
 2018-05-28 15:24:40 ERROR PesmaResource:208 - Token je istekao. Ulogujte se ponovo.
 2018-05-29 09:00:17 ERROR KorisnikResource:216 - Pogresna sifra!!!
+2018-05-29 12:54:58 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:54:59 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:00 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:00 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:00 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:00 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:00 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:01 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:01 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 12:55:01 ERROR KorisnikResource:213 - Pogresna sifra!!!
+2018-05-29 14:22:38 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'rrr@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-29 14:22:42 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'rrr@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-29 14:24:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'rrr@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-29 14:24:19 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'rrr@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 10:46:30 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 10:48:35 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 10:52:14 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 10:52:40 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 10:53:14 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:05:59 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:21:18 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:26:29 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:26:32 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:26:33 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a.com' for key 'korisnici_email_UNIQUE'
+2018-05-30 15:26:55 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:24:00 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:26:56 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:27:12 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asda@g.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:28:34 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'milija@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:29:13 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'milija@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:29:25 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'milija@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 09:29:36 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'milijanedoivc@gmail.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 10:22:09 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'asdad@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 10:22:21 ERROR KorisnikResource:99 - Postoji email u bazi.
+Duplicate entry 'dasdad@dsa.com' for key 'korisnici_email_UNIQUE'
+2018-05-31 12:46:07 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 13
+2018-05-31 12:46:08 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 13
+2018-05-31 12:46:09 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 13
+2018-05-31 12:46:13 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 14
+2018-05-31 12:56:58 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 09:02:29 ERROR ZanrResource:153 - Ne postoje pesme za zanr sa id-om 1
+2018-06-01 09:03:04 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 22
+2018-06-01 09:04:38 ERROR ZanrResource:153 - Ne postoje pesme za zanr sa id-om 1
+2018-06-01 09:04:45 ERROR ZanrResource:153 - Ne postoje pesme za zanr sa id-om 23
+2018-06-01 09:59:31 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 10:00:09 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 10:00:16 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 10:00:18 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 10:00:19 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-01 10:01:22 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0

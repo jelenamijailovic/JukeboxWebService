@@ -83,7 +83,7 @@ public class PesmaDAO {
 		try {
 			Connection con = DatabaseConnector.conStat();
 			prepStmt = con.prepareStatement(
-					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on p.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where i.izvodjaci_id= ?");
+					"select p.pesme_id, p.pesme_naziv, i.izvodjaci_ime, z.zanrovi_ime, c.cene_kolicina from ((pesme p join izvodjaci i on p.izvodjac_id=i.izvodjaci_id)join zanrovi z on i.zanr_id=z.zanrovi_id)join cene c on p.cena_id=c.cene_id where i.izvodjaci_id= ?");
 			prepStmt.setLong(1, izvodjacId);
 			resultSet = prepStmt.executeQuery();
 			while (resultSet.next()) {

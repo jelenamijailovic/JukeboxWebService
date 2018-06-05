@@ -21,7 +21,15 @@ import com.telnet.jukebox.webservice.dto.ZanrDTO;
 import com.telnet.jukebox.webservice.service.PesmaService;
 import com.telnet.jukebox.webservice.service.ZanrService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponses;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ResponseHeader;
+//import io.swagger.models.Swagger;
+
 @Path("/zanrovi")
+@Api(value = "zanrovi")
 @Produces({ MediaType.APPLICATION_JSON })
 @Consumes({ MediaType.APPLICATION_JSON })
 public class ZanrResource {
@@ -32,6 +40,12 @@ public class ZanrResource {
 	PesmaService pesmaService = new PesmaService();
 
 	@GET
+	/*@ApiOperation(value = "Prikazi sve zanrove",
+    response = ZanrDTO.class,
+    responseContainer = "List")
+	 @ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje uneti zanrovi"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getZanrovi() throws ClassNotFoundException {
 		logger.info("Prikaz svih zanrova");
 
@@ -56,6 +70,12 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}")
+	/*@ApiOperation(value = "Prikazi zanr datog id-a",
+    response = ZanrDTO.class,
+    responseContainer = "ZanrDTO")
+	 @ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoji zanr sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getZanr(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz zanra sa id-om " + zanrId);
 
@@ -78,6 +98,9 @@ public class ZanrResource {
 	}
 
 	@POST
+	/*@ApiOperation(value = "Unesi novi zanr",
+    response = ZanrDTO.class,
+    responseContainer = "ZanrDTO")*/
 	public ZanrDTO addZanr(ZanrDTO zanr) throws ClassNotFoundException {
 		logger.info("Unosenje zanra");
 
@@ -95,6 +118,9 @@ public class ZanrResource {
 
 	@PUT
 	@Path("/{zanrId}")
+	/*@ApiOperation(value = "Izmeni zanr datog id-a",
+    response = ZanrDTO.class,
+    responseContainer = "ZanrDTO")*/
 	public ZanrDTO updateZanr(@PathParam("zanrId") int zanrId, ZanrDTO zanr) throws ClassNotFoundException {
 		zanr.setId(zanrId);
 
@@ -114,7 +140,7 @@ public class ZanrResource {
 	}
 
 	@DELETE
-	@Path("/{zanrId}")
+	@Path("/{zanrId}")/*@ApiOperation(value = "Obrisi zanr sa datim id-om")*/
 	public void deleteZanr(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Brisanje zanra sa id-om " + zanrId);
 
@@ -131,7 +157,13 @@ public class ZanrResource {
 
 	@GET
 	@Path("/{zanrId}/pesme")
-	public Response getSvePesmePoZanru(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
+	/*@ApiOperation(value = "Prikazi pesme datog zanra",
+    response = PesmaDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje pesme za zanr sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })
+*/	public Response getSvePesmePoZanru(@PathParam("zanrId") int zanrId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za zanr sa id-om " + zanrId);
 
 		List<PesmaDTO> pesme = pesmaService.getSvePesmePoZanru(zanrId);
@@ -156,5 +188,6 @@ public class ZanrResource {
 
 		return r;
 	}
+//	 Swagger swagger = new SwaggerParser().read("http://localhost:8080/JukeboxWebService/webapi/zanrovi");
 
 }

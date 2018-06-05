@@ -23,7 +23,13 @@ import com.telnet.jukebox.webservice.model.Login;
 import com.telnet.jukebox.webservice.service.KorisnikService;
 import com.telnet.jukebox.webservice.service.PrometService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
 @Path("/korisnici")
+@Api(value = "korisnici")
 @Produces({ MediaType.APPLICATION_JSON })
 @Consumes({ MediaType.APPLICATION_JSON })
 
@@ -35,6 +41,12 @@ public class KorisnikResource {
 	PrometService prometService = new PrometService();
 
 	@GET
+	/*@ApiOperation(value = "Prikazi sve korisnike",
+    response = KorisnikDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje uneti korisnici"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getKorisnici() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
 
@@ -59,6 +71,12 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}")
+	/*@ApiOperation(value = "Prikazi korisnika sa datim id-om",
+    response = KorisnikDTO.class,
+    responseContainer = "KorisnikDTO")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoji korisnik sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getKorisnik(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz korisnika sa id-om " + korisnikId);
 
@@ -81,6 +99,13 @@ public class KorisnikResource {
 	}
 
 	@POST
+	/*@ApiOperation(value = "Unesi novog korisnika",
+    response = KorisnikDTO.class,
+    responseContainer = "KorisnikDTO")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 200, message = "Uspesan prikaz"),
+		      @ApiResponse(code = 409, message = "ostoji email u bazi."),
+		      @ApiResponse(code = 400, message = "Greska pri unosu korisnika")})*/
 	public Response addKorisnika(KorisnikDTO korisnik) throws ClassNotFoundException {
 		logger.info("Unosenje korisnika");
 		
@@ -108,6 +133,9 @@ public class KorisnikResource {
 
 	@PUT
 	@Path("/{korisnikId}")
+	/*@ApiOperation(value = "Izmeni korisnika sa datim id-om",
+    response = KorisnikDTO.class,
+    responseContainer = "KorisnikDTO")*/
 	public KorisnikDTO updateKorisnik(@PathParam("korisnikId") int korisnikId, KorisnikDTO korisnik)
 			throws ClassNotFoundException {
 		korisnik.setId(korisnikId);
@@ -128,6 +156,7 @@ public class KorisnikResource {
 
 	@DELETE
 	@Path("/{korisnikId}")
+	/*@ApiOperation(value = "Obrisi korisnika sa datim id-om")*/
 	public void deleteIzvodjac(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Brisanje korisnika sa id-om " + korisnikId);
 
@@ -144,6 +173,12 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}/prometi")
+	/*@ApiOperation(value = "Prikazi promete po korisniku",
+    response = PrometDTO.class,
+    responseContainer = "List")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 204, message = "Ne postoje prometi za korisnika sa datim id-om"),
+		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
 	public Response getSviPrometiPoKorisniku(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + korisnikId);
 		/*String authenticationheader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
@@ -196,6 +231,12 @@ public class KorisnikResource {
 
 	@POST
 	@Path("/login")
+	/*@ApiOperation(value = "Login korisnika",
+    response = String.class,
+    responseContainer = "String")
+	@ApiResponses(value = { 
+		      @ApiResponse(code = 200, message = "Uspesan prikaz"),
+		      @ApiResponse(code = 409, message = "Pogresna sifra!!!")})*/
 	public Response login(Login login) {
 		logger.info("Login korisnika");
 
