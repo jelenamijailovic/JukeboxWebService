@@ -32,7 +32,6 @@ public class IzvodjacResource {
 	IzvodjacService izvodjacService = new IzvodjacService();
 	PesmaService pesmaService = new PesmaService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getIzvodjaci() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
@@ -43,8 +42,8 @@ public class IzvodjacResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti izvodjaci")
+		if (izvodjaci.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti izvodjaci")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje uneti izvodjaci");
 		} else {
@@ -66,7 +65,7 @@ public class IzvodjacResource {
 		Response r;
 
 		if (i.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji izvodjac sa id-om " + izvodjacId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji izvodjac sa id-om " + izvodjacId);
@@ -145,7 +144,7 @@ public class IzvodjacResource {
 		Response r;
 
 		if (i.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoje pesme za izvodjaca sa id-om " + izvodjacId)
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje pesme za izvodjaca sa id-om " + izvodjacId);

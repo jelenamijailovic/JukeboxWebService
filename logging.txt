@@ -14211,3 +14211,1440 @@ Duplicate entry 'a' for key 'korisnici_email_UNIQUE'
 2018-05-28 16:01:15 INFO  PrometResource:97 - Prikaz top 5 pesama
 2018-05-28 16:01:15 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
 2018-05-28 16:01:15 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:02:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:02:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:02:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:02:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:02:39 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:02:39 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:04:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:04:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:04:44 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:04:44 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:04:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:04:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:04:48 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:04:48 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:04:49 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:04:49 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:04:49 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:04:49 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:04:50 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:04:50 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:17 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:05:17 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:05:17 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:18 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:18 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:05:18 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:05:20 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:20 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:21 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:21 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:21 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:21 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:31 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:05:31 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:05:31 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:31 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:31 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:05:31 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:05:34 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:34 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:36 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:36 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:05:36 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:05:36 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:06:42 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:06:42 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:06:43 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:06:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:06:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:06:43 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:07:38 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:07:38 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:07:38 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:07:38 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:07:38 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:07:38 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:25 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:09:25 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:09:25 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:25 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:09:25 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:25 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:09:29 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:29 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:29 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:29 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:30 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:30 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:30 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:30 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:31 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:31 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:33 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:33 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:33 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:33 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:34 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:34 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:09:34 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:09:34 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:10:30 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:10:30 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:10:30 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:10:30 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:10:30 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:10:30 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:13:10 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:13:10 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:13:10 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:13:10 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:13:10 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:13:10 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:13:29 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:13:29 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:13:29 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:13:29 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:13:29 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:13:29 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:14:24 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:14:24 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:14:24 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:14:24 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:14:24 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:14:24 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:15:17 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:15:17 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:15:17 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:15:17 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:15:17 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:15:17 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:15:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:15:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:15:44 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:15:44 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:15:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-28 16:15:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:16:06 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-28 16:16:06 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-28 16:16:06 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-28 16:16:06 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-28 16:16:06 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-28 16:16:06 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:17:50 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:17:50 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:17:50 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:17:51 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:17:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:17:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:17:53 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:17:53 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:17:54 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:17:54 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:18:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:18:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:18:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:18:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:19:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:19:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:19:56 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:19:56 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:20:01 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:20:01 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:20:01 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:20:01 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:21:52 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:21:52 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:21:52 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:21:52 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:22:00 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 08:22:00 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 08:22:02 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 08:22:02 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 08:22:04 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:22:04 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:22:04 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:22:04 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:22:06 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 08:22:06 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 08:22:09 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:09 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:22:10 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:10 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:22:13 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 08:22:13 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 08:22:14 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:14 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:22:17 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:17 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:22:18 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:18 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:22:21 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:22:21 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:22:21 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 08:22:21 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:22:21 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:22:21 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 08:23:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:23:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:23:28 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:23:28 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:23:35 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 08:23:35 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTc1MDE1fQ.r8loKMCQXxwXsD0SVBExbRkdaKkCQdIse0UCWdbLIvs
+2018-05-29 08:26:29 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:26:29 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:26:29 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:26:29 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:26:48 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:26:48 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:26:49 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:26:49 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:28:22 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:28:22 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:28:22 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:28:22 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:28:38 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:28:38 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:28:38 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:28:38 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:28:57 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:28:57 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:28:58 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:28:58 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:29:03 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:29:03 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:29:03 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:29:03 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:29:39 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:29:39 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:29:39 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:29:39 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:29:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:29:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:29:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:29:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:30:06 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:30:06 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:30:06 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:30:06 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:31:01 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:31:01 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:32:32 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:32:32 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:32:32 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:32:32 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:32:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:32:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:32:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:32:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:35:31 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:35:32 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:35:32 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:35:56 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:35:56 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:35:56 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:36:22 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:36:22 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:36:22 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:36:22 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:36:22 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:36:22 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:36:22 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:52:01 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:52:01 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:52:01 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:52:01 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:52:01 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:52:01 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:52:01 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:52:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:52:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:52:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:52:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:52:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:52:36 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:52:36 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:53:10 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:53:10 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:53:10 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:53:10 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:53:10 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:53:10 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:53:10 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:53:42 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:53:42 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:53:42 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:53:42 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:53:42 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:53:42 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:53:42 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 08:59:47 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 08:59:47 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 08:59:47 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 08:59:47 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 08:59:47 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 08:59:47 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 08:59:47 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:00:17 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 09:00:17 ERROR KorisnikResource:216 - Pogresna sifra!!!
+2018-05-29 09:00:23 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 09:00:23 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTc3MjIzfQ.7nOBlLSfASlZuOCrsN41cHEBSc8i4crrdgPK8ySjl9A
+2018-05-29 09:02:35 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:02:35 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:02:35 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:02:35 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:02:35 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:02:35 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:02:35 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:02:50 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:02:50 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:02:50 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:02:50 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:02:50 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:02:50 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:02:50 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:03:09 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:03:09 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:03:09 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:03:09 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:03:09 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:03:10 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:03:10 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:03:41 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:03:41 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:03:41 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:03:41 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:03:41 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:03:41 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:03:41 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:04:01 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:04:01 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:04:01 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:04:01 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:04:01 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:04:01 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:04:01 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:04:25 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:04:25 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:04:25 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:04:25 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:04:25 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:04:25 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:04:25 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:04:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:04:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:04:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:04:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:04:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:04:55 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:04:55 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:05:39 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:05:39 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:05:40 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:05:40 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:05:40 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:05:40 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:05:40 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:07:46 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:07:46 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:07:46 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:07:46 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:07:46 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:07:46 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:07:46 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:10:12 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:10:12 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:10:12 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:10:12 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:10:12 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:10:12 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:10:12 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:10:43 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:10:43 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:10:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:10:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:10:43 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:10:43 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:10:43 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:11:16 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:11:16 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:11:16 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:11:16 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:11:16 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:11:16 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:11:16 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:11:50 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:11:50 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:11:50 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:11:50 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:11:50 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:11:50 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:11:50 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:12:07 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:12:07 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:12:07 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:12:07 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:12:07 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:12:07 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:12:07 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:13:33 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:13:33 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:13:33 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:13:33 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:13:33 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:13:33 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:13:33 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:13:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:13:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:13:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:13:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:13:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:13:55 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:13:55 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:15:43 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:15:43 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:15:43 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:15:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:15:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:15:43 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:15:43 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:16:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:16:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:16:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:16:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:16:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:16:36 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:16:36 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:16:41 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:16:41 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:16:41 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:16:41 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:16:41 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:16:41 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:16:41 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:17:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:17:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:17:27 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:17:27 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:17:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:17:27 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:17:27 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:17:45 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:17:45 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:17:45 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:17:45 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:17:45 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:17:45 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:17:45 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:18:31 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:18:31 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:18:31 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:19:37 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:19:37 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:19:37 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:20:09 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:20:10 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:20:10 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:20:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:20:52 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:20:52 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:21:56 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:21:57 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:21:57 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:22:40 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:22:40 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:22:40 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:24:04 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:24:05 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:24:05 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:24:47 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:24:48 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:24:48 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:25:41 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:25:42 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:25:42 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:27:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:27:37 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:27:37 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:28:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:28:28 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:28:28 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:29:42 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:29:42 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:29:42 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:29:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:29:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:29:43 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:29:43 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:29:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:29:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:29:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:29:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:29:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:30:00 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:30:00 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:30:00 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:30:00 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:30:00 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:30:40 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:30:40 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:30:40 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:30:40 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:30:40 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:30:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:30:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:30:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:30:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:30:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:31:08 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:31:08 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:31:08 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:31:15 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:31:15 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:31:16 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:31:16 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:31:16 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:31:16 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:31:16 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:32:08 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:32:08 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:32:08 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:32:08 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:32:08 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:32:08 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:32:08 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:32:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:32:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:32:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:32:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:32:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:34:11 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:34:11 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:34:11 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:34:11 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:34:11 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:34:28 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:34:28 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:34:28 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:34:28 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:34:28 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:34:28 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:34:28 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:35:26 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:35:26 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:35:26 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:35:26 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:35:26 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:35:26 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:35:26 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:36:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:36:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:36:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:36:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:36:56 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:36:56 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:36:56 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:36:59 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:36:59 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:36:59 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:36:59 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:36:59 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:37:05 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:37:05 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:37:05 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:37:05 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:37:05 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:37:05 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:37:05 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:37:38 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:37:38 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:37:38 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:37:38 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:37:38 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:37:38 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:37:38 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:38:03 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:38:03 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:38:03 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:38:03 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:38:03 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:38:03 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:38:03 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:38:11 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:38:11 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:38:11 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:38:11 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:38:11 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:38:11 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:38:11 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:38:35 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:38:35 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:38:35 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:38:35 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:38:35 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:38:35 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:38:35 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:38:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:38:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:39:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:39:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:39:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:39:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:39:44 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:39:45 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:39:45 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:39:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:39:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:39:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:39:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:39:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:39:51 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:39:51 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:40:00 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:40:00 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:40:00 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:40:00 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:40:00 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:40:00 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:40:00 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:40:37 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:40:37 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:40:37 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:40:38 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:40:38 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:40:38 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:40:38 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:41:04 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 09:41:04 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 09:41:19 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 09:41:19 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 09:41:21 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 09:41:21 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 09:42:41 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 09:42:42 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 09:42:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:42:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:42:44 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:42:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:42:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:42:44 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:42:44 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:43:17 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 09:43:17 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 09:43:23 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 09:43:23 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTc3MjIzfQ.7nOBlLSfASlZuOCrsN41cHEBSc8i4crrdgPK8ySjl9A
+2018-05-29 09:43:23 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 09:44:29 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:44:29 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:44:29 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:44:29 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:44:29 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:44:29 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:44:29 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:44:56 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:44:56 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:44:56 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:44:56 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:44:56 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:44:56 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:44:56 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:49:28 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:49:28 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:49:28 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:49:28 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:49:28 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:49:28 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:49:28 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:49:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:49:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:49:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:49:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:49:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:50:14 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:50:14 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:50:14 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:50:14 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:50:14 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:50:14 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:50:14 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:51:07 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:51:07 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:51:07 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:51:07 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:51:07 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:51:07 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:51:07 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:51:29 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:51:29 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:51:29 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:51:29 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:51:29 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:51:45 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:51:45 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:51:45 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:51:45 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:51:45 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:52:03 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:52:03 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:52:03 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:52:03 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:52:03 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:52:03 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:52:03 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:54:17 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:54:17 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:54:17 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:54:17 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:54:17 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:54:17 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:54:17 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:54:33 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:54:33 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:54:33 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:54:33 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:54:33 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:54:33 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:54:33 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:57:33 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:57:33 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:57:33 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:57:33 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:57:33 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:57:33 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:57:33 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 09:57:43 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 09:57:43 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTc3MjIzfQ.7nOBlLSfASlZuOCrsN41cHEBSc8i4crrdgPK8ySjl9A
+2018-05-29 09:57:43 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 09:57:43 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTc3MjIzfQ.7nOBlLSfASlZuOCrsN41cHEBSc8i4crrdgPK8ySjl9A
+2018-05-29 09:57:43 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 09:57:43 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 09:58:04 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:58:04 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:58:04 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:58:04 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:58:04 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:58:12 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:58:12 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:58:12 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:58:12 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:58:12 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:58:16 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:58:16 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:58:16 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:58:16 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:58:16 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:58:29 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:58:29 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:58:29 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:58:29 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:58:29 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:58:52 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:58:52 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:58:52 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:58:52 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:58:52 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:59:31 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:59:31 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:59:31 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:59:31 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:59:32 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:59:40 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 09:59:40 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 09:59:42 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 09:59:42 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 09:59:42 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 09:59:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 09:59:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 09:59:43 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 09:59:43 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:01:08 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:01:08 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:01:08 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:01:08 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:01:08 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:01:08 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:01:08 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgwNzgwfQ.hs17-rPkCnhCsB7GmK7cfNy0dQZbaj_UFGtjMG3x0fg
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:19 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:01:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:01:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:01:27 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:01:27 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:01:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:01:27 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:01:27 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:01:34 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:01:34 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:01:34 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:01:34 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:01:34 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:16:53 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:16:53 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:16:53 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:16:53 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:16:53 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:17:34 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:17:34 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:17:34 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:17:34 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:17:34 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:17:46 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:17:46 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:17:46 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:17:46 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:17:46 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:18:21 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:18:21 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:18:21 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:18:21 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:18:21 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:19:11 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:19:11 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:19:11 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:19:11 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:19:11 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:19:23 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:19:23 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:19:23 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:19:23 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:19:23 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:19:32 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:19:32 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgxOTcyfQ.OrOSevByNxU9_TVlPO8F6sUZ5RCOClshC-MdL9oPJ4Q
+2018-05-29 10:20:50 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:20:50 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:20:50 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:20:50 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:20:50 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:20:50 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:20:50 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:21:05 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:21:05 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:21:05 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:21:05 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:21:05 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:21:24 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:21:24 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:21:25 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:21:25 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:21:25 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:22:42 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:22:42 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:22:42 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:22:42 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:22:42 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:22:49 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:22:49 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgyMTY5fQ.9lIpIIDGCID1kIADmi3WOUC8zEKMe83b4KWcVGJwdBk
+2018-05-29 10:22:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:22:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:22:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:22:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:22:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:22:51 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:22:51 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:26:13 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:26:13 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:26:13 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:26:13 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:26:13 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:26:13 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:26:13 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:26:22 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:26:22 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgyMzgyfQ.4vH6Upt0byzlRID0UgQyVcvkNx13faURUkcrzWT97xs
+2018-05-29 10:26:22 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:26:22 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:26:22 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:26:22 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:26:22 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:26:22 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:26:22 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:26:55 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:26:55 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgyNDE1fQ.DnnCUnJho-B1OMNuxKpiCYSrg3vf7-f3Xk_NXwlI43o
+2018-05-29 10:26:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:26:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:26:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:26:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:26:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:27:11 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:27:11 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:27:11 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:27:11 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:27:11 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:27:11 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:27:11 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:27:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:27:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:27:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:27:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:27:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:28:02 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:28:02 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgyNDgyfQ.m3Emf8z_dxQKAbEWPQa1OXMIq6WyPoF5e8wTwU1F5CI
+2018-05-29 10:28:02 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:28:02 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:28:02 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:28:02 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:28:02 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:28:02 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:28:02 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:28:06 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:28:06 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:28:06 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:28:06 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:28:06 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:28:16 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:28:16 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgyNDk2fQ.e-15iA2UW1CNHg9KcPWt-ceW40BxkUVJFYoNa1Q9Mq8
+2018-05-29 10:28:16 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:28:16 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:28:16 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:28:16 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:28:16 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:28:16 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:28:16 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:29:16 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:29:16 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:29:16 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:29:16 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:29:16 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:29:45 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:29:45 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:29:45 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:29:45 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:29:45 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:29:57 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:29:57 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:00 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:30:00 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:30:00 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:30:00 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:30:00 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:30:01 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:01 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:03 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:30:03 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:30:03 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:30:03 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:30:03 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:30:05 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:05 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:06 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:30:06 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:30:06 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:30:07 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:30:07 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:30:08 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:08 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:10 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:30:10 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:30:10 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:30:10 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:30:10 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:30:18 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:18 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:19 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:19 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:20 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:20 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:20 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:20 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:21 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:30:21 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:30:23 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:30:23 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:30:23 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:30:23 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:30:23 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:31:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:31:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:31:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:31:52 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:31:52 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:35:19 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:35:19 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:35:19 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:35:19 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:35:19 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:02 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:36:02 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:36:02 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:36:02 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:36:02 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:20 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:36:20 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:36:20 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:20 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:36:20 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:36:44 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:36:44 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMDA0fQ.fRcZYAeSddjF03xSXJhSFgOKxNQnbkrr2o5BAAbdwKs
+2018-05-29 10:36:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:36:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:36:44 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:36:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:36:44 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:36:44 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:36:52 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:36:52 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:36:52 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:52 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:36:52 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:36:58 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:36:58 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:36:58 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:36:58 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:36:58 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:37:04 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:37:04 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMDI0fQ.GDdvWHHiQ1rQkKfDR1vTyPV3Nx_lxfTUyz111x0AS0Q
+2018-05-29 10:37:04 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:37:04 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:37:04 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:37:04 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:37:04 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:37:04 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:37:04 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:37:40 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:37:40 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:37:40 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:37:40 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:37:40 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:37:47 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:37:47 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:37:47 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:37:47 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:37:47 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:37:50 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:37:56 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:37:56 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMDc2fQ.onzTB5DRAGFNfohJksN4bpKCNdHRkIdo6YboJ9IoFLI
+2018-05-29 10:37:57 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:37:57 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:37:57 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:37:57 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:37:57 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:37:57 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:37:57 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:38:03 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:38:03 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:38:04 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:38:04 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:38:04 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:38:52 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:38:52 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:38:52 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:38:52 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:38:52 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:00 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:39:00 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMTQwfQ.Ic_kDpPPbnXTImhqfAz7_4B0Mqgc-VR1aW8bUGOKE9U
+2018-05-29 10:39:01 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:39:01 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:39:01 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:01 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:39:01 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:39:01 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:39:01 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:39:08 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:39:08 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:39:08 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:09 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:39:09 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:39:14 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:39:14 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMTU0fQ.rfvSvlM5ApnlMjHQ4WaOomubG4ndt902EzG0Vd-TRI4
+2018-05-29 10:39:15 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:39:15 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:39:15 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:15 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:39:15 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:39:15 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:39:15 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:39:20 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:39:20 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:39:20 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:20 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:39:20 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:39:26 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:39:26 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMTY2fQ.vP1eqgGZ6uqja0qf8Gx9pCrLsoLzK0Bda9bgYODDev0
+2018-05-29 10:39:26 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:39:26 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:39:26 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:39:26 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:39:26 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:39:26 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:39:26 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:40:24 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:40:24 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzMTY2fQ.vP1eqgGZ6uqja0qf8Gx9pCrLsoLzK0Bda9bgYODDev0
+2018-05-29 10:40:24 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:40:47 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:47 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:50 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:51 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:51 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:51 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:52 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:52 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:52 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:52 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:54 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:54 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:54 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:54 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:40:54 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:40:54 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:41:07 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:41:07 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:41:07 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:41:07 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:41:07 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:41:30 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:41:30 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:41:30 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:41:30 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:41:30 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:41:30 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:41:30 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:30 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:30 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:30 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:30 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:31 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:31 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:31 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:32 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:32 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:32 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:32 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:32 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:37 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:37 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:38 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:38 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:38 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:38 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:38 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:39 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:39 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:39 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:39 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:39 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:39 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:39 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:41 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:41 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:41 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:41 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:41 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:45 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:45 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:45 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:45 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:45 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:45 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:45 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:47 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:47 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:47 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:47 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:47 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:49 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:49 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:49 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:49 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:49 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:51 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:51 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:51 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:51 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:51 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:51 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:51 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:43:58 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:43:58 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:43:58 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:43:58 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:43:58 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:43:58 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:43:58 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:44:00 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:00 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:00 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:00 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:00 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:00 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:44:00 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:44:02 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:02 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:02 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:02 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:02 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:22 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:22 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:22 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:22 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:22 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:22 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:44:22 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:44:24 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:24 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:24 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:24 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:24 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:24 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:44:24 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:44:26 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:26 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:26 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:26 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:26 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:27 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:27 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:27 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:44:27 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:44:31 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:31 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:31 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:31 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:31 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:35 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:35 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:35 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:35 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:35 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:36 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:36 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:36 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:36 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:36 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:43 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:44:43 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzNDgzfQ.X0TufKmIKiPsoQfhoQf20GyED0KhLzKVVdcH7DQ24bQ
+2018-05-29 10:44:43 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:44:43 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:44:43 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:44:43 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:44:43 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:44:43 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:44:43 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:45:08 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:45:08 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:45:08 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:45:08 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:45:08 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:45:08 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:45:08 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:45:13 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:45:13 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:45:13 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:45:13 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:45:13 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:46:11 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 10:46:11 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzNTcxfQ.0Rk5KlB5vH-gtxextmRbhvuiVDYCtXPj_EpgfBn58N0
+2018-05-29 10:46:11 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:46:11 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:46:11 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:46:11 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:46:11 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:46:11 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 10:46:11 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 10:46:15 INFO  PrometResource:164 - Unosenje prometa
+2018-05-29 10:46:15 INFO  PrometResource:169 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTgzNTcxfQ.0Rk5KlB5vH-gtxextmRbhvuiVDYCtXPj_EpgfBn58N0
+2018-05-29 10:46:15 INFO  PrometResource:199 - Promet je uspesno unet
+2018-05-29 10:46:20 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:46:20 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:46:20 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:46:20 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:46:20 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:46:21 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:46:21 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:46:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:46:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:46:27 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:46:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:46:27 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:46:27 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:46:27 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:46:46 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:46:46 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:47:51 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:47:51 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:47:54 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:47:54 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:47:56 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:47:57 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:02 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:02 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:04 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:04 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:05 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:06 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:06 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:06 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:08 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:08 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:09 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:09 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:11 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:11 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:13 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:13 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:15 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:15 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:21 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:48:21 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:48:23 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:23 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:26 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:26 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:59 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:48:59 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:48:59 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:48:59 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:48:59 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:48:59 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:48:59 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 10:49:01 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 10:49:01 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 10:49:04 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:49:04 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:49:05 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 10:49:05 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 10:49:06 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 10:49:06 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 10:49:06 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 10:49:06 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 10:49:06 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:06:57 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:06:57 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:06:57 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:06:57 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:06:57 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:29:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:29:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:29:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:29:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:29:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:31:57 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:31:57 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:31:57 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:31:57 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:31:57 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:32:18 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:32:18 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:32:18 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:32:18 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:32:18 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:33:59 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:33:59 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:33:59 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:34:00 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:34:00 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:37:33 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:37:33 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:37:33 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:37:33 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:37:33 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:37:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:37:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:37:44 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:37:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:37:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:38:35 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:38:35 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:38:35 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:38:35 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:38:35 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:38:44 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:38:44 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:38:44 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:38:44 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:38:44 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:38:55 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:38:55 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:38:55 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:38:55 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:38:55 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:39:00 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 11:39:00 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTg2NzQwfQ.2x3M6GFrW73Vj4xxxJmEE1isOSz5qh3gtmYI8Y2mZsU
+2018-05-29 11:39:01 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:39:01 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:39:01 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:39:01 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:39:01 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:39:01 INFO  PesmaResource:186 - Korisnik id from token 
+2018-05-29 11:39:01 INFO  PesmaResource:198 - Pesme su uspesno prikazane
+2018-05-29 11:43:27 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:43:27 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:43:27 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:43:27 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:43:27 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:45:18 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:45:18 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:45:19 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:45:19 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:45:19 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:45:33 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:45:33 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:45:33 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:45:33 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:45:33 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:45:57 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:45:57 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:45:58 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:45:58 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:45:58 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:46:37 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:46:37 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:46:37 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:46:37 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:46:37 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:46:42 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 11:46:42 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 11:46:45 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 11:46:45 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 11:46:45 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 11:46:45 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 11:46:46 INFO  PesmaResource:72 - Prikaz svih pesama
+2018-05-29 11:46:46 INFO  PesmaResource:88 - Pesme su uspesno prikazane
+2018-05-29 11:46:49 INFO  PesmaResource:46 - Prikaz svih pesama
+2018-05-29 11:46:49 INFO  PesmaResource:62 - Pesme su uspesno prikazane
+2018-05-29 11:46:50 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:46:50 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:46:50 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:46:50 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:46:50 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:47:15 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:47:15 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:47:15 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:47:15 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:47:15 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:47:22 INFO  PrometResource:97 - Prikaz top 5 pesama
+2018-05-29 11:47:22 INFO  PrometResource:122 - Prikaz top 5 izvodjaca
+2018-05-29 11:47:22 INFO  PrometResource:137 - Top 5 izvodjaca je uspesno prikazano
+2018-05-29 11:47:22 INFO  PrometResource:112 - Top 5 pesama je uspesno prikazano
+2018-05-29 11:47:22 INFO  PesmaResource:175 - Preporucujemo
+2018-05-29 11:47:29 INFO  KorisnikResource:203 - Login korisnika
+2018-05-29 11:47:29 INFO  KorisnikResource:207 - eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImFzZGFAZHNhLmNvbSIsImlkIjozMSwiZXhwIjoxNTI4MTg3MjQ5fQ.GbSUMs3U8__s4zULjWg7QtZ-vKS_pknk5gVQdGaUzGM
+2018-05-29 12:03:27 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-29 12:03:27 INFO  ZanrResource:52 - Zanrovi su uspesno prikazani
+2018-05-29 12:04:29 INFO  ZanrResource:37 - Prikaz svih zanrova
+2018-05-29 12:04:29 INFO  ZanrResource:52 - Zanrovi su uspesno prikazani

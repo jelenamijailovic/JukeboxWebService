@@ -3,19 +3,9 @@ package com.telnet.jukebox.webservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.ws.rs.HeaderParam;
-import javax.xml.bind.DatatypeConverter;
-
 import com.telnet.jukebox.webservice.database.PrometDAO;
-import com.telnet.jukebox.webservice.dto.PesmaDTO;
 import com.telnet.jukebox.webservice.dto.PrometDTO;
-import com.telnet.jukebox.webservice.model.Pesma;
 import com.telnet.jukebox.webservice.model.Promet;
-
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
 
 public class PrometService {
 

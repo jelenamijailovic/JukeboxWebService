@@ -31,7 +31,6 @@ public class ZanrResource {
 	ZanrService zanrService = new ZanrService();
 	PesmaService pesmaService = new PesmaService();
 
-	@SuppressWarnings("unused")
 	@GET
 	public Response getZanrovi() throws ClassNotFoundException {
 		logger.info("Prikaz svih zanrova");
@@ -42,8 +41,8 @@ public class ZanrResource {
 
 		Response r;
 
-		if (list == null) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti zanrovi")
+		if (zanrovi.isEmpty()) {
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje uneti zanrovi")
 					.header("Access-Control-Allow-Methods", "GET").allow("OPTIONS").build();
 			logger.error("Ne postoje uneti zanrovi");
 		} else {
@@ -65,7 +64,7 @@ public class ZanrResource {
 		Response r;
 
 		if (z.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoji zanr sa id-om " + zanrId).header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoji zanr sa id-om " + zanrId);
@@ -144,7 +143,7 @@ public class ZanrResource {
 		Response r;
 
 		if (z.getId() == 0) {
-			r = Response.status(404).header("Access-Control-Allow-Origin", "*")
+			r = Response.status(204).header("Access-Control-Allow-Origin", "*")
 					.entity("Ne postoje pesme za zanr sa id-om").header("Access-Control-Allow-Methods", "GET")
 					.allow("OPTIONS").build();
 			logger.error("Ne postoje pesme za zanr sa id-om " + zanrId);
