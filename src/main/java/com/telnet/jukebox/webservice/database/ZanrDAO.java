@@ -86,8 +86,7 @@ public class ZanrDAO {
 	public Zanr updateZanr(Zanr zanr) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("update zanrovi set zanrovi_ime= ? where zanrovi_id= ?");
+			prepStmt = con.prepareStatement("update zanrovi set zanrovi_ime= ? where zanrovi_id= ?");
 			prepStmt.setString(1, zanr.getNaziv());
 			prepStmt.setInt(2, zanr.getId());
 			prepStmt.executeUpdate();

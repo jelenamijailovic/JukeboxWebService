@@ -86,8 +86,7 @@ public class CenaDAO {
 	public Cena updateCena(Cena cena) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("update cene set cene_kolicina= ? where cene_id= ?");
+			prepStmt = con.prepareStatement("update cene set cene_kolicina= ? where cene_id= ?");
 			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.setInt(2, cena.getId());
 			prepStmt.executeUpdate();

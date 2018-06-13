@@ -41,12 +41,16 @@ public class KorisnikResource {
 	PrometService prometService = new PrometService();
 
 	@GET
-	/*@ApiOperation(value = "Prikazi sve korisnike",
-    response = KorisnikDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje uneti korisnici"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi sve korisnike", response = KorisnikDTO.class,
+	 * responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoje uneti korisnici"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getKorisnici() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
 
@@ -71,12 +75,16 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}")
-	/*@ApiOperation(value = "Prikazi korisnika sa datim id-om",
-    response = KorisnikDTO.class,
-    responseContainer = "KorisnikDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoji korisnik sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi korisnika sa datim id-om", response =
+	 * KorisnikDTO.class, responseContainer = "KorisnikDTO")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoji korisnik sa datim id-om"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getKorisnik(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz korisnika sa id-om " + korisnikId);
 
@@ -99,16 +107,20 @@ public class KorisnikResource {
 	}
 
 	@POST
-	/*@ApiOperation(value = "Unesi novog korisnika",
-    response = KorisnikDTO.class,
-    responseContainer = "KorisnikDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 200, message = "Uspesan prikaz"),
-		      @ApiResponse(code = 409, message = "ostoji email u bazi."),
-		      @ApiResponse(code = 400, message = "Greska pri unosu korisnika")})*/
+	/*
+	 * @ApiOperation(value = "Unesi novog korisnika", response = KorisnikDTO.class,
+	 * responseContainer = "KorisnikDTO")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz"),
+	 * 
+	 * @ApiResponse(code = 409, message = "ostoji email u bazi."),
+	 * 
+	 * @ApiResponse(code = 400, message = "Greska pri unosu korisnika")})
+	 */
 	public Response addKorisnika(KorisnikDTO korisnik) throws ClassNotFoundException {
 		logger.info("Unosenje korisnika");
-		
 
 		Response r;
 		try {
@@ -133,9 +145,10 @@ public class KorisnikResource {
 
 	@PUT
 	@Path("/{korisnikId}")
-	/*@ApiOperation(value = "Izmeni korisnika sa datim id-om",
-    response = KorisnikDTO.class,
-    responseContainer = "KorisnikDTO")*/
+	/*
+	 * @ApiOperation(value = "Izmeni korisnika sa datim id-om", response =
+	 * KorisnikDTO.class, responseContainer = "KorisnikDTO")
+	 */
 	public KorisnikDTO updateKorisnik(@PathParam("korisnikId") int korisnikId, KorisnikDTO korisnik)
 			throws ClassNotFoundException {
 		korisnik.setId(korisnikId);
@@ -156,7 +169,7 @@ public class KorisnikResource {
 
 	@DELETE
 	@Path("/{korisnikId}")
-	/*@ApiOperation(value = "Obrisi korisnika sa datim id-om")*/
+	/* @ApiOperation(value = "Obrisi korisnika sa datim id-om") */
 	public void deleteIzvodjac(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Brisanje korisnika sa id-om " + korisnikId);
 
@@ -173,39 +186,37 @@ public class KorisnikResource {
 
 	@GET
 	@Path("/{korisnikId}/prometi")
-	/*@ApiOperation(value = "Prikazi promete po korisniku",
-    response = PrometDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje prometi za korisnika sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi promete po korisniku", response =
+	 * PrometDTO.class, responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message =
+	 * "Ne postoje prometi za korisnika sa datim id-om"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getSviPrometiPoKorisniku(@PathParam("korisnikId") int korisnikId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + korisnikId);
-		/*String authenticationheader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-		System.out.println(authenticationheader);
-		logger.info(authenticationheader);*/
-		
-		/*HttpClient client = HttpClientBuilder.create().build();
-		HttpGet request = new HttpGet();
-		HttpResponse response;
-		try {
-			response = client.execute(request);
-			Header[] headers = response.getAllHeaders();
-			for (Header header : headers) {
-				System.out.println("Key : " + header.getName() 
-				      + " ,Value : " + header.getValue());
-			}
+		/*
+		 * String authenticationheader =
+		 * requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
+		 * System.out.println(authenticationheader); logger.info(authenticationheader);
+		 */
 
-			//get header by 'key'
-			String server = response.getFirstHeader("Server").getValue();
-			System.out.println(server);
-		} catch (ClientProtocolException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}*/
-			
-		
+		/*
+		 * HttpClient client = HttpClientBuilder.create().build(); HttpGet request = new
+		 * HttpGet(); HttpResponse response; try { response = client.execute(request);
+		 * Header[] headers = response.getAllHeaders(); for (Header header : headers) {
+		 * System.out.println("Key : " + header.getName() + " ,Value : " +
+		 * header.getValue()); }
+		 * 
+		 * //get header by 'key' String server =
+		 * response.getFirstHeader("Server").getValue(); System.out.println(server); }
+		 * catch (ClientProtocolException e) { e.printStackTrace(); } catch (IOException
+		 * e) { e.printStackTrace(); }
+		 */
 
 		List<PrometDTO> prometi = prometService.getSviPrometiPoKorisniku(korisnikId);
 		GenericEntity<List<PrometDTO>> list = new GenericEntity<List<PrometDTO>>(prometi) {
@@ -231,12 +242,16 @@ public class KorisnikResource {
 
 	@POST
 	@Path("/login")
-	/*@ApiOperation(value = "Login korisnika",
-    response = String.class,
-    responseContainer = "String")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 200, message = "Uspesan prikaz"),
-		      @ApiResponse(code = 409, message = "Pogresna sifra!!!")})*/
+	/*
+	 * @ApiOperation(value = "Login korisnika", response = String.class,
+	 * responseContainer = "String")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz"),
+	 * 
+	 * @ApiResponse(code = 409, message = "Pogresna sifra!!!")})
+	 */
 	public Response login(Login login) {
 		logger.info("Login korisnika");
 
@@ -255,8 +270,6 @@ public class KorisnikResource {
 		return Response.status(Response.Status.CONFLICT).header("Access-Control-Allow-Origin", "*")
 				.entity("Pogresna sifra!!!").header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
 	}
-
-	
 
 	/*
 	 * @GET

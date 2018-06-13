@@ -89,4 +89,76 @@ public class Promet {
 		this.idKor = idKor;
 	}
 
+	public Promet(int id, Date datum, String pesmaNaziv, int cenaKolicina, int repetition,
+			String izvodjacIme, String emailKor) {
+		super();
+		this.id = id;
+		this.datum = datum;
+		this.pesmaNaziv = pesmaNaziv;
+		this.cenaKolicina = cenaKolicina;
+		this.repetition = repetition;
+		this.izvodjacIme = izvodjacIme;
+		this.emailKor = emailKor;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + cenaKolicina;
+		result = prime * result + ((datum == null) ? 0 : datum.hashCode());
+		result = prime * result + ((emailKor == null) ? 0 : emailKor.hashCode());
+		result = prime * result + id;
+		result = prime * result + idKor;
+		result = prime * result + ((izvodjacIme == null) ? 0 : izvodjacIme.hashCode());
+		result = prime * result + pesmaId;
+		result = prime * result + ((pesmaNaziv == null) ? 0 : pesmaNaziv.hashCode());
+		result = prime * result + repetition;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Promet other = (Promet) obj;
+		if (cenaKolicina != other.cenaKolicina)
+			return false;
+		if (datum == null) {
+			if (other.datum != null)
+				return false;
+		} else if (!datum.equals(other.datum))
+			return false;
+		if (emailKor == null) {
+			if (other.emailKor != null)
+				return false;
+		} else if (!emailKor.equals(other.emailKor))
+			return false;
+		if (id != other.id)
+			return false;
+		if (idKor != other.idKor)
+			return false;
+		if (izvodjacIme == null) {
+			if (other.izvodjacIme != null)
+				return false;
+		} else if (!izvodjacIme.equals(other.izvodjacIme))
+			return false;
+		if (pesmaId != other.pesmaId)
+			return false;
+		if (pesmaNaziv == null) {
+			if (other.pesmaNaziv != null)
+				return false;
+		} else if (!pesmaNaziv.equals(other.pesmaNaziv))
+			return false;
+		if (repetition != other.repetition)
+			return false;
+		return true;
+	}
+	
+	
+
 }

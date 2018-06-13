@@ -39,12 +39,16 @@ public class IzvodjacResource {
 	PesmaService pesmaService = new PesmaService();
 
 	@GET
-	/*@ApiOperation(value = "Prikazi sve izvodjace",
-    response = IzvodjacDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje uneti izvodjaci"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi sve izvodjace", response = IzvodjacDTO.class,
+	 * responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoje uneti izvodjaci"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getIzvodjaci() throws ClassNotFoundException {
 		logger.info("Prikaz svih izvodjaca");
 
@@ -69,12 +73,16 @@ public class IzvodjacResource {
 
 	@GET
 	@Path("/{izvodjacId}")
-	/*@ApiOperation(value = "Prikazi izvodjaca datog id-a",
-    response = IzvodjacDTO.class,
-    responseContainer = "IzvodjacDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoji izvodjac sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi izvodjaca datog id-a", response =
+	 * IzvodjacDTO.class, responseContainer = "IzvodjacDTO")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoji izvodjac sa datim id-om"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getIzvodjac(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz izvodjaca sa id-om " + izvodjacId);
 
@@ -97,9 +105,10 @@ public class IzvodjacResource {
 	}
 
 	@POST
-	/*@ApiOperation(value = "Unesi novog izvodjaca",
-    response = IzvodjacDTO.class,
-    responseContainer = "IzvodjacDTO")*/
+	/*
+	 * @ApiOperation(value = "Unesi novog izvodjaca", response = IzvodjacDTO.class,
+	 * responseContainer = "IzvodjacDTO")
+	 */
 	public IzvodjacDTO addIzvodjaca(IzvodjacDTO izvodjac) throws ClassNotFoundException {
 		logger.info("Unosenje izvodjaca");
 
@@ -117,9 +126,10 @@ public class IzvodjacResource {
 
 	@PUT
 	@Path("/{izvodjacId}")
-	/*@ApiOperation(value = "Izmeni izvodjaca datog id-a",
-    response = IzvodjacDTO.class,
-    responseContainer = "IzvodjacDTO")*/
+	/*
+	 * @ApiOperation(value = "Izmeni izvodjaca datog id-a", response =
+	 * IzvodjacDTO.class, responseContainer = "IzvodjacDTO")
+	 */
 	public IzvodjacDTO updateIzvodjac(@PathParam("izvodjacId") int izvodjacId, IzvodjacDTO izvodjac)
 			throws ClassNotFoundException {
 		izvodjac.setId(izvodjacId);
@@ -140,7 +150,7 @@ public class IzvodjacResource {
 
 	@DELETE
 	@Path("/{izvodjacId}")
-	/*@ApiOperation(value = "Prikazi izvodjaca datog id-a")*/
+	/* @ApiOperation(value = "Prikazi izvodjaca datog id-a") */
 	public void deleteIzvodjac(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Brisanje izvodjaca sa id-om " + izvodjacId);
 
@@ -157,12 +167,17 @@ public class IzvodjacResource {
 
 	@GET
 	@Path("/{izvodjacId}/pesme")
-	/*@ApiOperation(value = "Prikazi pesme datog izvodjaca",
-    response = PesmaDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje pesme za izvodjaca sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi pesme datog izvodjaca", response =
+	 * PesmaDTO.class, responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message =
+	 * "Ne postoje pesme za izvodjaca sa datim id-om"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getSvePesmePoIzvodjacu(@PathParam("izvodjacId") int izvodjacId) throws ClassNotFoundException {
 		logger.info("Prikaz pesama za izvodjaca sa id-om " + izvodjacId);
 

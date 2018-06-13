@@ -10,7 +10,7 @@ import com.telnet.jukebox.webservice.model.Promet;
 public class PrometService {
 
 	PrometDAO dao = new PrometDAO();
-	KorisnikService korisnikService= new KorisnikService();
+	KorisnikService korisnikService = new KorisnikService();
 
 	public List<PrometDTO> getSviPrometi() throws ClassNotFoundException {
 		List<PrometDTO> list = new ArrayList<PrometDTO>();
@@ -67,28 +67,26 @@ public class PrometService {
 	}
 
 	public PrometDTO addPromet(int pesmaId, int korisnikId, PrometDTO promet) throws ClassNotFoundException {
-//
-//		KorisnikDTO kor= korisnikService.
-		
+		//
+		// KorisnikDTO kor= korisnikService.
+
 		java.util.Date datum = new java.util.Date();
 		java.sql.Date date = new java.sql.Date(datum.getTime());
 
 		promet.setPesmaId(pesmaId);
-		
-//		Jws<Claims> claims = Jwts.parser()
-//				  .setSigningKey("sifra".getBytes())
-//				  .parseClaimsJws(Authorization);
-//		String id= claims.getBody().getId();
-//		System.out.println(id);
-//		Long idKor= Long.parseLong(id);
-//		System.out.println(idKor);
+
+		// Jws<Claims> claims = Jwts.parser()
+		// .setSigningKey("sifra".getBytes())
+		// .parseClaimsJws(Authorization);
+		// String id= claims.getBody().getId();
+		// System.out.println(id);
+		// Long idKor= Long.parseLong(id);
+		// System.out.println(idKor);
 		promet.setIdKor(korisnikId);
-		
+
 		promet.setDatum(date);
 
 		PrometDTO promet1 = entityToDTO(dao.insertPromet(pesmaId, korisnikId, DTOToEntity(promet)));
-
-		
 
 		return promet1;
 	}
@@ -100,8 +98,6 @@ public class PrometService {
 	public void deletePromet(int prometId) throws ClassNotFoundException {
 		dao.removePromet(prometId);
 	}
-	
-	
 
 	public Promet DTOToEntity(PrometDTO promet) {
 		Promet entity = new Promet();
@@ -126,7 +122,5 @@ public class PrometService {
 		dto.setEmailKor(promet.getEmailKor());
 		return dto;
 	}
-	
-	 
 
 }

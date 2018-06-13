@@ -155,8 +155,6 @@ public class PrometDAO {
 		return prometi;
 	}
 
-	
-
 	public List<Promet> getTop5Artists() throws ClassNotFoundException {
 		List<Promet> prometi = new ArrayList<Promet>();
 

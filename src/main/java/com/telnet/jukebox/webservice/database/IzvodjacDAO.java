@@ -86,8 +86,7 @@ public class IzvodjacDAO {
 	public Izvodjac updateIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException {
 		try {
 			Connection con = DatabaseConnector.conStat();
-			prepStmt = con
-					.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
+			prepStmt = con.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.setInt(2, izvodjac.getId());
 			prepStmt.executeUpdate();

@@ -38,12 +38,9 @@ public class CenaResource {
 	PesmaService pesmaService = new PesmaService();
 
 	@GET
-	@ApiOperation(value = "Prikazi sve cene",
-    response = CenaDTO.class,
-    responseContainer = "List")
-	 @ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje unete cene"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	@ApiOperation(value = "Prikazi sve cene", response = CenaDTO.class, responseContainer = "List")
+	@ApiResponses(value = { @ApiResponse(code = 204, message = "Ne postoje unete cene"),
+			@ApiResponse(code = 200, message = "Uspesan prikaz") })
 	public Response getCene() throws ClassNotFoundException {
 		logger.info("Prikaz svih cena");
 
@@ -68,12 +65,9 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}")
-	@ApiOperation(value = "Prikazi scenu datog id-a",
-    response = CenaDTO.class,
-    responseContainer = "CenaDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoji cena sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	@ApiOperation(value = "Prikazi scenu datog id-a", response = CenaDTO.class, responseContainer = "CenaDTO")
+	@ApiResponses(value = { @ApiResponse(code = 204, message = "Ne postoji cena sa datim id-om"),
+			@ApiResponse(code = 200, message = "Uspesan prikaz") })
 	public Response getCena(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 		logger.info("Prikaz cene sa id-om " + cenaId);
 
@@ -96,9 +90,7 @@ public class CenaResource {
 	}
 
 	@POST
-	@ApiOperation(value = "Unesi novu cenu",
-    response = CenaDTO.class,
-    responseContainer = "CenaDTO")
+	@ApiOperation(value = "Unesi novu cenu", response = CenaDTO.class, responseContainer = "CenaDTO")
 	public CenaDTO addCena(CenaDTO cena) throws ClassNotFoundException {
 		logger.info("Unosenje cene");
 
@@ -116,9 +108,7 @@ public class CenaResource {
 
 	@PUT
 	@Path("/{cenaId}")
-	@ApiOperation(value = "Izmeni cenu datog id-a",
-    response = CenaDTO.class,
-    responseContainer = "CenaDTO")
+	@ApiOperation(value = "Izmeni cenu datog id-a", response = CenaDTO.class, responseContainer = "CenaDTO")
 	public CenaDTO updateIzvodjac(@PathParam("cenaId") int cenaId, CenaDTO cena) throws ClassNotFoundException {
 		cena.setId(cenaId);
 
@@ -155,12 +145,9 @@ public class CenaResource {
 
 	@GET
 	@Path("/{cenaId}/pesme")
-	@ApiOperation(value = "Prikazi pesme date cene",
-    response = PesmaDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje pesme za cenu sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	@ApiOperation(value = "Prikazi pesme date cene", response = PesmaDTO.class, responseContainer = "List")
+	@ApiResponses(value = { @ApiResponse(code = 204, message = "Ne postoje pesme za cenu sa datim id-om"),
+			@ApiResponse(code = 200, message = "Uspesan prikaz") })
 	public Response getSvePesmePoCeni(@PathParam("cenaId") int cenaId) throws ClassNotFoundException {
 
 		logger.info("Prikaz pesama za cenu sa id-om " + cenaId);

@@ -44,12 +44,16 @@ public class PrometResource {
 	public PrometService prometService = new PrometService();
 
 	@GET
-	/*@ApiOperation(value = "Prikazi sve promete",
-    response = PrometDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje uneti prometi"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi sve promete", response = PrometDTO.class,
+	 * responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoje uneti prometi"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getSviPrometi() throws ClassNotFoundException {
 		logger.info("Prikaz svih prometa");
 
@@ -74,12 +78,16 @@ public class PrometResource {
 
 	@GET
 	@Path("/{prometId}")
-	/*@ApiOperation(value = "Prikazi promet sa datim id-om",
-    response = PrometDTO.class,
-    responseContainer = "PrometDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoji promet sa datim id-om"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi promet sa datim id-om", response =
+	 * PrometDTO.class, responseContainer = "PrometDTO")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoji promet sa datim id-om"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getPromet(@PathParam("prometId") int prometId) throws ClassNotFoundException {
 		logger.info("Prikaz prometa sa id-om " + prometId);
 
@@ -103,12 +111,16 @@ public class PrometResource {
 
 	@GET
 	@Path("/top5songs")
-	/*@ApiOperation(value = "Prikazi top 5 pesmama",
-    response = PesmaDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje pesme"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi top 5 pesmama", response = PesmaDTO.class,
+	 * responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoje pesme"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getTop5Songs() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 pesama");
 
@@ -133,12 +145,16 @@ public class PrometResource {
 
 	@GET
 	@Path("/top5artists")
-	/*@ApiOperation(value = "Prikazi top 5 izvodjaca",
-    response = IzvodjacDTO.class,
-    responseContainer = "List")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 204, message = "Ne postoje izvodjaci"),
-		      @ApiResponse(code = 200, message = "Uspesan prikaz") })*/
+	/*
+	 * @ApiOperation(value = "Prikazi top 5 izvodjaca", response =
+	 * IzvodjacDTO.class, responseContainer = "List")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 204, message = "Ne postoje izvodjaci"),
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan prikaz") })
+	 */
 	public Response getTop5Artists() throws ClassNotFoundException {
 		logger.info("Prikaz top 5 izvodjaca");
 
@@ -163,13 +179,18 @@ public class PrometResource {
 
 	@POST
 	// @Path("/{pesmaId}")
-	/*@ApiOperation(value = "Unesi novi promet",
-    response = PrometDTO.class,
-    responseContainer = "PrometDTO")
-	@ApiResponses(value = { 
-		      @ApiResponse(code = 200, message = "Uspesan unos"),
-		      @ApiResponse(code = 400, message = "Greska pri unosu prometa"),
-		      @ApiResponse(code = 401, message = "Token je istekao")})*/
+	/*
+	 * @ApiOperation(value = "Unesi novi promet", response = PrometDTO.class,
+	 * responseContainer = "PrometDTO")
+	 * 
+	 * @ApiResponses(value = {
+	 * 
+	 * @ApiResponse(code = 200, message = "Uspesan unos"),
+	 * 
+	 * @ApiResponse(code = 400, message = "Greska pri unosu prometa"),
+	 * 
+	 * @ApiResponse(code = 401, message = "Token je istekao")})
+	 */
 	public Response addPromet(@HeaderParam("Authorization") String authorization, @RequestBody PrometDTO promet)
 			throws ClassNotFoundException {
 		logger.info("Unosenje prometa");
@@ -219,8 +240,8 @@ public class PrometResource {
 			// TODO: handle exception
 			Response r;
 			r = Response.status(401).header("Access-Control-Allow-Origin", "*")
-					.entity("Token je istekao:\n" + e.getMessage())
-					.header("Access-Control-Allow-Methods", "POST").allow("OPTIONS").build();
+					.entity("Token je istekao:\n" + e.getMessage()).header("Access-Control-Allow-Methods", "POST")
+					.allow("OPTIONS").build();
 			logger.error("Token je istekao. Ulogujte se ponovo.");
 			System.out.println("Token je istekao. Ulogujte se ponovo.");
 			return r;
@@ -252,7 +273,7 @@ public class PrometResource {
 
 	@DELETE
 	@Path("/{prometId}")
-	/*@ApiOperation(value = "Obrisi promet sa datim id-om")*/
+	/* @ApiOperation(value = "Obrisi promet sa datim id-om") */
 	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
 	public void deletePromet(@PathParam("prometId") int prometId) throws ClassNotFoundException {
 		logger.info("Brisanje prometa sa id-om " + prometId);

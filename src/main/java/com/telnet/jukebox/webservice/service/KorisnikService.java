@@ -90,35 +90,33 @@ public class KorisnikService extends Application {
 
 		if (korisnik.getEmail() != null) {
 			Long time = System.currentTimeMillis();
-			
-			/*Claims claims = Jwts.claims().setSubject("info");
-			claims.put("id", id);
-			claims.put("email", korisnik.getEmail());
-			claims.setExpiration(new Date(time + 950000000));
-			
-			jwt= Jwts.builder().setClaims(claims).signWith(SignatureAlgorithm.HS256, "sifra".getBytes()).compact();*/
-			
-			
-			jwt= Jwts.builder()
-					  .claim("email", korisnik.getEmail())
-					  .claim("id", korisnik.getId())
-					  .setExpiration(new Date(time + 600000000))
-					  .signWith(
-					    SignatureAlgorithm.HS256,
-					    "sifra".getBytes()
-					  )
-					  .compact();
-			
-			/*Jws<Claims> claims = Jwts.parser()
-			  .setSigningKey(login.getSifra().getBytes())
-			  .parseClaimsJws(jwt);
-			Object exp = claims.getBody();
-			System.out.println(exp);*/
-			/*jwt = Jwts.builder().signWith(SignatureAlgorithm.HS256, login.getSifra().getBytes()).setId(id)
-					.setSubject(korisnik.getEmail()).setExpiration(new Date(time + 15000)).compact();*/
+
+			/*
+			 * Claims claims = Jwts.claims().setSubject("info"); claims.put("id", id);
+			 * claims.put("email", korisnik.getEmail()); claims.setExpiration(new Date(time
+			 * + 950000000));
+			 * 
+			 * jwt= Jwts.builder().setClaims(claims).signWith(SignatureAlgorithm.HS256,
+			 * "sifra".getBytes()).compact();
+			 */
+
+			jwt = Jwts.builder().claim("email", korisnik.getEmail()).claim("id", korisnik.getId())
+					.setExpiration(new Date(time + 600000000)).signWith(SignatureAlgorithm.HS256, "sifra".getBytes())
+					.compact();
+
+			/*
+			 * Jws<Claims> claims = Jwts.parser()
+			 * .setSigningKey(login.getSifra().getBytes()) .parseClaimsJws(jwt); Object exp
+			 * = claims.getBody(); System.out.println(exp);
+			 */
+			/*
+			 * jwt = Jwts.builder().signWith(SignatureAlgorithm.HS256,
+			 * login.getSifra().getBytes()).setId(id)
+			 * .setSubject(korisnik.getEmail()).setExpiration(new Date(time +
+			 * 15000)).compact();
+			 */
 			// JsonObject json = Json.createObjectBuilder().add("JWT", jwt).build();
-		
-			
+
 			return jwt;
 		}
 
@@ -141,45 +139,42 @@ public class KorisnikService extends Application {
 		return dto;
 	}
 
-	/*public static KorisnikDTO getDataFromToken(String token) {
+	/*
+	 * public static KorisnikDTO getDataFromToken(String token) {
+	 * 
+	 * String authToken = token; authToken =
+	 * authToken.substring("Bearer ".length()).trim(); Claims body =
+	 * Jwts.parser().setSigningKey(LoginResource.secret).parseClaimsJws(authToken)
+	 * .getBody(); KorisnikDTO model = new KorisnikDTO(); model.setId((Long)
+	 * body.get("id")); model.setEmail((String) body.get("email"));
+	 * model.setSifra((String) body.get("password")); return model;
+	 * 
+	 * }
+	 */
 
-		String authToken = token;
-		authToken = authToken.substring("Bearer ".length()).trim();
-		Claims body = Jwts.parser().setSigningKey(LoginResource.secret).parseClaimsJws(authToken)
-				.getBody();
-		KorisnikDTO model = new KorisnikDTO();
-		model.setId((Long) body.get("id"));
-		model.setEmail((String) body.get("email"));
-		model.setSifra((String) body.get("password"));
-		return model;
-
-	}*/
-	
-	
-	/*public void filter(ContainerRequestContext requestContext) throws IOException {
-		// TODO Auto-generated method stub
-		System.out.println("loginAuth");
-		String authenticationheader = requestContext.getHeaderString(HttpHeaders.AUTHORIZATION);
-		if (authenticationheader == null ) {
-//			ErrorMessages message = new ErrorMessages("Empty header",401);
-			Response response = Response.status(401).entity("Empty header").build();
-			throw new WebApplicationException(response);
-			
-		} 
-		
-		try {
-			 // Validate the token
-            validateToken(authenticationheader);
-			
-		} catch (Exception e) {
-//			ErrorMessages message = new ErrorMessages("Token expired",401);
-			requestContext.abortWith (Response.status(Response.Status.UNAUTHORIZED).entity("Token expired").build());
-		}			
-		
-	}
-	private void validateToken(String token) {
-		Jwts.parser().setSigningKey(LoginResource.secret).parseClaimsJws(token);
-		
-	}*/
+	/*
+	 * public void filter(ContainerRequestContext requestContext) throws IOException
+	 * { // TODO Auto-generated method stub System.out.println("loginAuth"); String
+	 * authenticationheader =
+	 * requestContext.getHeaderString(HttpHeaders.AUTHORIZATION); if
+	 * (authenticationheader == null ) { // ErrorMessages message = new
+	 * ErrorMessages("Empty header",401); Response response =
+	 * Response.status(401).entity("Empty header").build(); throw new
+	 * WebApplicationException(response);
+	 * 
+	 * }
+	 * 
+	 * try { // Validate the token validateToken(authenticationheader);
+	 * 
+	 * } catch (Exception e) { // ErrorMessages message = new
+	 * ErrorMessages("Token expired",401); requestContext.abortWith
+	 * (Response.status(Response.Status.UNAUTHORIZED).entity("Token expired").build(
+	 * )); }
+	 * 
+	 * } private void validateToken(String token) {
+	 * Jwts.parser().setSigningKey(LoginResource.secret).parseClaimsJws(token);
+	 * 
+	 * }
+	 */
 
 }

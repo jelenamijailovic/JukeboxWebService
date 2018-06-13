@@ -24168,3 +24168,13 @@ Duplicate entry 'dasdad@dsa.com' for key 'korisnici_email_UNIQUE'
 2018-06-05 08:11:45 INFO  PrometResource:158 - Top 5 izvodjaca je uspesno prikazano
 2018-06-05 08:11:45 INFO  PrometResource:128 - Top 5 pesama je uspesno prikazano
 2018-06-05 08:11:45 INFO  PesmaResource:208 - Preporucujemo
+2018-06-13 16:57:16 INFO  ZanrResource:54 - Prikaz svih zanrova
+2018-06-13 16:57:16 INFO  ZanrResource:69 - Zanrovi su uspesno prikazani
+2018-06-13 16:59:19 INFO  ZanrResource:54 - Prikaz svih zanrova
+2018-06-13 16:59:20 INFO  ZanrResource:69 - Zanrovi su uspesno prikazani
+2018-06-13 17:00:31 INFO  ZanrResource:54 - Prikaz svih zanrova
+2018-06-13 17:00:31 INFO  ZanrResource:69 - Zanrovi su uspesno prikazani
+2018-06-13 17:07:28 INFO  ZanrResource:54 - Prikaz svih zanrova
+2018-06-13 17:07:29 INFO  ZanrResource:69 - Zanrovi su uspesno prikazani
+2018-06-13 17:14:28 INFO  ZanrResource:54 - Prikaz svih zanrova
+2018-06-13 17:14:29 INFO  ZanrResource:69 - Zanrovi su uspesno prikazani
