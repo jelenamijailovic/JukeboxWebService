@@ -13,6 +13,7 @@ import com.telnet.jukebox.webservice.model.Izvodjac;
 
 public class IzvodjacDAO {
 
+	DatabaseConnector ds;
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
@@ -21,7 +22,7 @@ public class IzvodjacDAO {
 		List<Izvodjac> izvodjaci = new ArrayList<Izvodjac>();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from izvodjaci");
 			while (resultSet.next()) {
@@ -44,7 +45,7 @@ public class IzvodjacDAO {
 		Izvodjac izvodjac = new Izvodjac();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("select * from izvodjaci where izvodjaci_id= ?");
 			prepStmt.setInt(1, izvodjacId);
 			resultSet = prepStmt.executeQuery();
@@ -65,7 +66,7 @@ public class IzvodjacDAO {
 
 	public Izvodjac insertIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("insert into izvodjaci (izvodjaci_ime) values (?)");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.executeUpdate();
@@ -85,7 +86,7 @@ public class IzvodjacDAO {
 
 	public Izvodjac updateIzvodjac(Izvodjac izvodjac) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("update izvodjaci set izvodjaci_ime= ? where izvodjaci_id= ?");
 			prepStmt.setString(1, izvodjac.getIme());
 			prepStmt.setInt(2, izvodjac.getId());
@@ -102,7 +103,7 @@ public class IzvodjacDAO {
 
 	public void removeIzvodjac(int izvodjacId) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("delete from izvodjaci where izvodjaci_id= ?");
 			prepStmt.setInt(1, izvodjacId);
 			prepStmt.executeUpdate();

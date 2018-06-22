@@ -18,6 +18,7 @@ import com.telnet.jukebox.webservice.model.Login;
 
 public class KorisnikDAO {
 
+	DatabaseConnector ds;
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
@@ -26,7 +27,7 @@ public class KorisnikDAO {
 		List<Korisnik> korisnici = new ArrayList<>();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from korisnici");
 			while (resultSet.next()) {
@@ -50,7 +51,7 @@ public class KorisnikDAO {
 		Korisnik korisnik = new Korisnik();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("select * from korisnici where korisnici_id= ?");
 			prepStmt.setLong(1, korisnikId);
 			resultSet = prepStmt.executeQuery();
@@ -73,7 +74,7 @@ public class KorisnikDAO {
 
 	public Korisnik insertKorisnik(Korisnik korisnik) throws ClassNotFoundException, SQLException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("insert into korisnici (korisnici_email, korisnici_sifra) values (?,?)");
 			prepStmt.setString(1, korisnik.getEmail());
 			prepStmt.setString(2, encryptPassword(korisnik.getSifra()));
@@ -96,7 +97,7 @@ public class KorisnikDAO {
 		String sifra1 = encryptPassword(login.getSifra());
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("select * from korisnici where korisnici_email= ?");
 			prepStmt.setString(1, login.getEmail());
 			resultSet = prepStmt.executeQuery();
@@ -130,7 +131,7 @@ public class KorisnikDAO {
 
 	public Korisnik updateKorisnik(Korisnik korisnik) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement(
 					"update korisnici set korisnici_sifra=?, korisnici_email=? where korisnici_id= ?");
 			prepStmt.setString(1, korisnik.getSifra());
@@ -149,7 +150,7 @@ public class KorisnikDAO {
 
 	public void deleteKorisnik(int korisnikId) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("delete from korisnici where korisnici_id= ?");
 			prepStmt.setInt(1, korisnikId);
 			prepStmt.executeUpdate();

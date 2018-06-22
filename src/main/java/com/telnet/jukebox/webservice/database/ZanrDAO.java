@@ -13,6 +13,7 @@ import com.telnet.jukebox.webservice.model.Zanr;
 
 public class ZanrDAO {
 
+	DatabaseConnector ds;
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
@@ -21,7 +22,7 @@ public class ZanrDAO {
 		List<Zanr> zanrovi = new ArrayList<Zanr>();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from zanrovi");
 			while (resultSet.next()) {
@@ -44,7 +45,7 @@ public class ZanrDAO {
 		Zanr zanr = new Zanr();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("select * from zanrovi where zanrovi_id= ?");
 			prepStmt.setInt(1, zanrId);
 			resultSet = prepStmt.executeQuery();
@@ -65,15 +66,17 @@ public class ZanrDAO {
 
 	public Zanr insertZanr(Zanr zanr) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
-			prepStmt = con.prepareStatement("insert into zanrovi (zanrovi_ime) values(?)");
-			prepStmt.setString(1, zanr.getNaziv());
-			prepStmt.executeUpdate();
-			resultSet = prepStmt.getGeneratedKeys();
-			if (resultSet.next()) {
-				zanr.setId(resultSet.getInt(1));
+			if (!zanr.getNaziv().equals(null)) {
+				Connection con = ds.conStat();
+				prepStmt = con.prepareStatement("insert into zanrovi (zanrovi_ime) values(?)");
+				prepStmt.setString(1, zanr.getNaziv());
+				prepStmt.executeUpdate();
+				resultSet = prepStmt.getGeneratedKeys();
+				if (resultSet.next()) {
+					zanr.setId(resultSet.getInt(1));
+				}
+				con.close();
 			}
-			con.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -85,12 +88,14 @@ public class ZanrDAO {
 
 	public Zanr updateZanr(Zanr zanr) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
-			prepStmt = con.prepareStatement("update zanrovi set zanrovi_ime= ? where zanrovi_id= ?");
-			prepStmt.setString(1, zanr.getNaziv());
-			prepStmt.setInt(2, zanr.getId());
-			prepStmt.executeUpdate();
-			con.close();
+			if (!zanr.getNaziv().equals(null)) {
+				Connection con = ds.conStat();
+				prepStmt = con.prepareStatement("update zanrovi set zanrovi_ime= ? where zanrovi_id= ?");
+				prepStmt.setString(1, zanr.getNaziv());
+				prepStmt.setInt(2, zanr.getId());
+				prepStmt.executeUpdate();
+				con.close();
+			}
 		} catch (SQLException e) {
 			System.out.println("sql except");
 			e.printStackTrace();
@@ -104,7 +109,7 @@ public class ZanrDAO {
 
 	public void removeZanr(int zanrId) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("delete from zanrovi where zanrovi_id= ?");
 			prepStmt.setInt(1, zanrId);
 			prepStmt.executeUpdate();

@@ -13,6 +13,7 @@ import com.telnet.jukebox.webservice.model.Cena;
 
 public class CenaDAO {
 
+	DatabaseConnector ds;
 	Statement stmt = null;
 	PreparedStatement prepStmt = null;
 	ResultSet resultSet = null;
@@ -21,7 +22,7 @@ public class CenaDAO {
 		List<Cena> cene = new ArrayList<Cena>();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			stmt = con.createStatement();
 			resultSet = stmt.executeQuery("select * from cene");
 			while (resultSet.next()) {
@@ -44,7 +45,7 @@ public class CenaDAO {
 		Cena cena = new Cena();
 
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("select * from cene where cene_id= ?");
 			prepStmt.setInt(1, cenaId);
 			resultSet = prepStmt.executeQuery();
@@ -65,7 +66,7 @@ public class CenaDAO {
 
 	public Cena insertCena(Cena cena) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("insert into cene (cene_kolicina) values(?)");
 			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.executeUpdate();
@@ -85,7 +86,7 @@ public class CenaDAO {
 
 	public Cena updateCena(Cena cena) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("update cene set cene_kolicina= ? where cene_id= ?");
 			prepStmt.setInt(1, cena.getKolicina());
 			prepStmt.setInt(2, cena.getId());
@@ -102,7 +103,7 @@ public class CenaDAO {
 
 	public void removeCena(int cenaId) throws ClassNotFoundException {
 		try {
-			Connection con = DatabaseConnector.conStat();
+			Connection con = ds.conStat();
 			prepStmt = con.prepareStatement("delete from cene where cene_id= ?");
 			prepStmt.setInt(1, cenaId);
 			prepStmt.executeUpdate();

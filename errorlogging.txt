@@ -277,3 +277,148 @@ Duplicate entry 'dasdad@dsa.com' for key 'korisnici_email_UNIQUE'
 2018-06-01 10:00:18 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
 2018-06-01 10:00:19 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
 2018-06-01 10:01:22 ERROR ZanrResource:150 - Ne postoje pesme za izvodjaca sa id-om 0
+2018-06-14 08:43:55 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 08:47:03 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 08:47:29 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 08:53:07 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:00:22 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:15:14 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:19:27 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:19:44 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:57:11 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 09:58:09 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 10:27:43 ERROR ZanrResource:98 - Ne postoji zanr sa id-om 99
+2018-06-14 11:10:04 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:10:31 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:10:42 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:11:02 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:15:07 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:16:29 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:18:49 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:21:16 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:21:42 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:24:37 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:38:03 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:38:03 ERROR ZanrResource:152 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 11:51:12 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:51:13 ERROR ZanrResource:152 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 11:52:49 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 11:52:50 ERROR ZanrResource:154 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:00:02 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:00:03 ERROR ZanrResource:154 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:01:51 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:01:52 ERROR ZanrResource:154 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:01:52 ERROR ZanrResource:131 - Greska pri unosu zanra:
+null
+2018-06-14 12:15:23 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:15:23 ERROR ZanrResource:155 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:15:24 ERROR ZanrResource:132 - Greska pri unosu zanra:
+null
+2018-06-14 12:16:01 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:16:01 ERROR ZanrResource:155 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:16:01 ERROR ZanrResource:132 - Greska pri unosu zanra:
+null
+2018-06-14 12:16:12 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:16:13 ERROR ZanrResource:155 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:16:36 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:16:38 ERROR ZanrResource:155 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:17:31 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:17:32 ERROR ZanrResource:155 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:17:32 ERROR ZanrResource:132 - Greska pri unosu zanra:
+null
+2018-06-14 12:51:20 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:51:21 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:51:21 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 12:52:00 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:52:01 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:52:01 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 12:54:19 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:54:20 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 12:57:36 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:57:37 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:57:37 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 12:58:12 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:58:13 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:58:13 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 12:58:57 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 12:58:58 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 12:58:58 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:09:16 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:09:17 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:09:17 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:27:18 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:27:19 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:27:20 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:27:20 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:29:32 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:29:34 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:29:35 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:29:35 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:31:20 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:31:21 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:31:22 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:31:22 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:37:33 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:37:34 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:37:35 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:37:35 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:38:33 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:38:35 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:38:36 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:38:36 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:41:32 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:41:33 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:41:35 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:41:35 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 13:56:43 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 13:56:44 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 13:56:45 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 13:56:45 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:02:29 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:02:30 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:02:31 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:02:31 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:10:28 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:10:29 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:10:30 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:10:30 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:11:16 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:11:17 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:11:18 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:11:18 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:14:31 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:14:32 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:14:33 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:14:33 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:14:53 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:14:54 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:14:55 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:14:55 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 14:26:32 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 14:26:33 ERROR ZanrResource:100 - Ne postoji zanr sa id-om 99
+2018-06-14 14:26:34 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 14:26:34 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null
+2018-06-14 15:33:37 ERROR ZanrResource:175 - Zanr sa id-om 40 ne moze biti obrisan jer ne postoji
+2018-06-14 15:33:39 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
+2018-06-14 15:33:39 ERROR ZanrResource:129 - Greska pri unosu zanra:
+null

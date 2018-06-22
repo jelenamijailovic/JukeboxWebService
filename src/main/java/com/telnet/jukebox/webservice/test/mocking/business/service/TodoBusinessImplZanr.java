@@ -1,19 +1,53 @@
-package com.telnet.jukebox.webservice.test.mocking.business.service;
+/*package com.telnet.jukebox.webservice.test.mocking.business.service;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.telnet.jukebox.webservice.dto.ZanrDTO;
 import com.telnet.jukebox.webservice.model.Zanr;
-import com.telnet.jukebox.webservice.test.mocking.data.api.service.TodoServiceZanr;
+import com.telnet.jukebox.webservice.test.mocking.data.api.service.Database;
 
 public class TodoBusinessImplZanr {
 
-	private TodoServiceZanr todoService;
-
-	public TodoBusinessImplZanr(TodoServiceZanr todoService) {
+	private Database ds;
+	private Statement stmt;
+	private ResultSet resultSet;
+	
+	
+	public TodoBusinessImplZanr(Database todoService) {
 		super();
-		this.todoService = todoService;
+		this.ds = todoService;
 	}
+	
+	public List<Zanr> getZanrovi() throws ClassNotFoundException {
+		List<Zanr> zanrovi = new ArrayList<Zanr>();
+
+		try {
+			Connection con = ds.conStat();
+			stmt = con.createStatement();
+			resultSet = stmt.executeQuery("select * from zanrovi");
+			while (resultSet.next()) {
+				Zanr zanr = new Zanr();
+				zanr.setId(resultSet.getInt(1));
+				zanr.setNaziv(resultSet.getString(2));
+				zanrovi.add(zanr);
+			}
+			con.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return zanrovi;
+	}
+	
+	
+
+	
 	
 	public ZanrDTO getZanr(int id){
 		List<ZanrDTO> sviZanrovi= todoService.sviZanrovi();
@@ -84,3 +118,4 @@ public class TodoBusinessImplZanr {
 		return dto;
 	}
 }
+*/
