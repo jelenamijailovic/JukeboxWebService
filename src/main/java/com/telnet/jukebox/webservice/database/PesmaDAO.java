@@ -1,5 +1,6 @@
 package com.telnet.jukebox.webservice.database;
 
+import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -208,6 +209,7 @@ public class PesmaDAO {
 				pesma.setCenaKolicina(resultSet.getInt(1));
 			}
 			con.close();
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

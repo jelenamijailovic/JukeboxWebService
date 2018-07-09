@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class DatabaseConnector {
 
-	public Connection conStat() throws ClassNotFoundException, IOException, SQLException {
+	public static Connection conStat() throws ClassNotFoundException, IOException, SQLException {
 		// Connection con = null;
 
 		// try {

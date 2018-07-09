@@ -1,5 +1,6 @@
 package com.telnet.jukebox.webservice.resources;
 
+import java.io.File;
 import java.util.List;
 
 import javax.ws.rs.Consumes;
@@ -65,6 +66,8 @@ public class PesmaResource {
 		};
 
 		Response r;
+//		File file = new File("/home/dev-10/Desktop/Jelena/sts-bundle/sts-3.9.2.RELEASE/license.txt");
+//		System.out.println("File nam is :"+file.getName());
 
 		if (pesme.isEmpty()) {
 			r = Response.status(204).header("Access-Control-Allow-Origin", "*").entity("Ne postoje unete pesme")
