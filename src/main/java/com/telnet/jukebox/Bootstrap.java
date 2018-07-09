@@ -1,4 +1,4 @@
-package com.telnet.jukebox;
+/*package com.telnet.jukebox;
 
 import io.swagger.jaxrs.config.SwaggerContextService;
 import io.swagger.models.*;
@@ -48,4 +48,4 @@ public class Bootstrap extends HttpServlet {
 
     new SwaggerContextService().withServletConfig(config).updateSwagger(swagger);
   }
-}
+}*/
