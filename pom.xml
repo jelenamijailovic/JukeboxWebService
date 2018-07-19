@@ -117,11 +117,7 @@
 			<artifactId>javax.ws.rs-api</artifactId>
 			<version>2.0</version>
 		</dependency>
-	
-	
-	
-	
-
+		
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -146,7 +142,7 @@
 			<version>1.4.1</version>
 		</dependency>
 
-		<dependency>
+		 <dependency>
 			<groupId>javax.json</groupId>
 			<artifactId>javax.json-api</artifactId>
 			<version>1.0</version>
@@ -198,11 +194,6 @@
 			<version>2.3.4</version>
 			<scope>test</scope>
 		</dependency>
-
-
-
-
-
 	</dependencies>
 
 	<properties>

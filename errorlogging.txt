@@ -422,3 +422,32 @@ null
 2018-06-14 15:33:39 ERROR ZanrResource:153 - Zanr sa id-om 4 ne moze biti modifikovan jer ne postoji
 2018-06-14 15:33:39 ERROR ZanrResource:129 - Greska pri unosu zanra:
 null
+2018-07-17 12:04:31 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:04:33 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:04:44 ERROR PesmaResource:143 - Ne postoji pesma sa id-om 10
+2018-07-17 12:04:47 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:19 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:21 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:22 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:22 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:22 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:05:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:07 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:08 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:09 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:09 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:10 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:10 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:23 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:24 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:24 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:25 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:25 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:25 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:26 ERROR PesmaResource:75 - Ne postoje unete pesme
+2018-07-17 12:09:41 ERROR PesmaResource:75 - Ne postoje unete pesme
